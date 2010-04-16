@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="img" >
+    <file>player_pn.png</file>
+    <file>player_nn.png</file>
+    <file>player_ns.png</file>
+    <file>player_ps.png</file>
+    <file>daisyduck_2.png</file>
+    <file>daisyduck_3.png</file>
+    <file>daisyduck.png</file>
+    <file>exit.png</file>
+    <file>online.png</file>
+    <file>open.png</file>
+    <file>player.png</file>
+    <file>settings.png</file>
+    <file>welcome.png</file>
+  </qresource>
+</RCC>

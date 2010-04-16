@@ -1,0 +1,1029 @@
+#!/bin/sh
+#
+# DaisyDuck configure script - (c) 2010 Mathieu Schroeter
+#
+#  Fully inspired from :
+#      daisyduck configure script - (c) 2006-2010 Mathieu Schroeter
+#   libplayer configure script - (c) 2006 Benjamin Zores
+#      FFmpeg configure script, thanks to Fabrice Bellard
+#
+
+# make sure we are running under a compatible shell
+unset foo
+(: ${foo%%bar}) 2>/dev/null && ! (: ${foo?}) 2>/dev/null
+if test "$?" != 0; then
+    if test "x$DD_CONFIGURE_EXEC" = x; then
+        DD_CONFIGURE_EXEC=1
+        export DD_CONFIGURE_EXEC
+        exec bash "$0" "$@"
+        exec ksh "$0" "$@"
+        exec /usr/xpg4/bin/sh "$0" "$@"
+    fi
+    echo "No compatible shell script interpreter found."
+    exit 1
+fi
+
+show_help(){
+  echo "Usage: configure [options]"
+  echo "Options: [defaults in brackets after descriptions]"
+  echo
+  echo "Standard options:"
+  echo "  --help                      print this message"
+  echo "  --log[=FILE|yes|no]         log tests and output to FILE [config.log]"
+  echo "  --prefix=PREFIX             install in PREFIX [$PREFIX]"
+  echo "  --bindir=DIR                install bins in DIR [PREFIX/bin]"
+  echo "  --libdir=DIR                install libs in DIR [PREFIX/lib]"
+  echo "  --includedir=DIR            install includes in DIR [PREFIX/include]"
+  echo "  --sharedir=DIR              install data in DIR [PREFIX/share]"
+  echo "  --docdir=DIR                install docs in DIR [PREFIX/share/doc]"
+  echo "  --mandir=DIR                install man page in DIR [PREFIX/share/man]"
+  echo "  --with-libqt4-dir           check for Qt4 installed in DIR"
+  echo "  --with-libduck-dir          check for libduck in DIR"
+  echo "  --with-libvlc-dir           check for libvlc in DIR"
+  echo ""
+  echo "Advanced options (experts only):"
+  echo "  --arch=ARCH                 force architecture"
+  echo "  --cpu=CPU                   force CPU optimization"
+  echo "  --disable-debug             disable debugging symbols"
+  echo "  --enable-debug=LEVEL        set the debug level [$debuglevel]"
+  echo "  --disable-strip             disable stripping of executables at installation"
+  echo "  --disable-optimize          disable compiler optimization"
+  echo "  --enable-small              optimize for size instead of speed"
+  echo "  --cross-prefix=PREFIX       use PREFIX for compilation tools [$cross_prefix]"
+  echo "  --cross-compile             assume a cross-compiler is used"
+  echo "  --enable-pic                build position-independent code"
+  exit 1
+}
+
+log(){
+    echo "$@" >>$logfile
+}
+
+log_file(){
+    log BEGIN $1
+    cat -n $1 >>$logfile
+    log END $1
+}
+
+echolog(){
+    log "$@"
+    echo "$@"
+}
+
+echologn(){
+    log "$@"
+    echo -n "$@"
+}
+
+clean(){
+    rm -f $TMPC $TMPO $TMPE $TMPS
+}
+
+die(){
+    echolog "$@"
+    if enabled logging; then
+      echo "See file \"$logfile\" produced by configure for more details."
+    else
+      echo "Rerun configure with logging enabled (do not use --log=no) for more details."
+    fi
+    clean
+    exit 1
+}
+
+set_all(){
+    value=$1
+    shift
+    for var in $*; do
+        eval $var=$value
+    done
+}
+
+enable(){
+    set_all yes $*
+}
+
+enabled(){
+    eval test "x\$$1" = "xyes"
+}
+
+disabled(){
+    eval test "x\$$1" = "xno"
+}
+
+flags_saved(){
+    (: ${SAVE_CXXFLAGS?}) 2>/dev/null
+}
+
+save_flags(){
+    flags_saved && return
+    SAVE_CXXFLAGS="$CXXFLAGS"
+    SAVE_CPPFLAGS="$CPPFLAGS"
+    SAVE_HOST_CXXFLAGS="$HOST_CXXFLAGS"
+    SAVE_LDFLAGS="$LDFLAGS"
+    SAVE_extralibs="$extralibs"
+}
+
+restore_flags(){
+    CXXFLAGS="$SAVE_CXXFLAGS"
+    CPPFLAGS="$SAVE_CPPFLAGS"
+    HOST_CXXFLAGS="$SAVE_HOST_CXXFLAGS"
+    LDFLAGS="$SAVE_LDFLAGS"
+    extralibs="$SAVE_extralibs"
+    unset SAVE_CXXFLAGS
+    unset SAVE_CPPFLAGS
+    unset SAVE_HOST_CXXFLAGS
+    unset SAVE_LDFLAGS
+    unset SAVE_extralibs
+}
+
+temp_cxxflags(){
+    temp_append CXXFLAGS "$@"
+}
+
+temp_cppflags(){
+    temp_append CPPFLAGS "$@"
+}
+
+temp_host_cxxflags(){
+    temp_append HOST_CXXFLAGS "$@"
+}
+
+temp_ldflags(){
+    temp_append LDFLAGS "$@"
+}
+
+temp_extralibs(){
+    temp_append extralibs "$@"
+}
+
+temp_append(){
+    local var
+    var=$1
+    shift
+    save_flags
+    append_var "$var" "$@"
+}
+
+append_var(){
+    local var f
+    var=$1
+    shift
+    for f in $@; do
+      if eval echo \$$var | grep -qv -e "$f"; then
+        test -n "$(eval echo \$$var)" && eval "$var=\"\$$var $f\"" || eval "$var=\"$f\""
+      fi
+    done
+}
+
+append(){
+    local var
+    var=$1
+    shift
+    flags_saved && append_var "SAVE_$var" "$@"
+    append_var "$var" "$@"
+}
+
+add_cxxflags(){
+    append CXXFLAGS "$@"
+}
+
+add_cppflags(){
+    append CPPFLAGS "$@"
+}
+
+add_ldflags(){
+    append LDFLAGS "$@"
+}
+
+add_extralibs(){
+    append extralibs "$@"
+}
+
+add_pkgconfig_requires(){
+    append pkgconfig_requires "$@"
+}
+
+add_pkgconfig_libs(){
+    append pkgconfig_libs "$@"
+}
+
+check_cmd(){
+    log "$@"
+    "$@" >>$logfile 2>&1
+}
+
+check_cxx(){
+    log check_cxx "$@"
+    cat >$TMPC
+    log_file $TMPC
+    check_cmd $cxx $CPPFLAGS $CXXFLAGS "$@" -c -o $TMPO $TMPC
+}
+
+check_host_cxx(){
+    log check_host_cxx "$@"
+    cat >$TMPC
+    log_file $TMPC
+    check_cmd $host_cxx $HOST_CXXFLAGS "$@" -c -o $TMPO $TMPC
+}
+
+check_cpp(){
+    log check_cpp "$@"
+    cat >$TMPC
+    log_file $TMPC
+    check_cmd $cxx $CPPFLAGS $CXXFLAGS "$@" -E -o $TMPO $TMPC
+}
+
+check_ld(){
+    log check_ld "$@"
+    check_cxx || return
+    check_cmd $cxx "$@" -o $TMPE $TMPO $extralibs $LDFLAGS
+}
+
+check_host_ld(){
+    log check_host_ld "$@"
+    check_host_cxx || return
+    check_cmd $host_cxx $HOST_LDFLAGS "$@" -o $TMPE $TMPO
+}
+
+check_exec(){
+    check_ld "$@" && { enabled cross_compile || $TMPE >>$logfile 2>&1; }
+}
+
+check_cppflags(){
+    log check_cppflags "$@"
+    check_cxx "$@" <<EOF && append CPPFLAGS "$@"
+int x;
+EOF
+}
+
+check_cxxflags(){
+    log check_cxxflags "$@"
+    check_cxx "$@" <<EOF && add_cxxflags "$@"
+int x;
+EOF
+}
+
+check_ldflags(){
+    log check_ldflags "$@"
+    check_ld "$@" <<EOF && add_ldflags "$@"
+int main(){
+    return 0;
+}
+EOF
+}
+
+check_header(){
+    local header
+    log check_header "$@"
+    header=$1
+    shift
+    check_cpp "$@" <<EOF
+#include <$header>
+int x;
+EOF
+}
+
+check_func(){
+    local func
+    log check_func "$@"
+    func=$1
+    shift
+    check_ld "$@" <<EOF
+extern int $func();
+int main(){
+    $func();
+    return 0;
+}
+EOF
+}
+
+check_func_headers(){
+    log check_func_headers "$@"
+    headers=$1
+    func=$2
+    shift 2
+    incs=""
+    for hdr in $headers; do
+      incs="$incs
+#include <$hdr>"
+    done
+    check_ld "$@" <<EOF
+$incs
+int main(){
+    return (long) $func;
+}
+EOF
+}
+
+check_lib(){
+    local header func err
+    log check_lib "$@"
+    header="$1"
+    func="$2"
+    shift 2
+    temp_extralibs "$@"
+    check_func_headers $header $func && add_extralibs "$@"
+    err=$?
+    restore_flags
+    return $err
+}
+
+check_libconfig(){
+    local config func ccflags clibs err
+    log check_libconfig "$@"
+    config="$1"
+    func="$2"
+    ccflags="${3:---cflags}"
+    clibs="${4:---libs}"
+    err=1
+    if `which "$config" 1>/dev/null 2>&1`; then
+      cflags=`$config $ccflags`
+      [ -n "$cflags" ] && check_cxxflags "$cflags"
+      libs=`$config $clibs`
+      if [ -n "$libs" ]; then
+        temp_extralibs "$libs"
+        check_func $func && add_extralibs "$libs"
+        err=$?
+        restore_flags
+      fi
+    fi
+    return $err
+}
+
+check_pkgconfig(){
+    local pkg func ccflags clibs err
+    log check_pkgconfig "$@"
+    pkg="$1"
+    header="$2"
+    func="$3"
+    ccflags="${4:---cflags}"
+    clibs="${5:---libs}"
+    err=1
+    if `which pkg-config 1>/dev/null 2>&1`; then
+      cflags=`pkg-config $pkg $ccflags`
+      [ -n "$cflags" ] && check_cxxflags "$cflags"
+      libs=`pkg-config $pkg $clibs`
+      if [ -n "$libs" ]; then
+        temp_extralibs "$libs"
+        check_func_headers $header $func
+        err=$?
+        restore_flags
+      fi
+    fi
+    return $err
+}
+
+check_lib_pkgcfg(){
+    local pkg header func err
+    log check_lib_pkgcfg "$@"
+    pkg="$1"
+    header="$2"
+    func="$3"
+    shift 3
+    err=1
+    check_pkgconfig $pkg $header $func && add_pkgconfig_requires $pkg && err=0
+    [ "$err" != 0 ] && check_lib $header $func "$@" && add_pkgconfig_libs "$@" && err=0
+    return $err
+}
+
+check_lib_libcfg(){
+    local config header func err
+    log check_lib_pkgcfg "$@"
+    config="$1"
+    header="$2"
+    func="$3"
+    shift 3
+    err=1
+    check_libconfig $config $func && add_pkgconfig_libs "$@" && err=0
+    [ "$err" != 0 ] && check_lib $header $func "$@" && add_pkgconfig_libs "$@" && err=0
+    return $err
+}
+
+check_lib_version() {
+    local min_ver toobig_ver
+    min_ver="$2"
+    toobig_ver="$3"
+    check_cmd pkg-config --print-errors --exists "$1 >= $min_ver $1 < $toobig_ver" 2>>$logfile
+    err=$?
+    return $err
+}
+
+append_config(){
+    echo "$@" >> $CONFIGFILE
+}
+
+pkgconfig_generate(){
+    name=$1
+    shortname=${name#lib}
+    comment=$2
+    version=$3
+    libs=$4
+    requires=$5
+    cflags=$6
+
+    cat <<EOF >$name.pc
+PREFIX=$PREFIX
+libdir=$libdir
+includedir=$includedir
+
+Name: $name
+Description: $comment
+Version: $version
+Requires: $(enabled shared || echo $requires)
+Requires.private: $(enabled shared && echo $requires)
+Conflicts:
+Libs: -L\${libdir} -l${shortname} $(enabled shared || echo $libs)
+Libs.private: $(enabled shared && echo $libs)
+Cflags: -I\${includedir} $cflags
+EOF
+}
+
+add_pkgconfig_deps() {
+    if `which pkg-config 1>/dev/null 2>&1`; then
+      add_cxxflags `pkg-config "$1" --cflags 2>>$logfile`
+      add_extralibs `pkg-config "$1" --libs 2>>$logfile`
+    fi
+}
+
+# set temporary file name
+if test ! -z "$TMPDIR" ; then
+    TMPDIR1="${TMPDIR}"
+elif test ! -z "$TEMPDIR" ; then
+    TMPDIR1="${TEMPDIR}"
+else
+    TMPDIR1="/tmp"
+fi
+
+TMPC="${TMPDIR1}/daisyduck-${RANDOM}-$$-${RANDOM}.c"
+TMPO="${TMPDIR1}/daisyduck-${RANDOM}-$$-${RANDOM}.o"
+TMPE="${TMPDIR1}/daisyduck-${RANDOM}-$$-${RANDOM}"
+TMPS="${TMPDIR1}/daisyduck-${RANDOM}-$$-${RANDOM}.S"
+
+CONFIGFILE="config.mak"
+
+#################################################
+#   set default parameters
+#################################################
+logging="yes"
+logfile="config.log"
+PREFIX="/usr/local"
+bindir='${PREFIX}/bin'
+libdir='${PREFIX}/lib'
+includedir='${PREFIX}/include'
+sharedir='${PREFIX}/share'
+docdir='${PREFIX}/share/doc'
+mandir='${PREFIX}/share/man'
+static="yes"
+shared="yes"
+cxx="g++"
+host_cxx="g++"
+ar="ar"
+ranlib="ranlib"
+make="make"
+strip="strip"
+arch=`uname -m`
+cpu="generic"
+optimize="yes"
+small="no"
+debug="yes"
+dostrip="yes"
+extralibs=""
+installstrip="-s"
+cross_compile="no"
+pic="no"
+INSTALL="install"
+VERSION=""
+pkgconfig_requires=""
+pkgconfig_libs=""
+mocqt4=moc-qt4
+uicqt4=uic-qt4
+rccqt4=rcc-qt4
+lupdateqt4=lupdate-qt4
+lreleaseqt4=lrelease-qt4
+
+#################################################
+#   check options
+#################################################
+for opt do
+  optval="${opt#*=}"
+  case "$opt" in
+  --log)
+  ;;
+  --log=*) logging="$optval"
+  ;;
+  --prefix=*) PREFIX="$optval"; force_prefix=yes
+  ;;
+  --bindir=*) bindir="$optval"
+  ;;
+  --libdir=*) libdir="$optval"; force_libdir=yes
+  ;;
+  --includedir=*) includedir="$optval"
+  ;;
+  --sharedir=*) sharedir="$optval"
+  ;;
+  --docdir=*) docdir="$optval"; force_docdir=yes
+  ;;
+  --mandir=*) mandir="$optval"
+  ;;
+  --enable-debug=*) debug="yes"; debuglevel="$optval"
+  ;;
+  --enable-debug) debug="yes"
+  ;;
+  --disable-debug) debug="no"
+  ;;
+  --enable-strip) dostrip="yes"
+  ;;
+  --disable-strip) dostrip="no"
+  ;;
+  --enable-optimize) optimize="yes"
+  ;;
+  --disable-optimize) optimize="no"
+  ;;
+  --enable-small) small="yes"
+  ;;
+  --disable-small) small="no"
+  ;;
+  --cross-prefix=*) cross_prefix="$optval"
+  ;;
+  --cross-compile) cross_compile="yes"
+  ;;
+  --with-libqt4-dir=*) libqt4dir="$optval";
+  ;;
+  --with-libduck-dir=*) libduckdir="$optval";
+  ;;
+  --with-libvlc-dir=*) libvlcdir="$optval";
+  ;;
+  --enable-pic) pic="yes";
+  ;;
+  --disable-pic) pic="no";
+  ;;
+  --help) show_help
+  ;;
+  *)
+  echo "Unknown option \"$opt\"."
+  echo "See $0 --help for available options."
+  exit 1
+  ;;
+  esac
+done
+
+# Check for conflictual build options
+if [ "$shared" = no -a "$static" = no ]; then
+  echo "At least one library type must be built."
+  echo "Specify --enable-static to build the static libraries or"
+  echo "--enable-shared to build the shared libraries as well."
+  exit 1
+fi
+
+if [ -n "$cross_prefix" ]; then
+  cross_compile="yes"
+  cxx="${cross_prefix}${cxx}"
+  ar="${cross_prefix}${ar}"
+  ranlib="${cross_prefix}${ranlib}"
+  strip="${cross_prefix}${strip}"
+else
+  [ -n "$CXX" ] && cxx="$CXX"
+  [ -n "$AR" ] && ar="$AR"
+  [ -n "$RANLIB" ] && ranlib="$RANLIB"
+  [ -n "$STRIP" ] && strip="$STRIP"
+fi
+[ -n "$MAKE" ] && make="$MAKE"
+
+[ -n "$HOST_CXX" ] && HOST_CXX="$HOST_CXX"
+[ -n "$HOST_CXXFLAGS" ] && HOST_CXXFLAGS="$HOST_CXXFLAGS"
+[ -n "$HOST_LDFLAGS" ] && HOST_LDFLAGS="$HOST_LDFLAGS"
+
+#################################################
+#   set arch variable and specific cpu flags
+#################################################
+if enabled cross_compile; then
+  arch="`$cxx -dumpmachine | sed -e 's,\([^-]*\)-.*,\1,'`"
+fi
+
+case "$arch" in
+  i386|i486|i586|i686|i86pc|BePC)
+    arch="x86_32"
+  ;;
+  x86_64|amd64)
+    arch="x86_32"
+    canon_arch="`$cxx -dumpmachine | sed -e 's,\([^-]*\)-.*,\1,'`"
+    if [ x"$canon_arch" = x"x86_64" -o x"$canon_arch" = x"amd64" ]; then
+      if [ -z "`echo $CXXFLAGS | grep -- -m32`"  ]; then
+        arch="x86_64"
+      fi
+    fi
+    spic=$shared
+  ;;
+# armv4l is a subset of armv5tel
+  arm|armv4l|armv5tel)
+    arch="armv4l"
+  ;;
+  alpha)
+    arch="alpha"
+    spic=$shared
+  ;;
+  "Power Macintosh"|ppc|ppc64|powerpc)
+    arch="powerpc"
+  ;;
+  mips|mipsel|IP*)
+    arch="mips"
+    spic=$shared
+  ;;
+  mips64)
+    arch="mips64"
+    spic=$shared
+  ;;
+  sun4u|sparc64)
+    arch="sparc64"
+    spic=$shared
+  ;;
+  sparc)
+    arch="sparc"
+    spic=$shared
+  ;;
+  sh4)
+    arch="sh4"
+  ;;
+  parisc|parisc64)
+    arch="parisc"
+    spic=$shared
+  ;;
+  s390|s390x)
+    arch="s390"
+  ;;
+  m68k)
+    arch="m68k"
+  ;;
+  ia64)
+    arch="ia64"
+    spic=$shared
+  ;;
+  bfin)
+    arch="bfin"
+  ;;
+  *)
+    arch="unknown"
+  ;;
+esac
+
+# Add processor-specific flags
+if test $cpu != "generic"; then
+  case $cpu in
+    601|ppc601|PowerPC601)
+      add_cxxflags "-mcpu=601"
+    ;;
+    603*|ppc603*|PowerPC603*)
+      add_cxxflags "-mcpu=603"
+    ;;
+    604*|ppc604*|PowerPC604*)
+      add_cxxflags "-mcpu=604"
+    ;;
+    G3|g3|75*|ppc75*|PowerPC75*)
+      add_cxxflags "-mcpu=750 -mpowerpc-gfxopt"
+    ;;
+    G4|g4|745*|ppc745*|PowerPC745*)
+      add_cxxflags "-mcpu=7450 -mpowerpc-gfxopt"
+    ;;
+    74*|ppc74*|PowerPC74*)
+      add_cxxflags "-mcpu=7400 -mpowerpc-gfxopt"
+    ;;
+    G5|g5|970|ppc970|PowerPC970|power4*|Power4*)
+      add_cxxflags "-mcpu=970 -mpowerpc-gfxopt -mpowerpc64"
+    ;;
+    Cell|CELL|cell)
+      add_cxxflags "-mcpu=cell"
+    ;;
+    i[3456]86|pentium|pentium-mmx|pentiumpro|pentium[23]|pentium-m|k6|k6-[23]|winchip-c6|winchip2|c3|athlon|athlon-tbird|athlon-4|athlon-[mx]p|athlon64|k8|opteron|athlon-fx|core2|pentium4|pentium4m|prescott|nocona)
+      add_cxxflags "-march=$cpu"
+    ;;
+    sparc64)
+      add_cxxflags "-mcpu=v9"
+    ;;
+    arm*|cortex*)
+      add_cxxflags "-mcpu=$cpu"
+    ;;
+    *)
+      die "WARNING: Unknown CPU \"$cpu\", ignored."
+    ;;
+  esac
+fi
+
+enable_pic(){
+    enable pic
+    add_cppflags -DPIC
+    add_cxxflags -fPIC
+}
+
+enabled spic && enable pic
+enabled pic && enable_pic
+
+#################################################
+#   create logging file
+#################################################
+if test "$logging" != no; then
+  enabled logging || logfile="$logging"
+  echo "# $0 $@" >$logfile
+  set >>$logfile
+else
+  logfile=/dev/null
+fi
+
+#################################################
+#   compiler sanity check
+#################################################
+echolog "Checking for compiler available..."
+check_exec <<EOF
+int main(){
+    return 0;
+}
+EOF
+if test "$?" != 0; then
+  echo "$cxx is unable to create an executable file."
+  if test -z "$cross_prefix" -a "$cross_compile" = no; then
+    echo "If $cxx is a cross-compiler, use the --cross-compile option."
+  fi
+  die "C compiler test failed."
+fi
+
+if test -n "`$cxx -v 2>&1 | grep version | grep Apple`"; then
+  dylib="yes"
+else
+  dylib="no"
+fi
+
+mingw32="no"
+if test -n "`$cxx -v 2>&1 | grep version | grep mingw`" \
+     -o -n "`$cxx -v 2>&1 | grep Target  | grep mingw`"; then
+  mingw32="yes"
+fi
+
+enabled mingw32 && fosmount="no"
+
+#################################################
+#   check for target specific flags
+#################################################
+# check for SIMD availability
+
+# mmi only available on mips
+if [ "$mmi" = "default" ]; then
+  if [ "$arch" = "mips" ]; then
+    mmi="yes"
+  else
+    mmi="no"
+  fi
+fi
+
+# check if our compiler supports mmi
+enabled mmi && check_cxx <<EOF || mmi="no"
+int main(void) {
+    __asm__ ("lq \$2, 0(\$2)");
+    return 0;
+}
+EOF
+
+# test g++ version to see if vector builtins can be used
+# currently only used on i386 for MMX builtins
+check_cxx -msse <<EOF && builtin_vector=yes || builtin_vector=no
+#include <xmmintrin.h>
+int main(void) {
+#if __GNUC__ > 3 || (__GNUC__ == 3 && __GNUC_MINOR__ >= 2)
+return 0;
+#else
+#error no vector builtins
+#endif
+}
+EOF
+
+# test for mm3dnow.h
+test "$arch" = "x86_64" && march=k8 || march=athlon
+check_cxx -march=$march <<EOF && mm3dnow=yes || mm3dnow=no
+#include <mm3dnow.h>
+int main(void) {
+__m64 b1;
+b1 = _m_pswapd(b1);
+_m_femms();
+return 0;
+}
+EOF
+
+# ---
+# big/little-endian test
+check_cxx <<EOF || die "endian test failed"
+unsigned int endian = 'B' << 24 | 'I' << 16 | 'G' << 8 | 'E';
+EOF
+od -A n -t x1 $TMPO | grep -q '42 *49 *47 *45' && enable bigendian
+
+enabled bigendian && add_cppflags -DHAVE_BIGENDIAN
+
+# add some useful compiler flags if supported
+check_cxxflags -W
+check_cxxflags -Wall
+check_cppflags -D_LARGEFILE_SOURCE
+check_cppflags -D_FILE_OFFSET_BITS=64
+check_cppflags -D_REENTRANT
+
+
+#################################################
+#   check for debug symbols
+#################################################
+enabled debug && add_cxxflags -g"$debuglevel" && add_cppflags -DHAVE_DEBUG
+disabled debug && add_cppflags -DQT_NO_DEBUG
+
+if enabled small; then
+  check_cxxflags -Os
+  add_cppflags -DCONFIG_SMALL
+elif enabled optimize; then
+  if test -n "`$cxx -v 2>&1 | grep xlc`"; then
+    add_cxxflags  "-O5"
+    add_ldflags "-O5"
+  else
+    add_cxxflags "-O2"
+  fi
+fi
+
+#################################################
+#   check for Qt4
+#################################################
+if [ -n "$libqt4dir" ]; then
+  check_cxxflags -I$libqt4dir/include
+  check_ldflags -L$libqt4dir/lib
+fi
+
+echolog "Checking for QtGui ..."
+check_lib_pkgcfg QtGui QtGui/QtGui QCoreApplication::arguments -lQtGui -lQtCore
+if [ "$?" != 0 ]; then
+  check_lib QtGui/QtGui QCoreApplication::arguments -lQtGui4 -lQtCore4 || die "Error, can't find QtGui !"
+fi
+
+echolog "Checking for QtXml ..."
+check_lib_pkgcfg QtXml QtXml/QtXml QDomImplementation::invalidDataPolicy -lQtXml
+if [ "$?" != 0 ]; then
+  check_lib QtXml/QtXml QDomImplementation::invalidDataPolicy -lQtXml4 || die "Error, can't find QtGui !"
+fi
+
+echolog "Checking for QtNetwork ..."
+check_lib_pkgcfg QtNetwork QtNetwork/QtNetwork QNetworkInterface::interfaceFromName -lQtNetwork
+if [ "$?" != 0 ]; then
+  check_lib QtNetwork/QtNetwork QNetworkInterface::interfaceFromName -lQtNetwork4 || die "Error, can't find QtGui !"
+fi
+
+echolog "Checking for Qt4 tools ..."
+
+which $mocqt4 >/dev/null 2>&1
+if [ "$?" != 0 ]; then
+  which moc >/dev/null 2>&1
+  [ "$?" != 0 ] && die "Error, can't find 'moc' !"
+  mocqt4=moc
+fi
+which $uicqt4 >/dev/null 2>&1
+if [ "$?" != 0 ]; then
+  which uic >/dev/null 2>&1
+  [ "$?" != 0 ] && die "Error, can't find 'uic' !"
+  uicqt4=uic
+fi
+which $rccqt4 >/dev/null 2>&1
+if [ "$?" != 0 ]; then
+  which rcc >/dev/null 2>&1
+  [ "$?" != 0 ] && die "Error, can't find 'rcc' !"
+  rccqt4=rcc
+fi
+which $lupdateqt4 >/dev/null 2>&1
+if [ "$?" != 0 ]; then
+  which lupdate >/dev/null 2>&1
+  [ "$?" != 0 ] && die "Error, can't find 'lupdate' !"
+  lupdateqt4=lupdate
+fi
+which $lreleaseqt4 >/dev/null 2>&1
+if [ "$?" != 0 ]; then
+  which lrelease >/dev/null 2>&1
+  [ "$?" != 0 ] && die "Error, can't find 'lrelease' !"
+  lreleaseqt4=lrelease
+fi
+
+#################################################
+#   check for libduck
+#################################################
+if [ -n "$libduckdir" ]; then
+  check_cppflags -I$libduckdir/include
+  check_ldflags -L$libduckdir/lib
+fi
+
+echolog "Checking for libduck ... "
+check_lib_version libduck "0.0.0" "1.0.0"
+[ "$?" != 0 ] && die "Error, can't find libduck or bad version !"
+check_lib_pkgcfg libduck duck.h duck_init -lduck
+[ "$?" != 0 ] && die "Error, can't find libduck !"
+
+#################################################
+#   check for libvlc
+#################################################
+if [ -n "$libvlcdir" ]; then
+  check_cppflags -I$libvlcdir/include
+  check_ldflags -L$libvlcdir/lib
+fi
+
+echolog "Checking for libvlc ... "
+check_lib_pkgcfg libvlc vlc/vlc.h libvlc_new -lvlc
+[ "$?" != 0 ] && die "Error, can't find libvlc !"
+
+#################################################
+#   version
+#################################################
+get_version(){
+    local name file version
+    name=$1
+    file=src/$2
+    eval $(grep "#define ${name}_VERSION_M" "$file" | awk '{ print $2"="$3 }')
+    eval version=\$${name}_VERSION_MAJOR.\$${name}_VERSION_MINOR.\$${name}_VERSION_MICRO
+    echo $version
+}
+
+VERSION=`get_version DAISYDUCK common.h`
+
+
+# Add all extralibs provided by the pkgconfig files
+[ -n "$pkgconfig_requires" ] && add_extralibs `pkg-config $pkgconfig_requires --libs`
+
+# Path for the translations
+add_cppflags -DDAISYDUCK_TS_PATH=\\\\\\\"$sharedir/daisyduck/ts\\\\\\\"
+
+
+#################################################
+#   logging result
+#################################################
+echolog ""
+echolog "Daisy says: configure is OK"
+echolog "  version            $VERSION"
+echolog "configuration:"
+echolog "  install prefix     $PREFIX"
+echolog "  C++ compiler       $cxx"
+echolog "  AR                 $ar"
+echolog "  RANLIB             $ranlib"
+echolog "  STRIP              $strip"
+echolog "  make               $make"
+echolog "  Architecture       $arch ($cpu)"
+echolog "  big-endian         ${bigendian-no}"
+echolog "  debug symbols      $debug"
+echolog "  strip symbols      $dostrip"
+echolog "  optimize           $optimize"
+echolog ""
+echolog "  CXXFLAGS           $CXXFLAGS $CPPFLAGS"
+echolog "  LDFLAGS            $LDFLAGS"
+echolog "  extralibs          $extralibs"
+echolog ""
+
+#################################################
+#   save configs attributes
+#################################################
+echolog "Daisy is creating config.mak ..."
+
+echo "# Automatically generated by configure - do not modify!" > $CONFIGFILE
+
+append_config "PREFIX=$PREFIX"
+append_config "prefix=\$(DESTDIR)\$(PREFIX)"
+append_config "bindir=\$(DESTDIR)$bindir"
+append_config "libdir=\$(DESTDIR)$libdir"
+append_config "includedir=\$(DESTDIR)$includedir"
+append_config "sharedir=\$(DESTDIR)$sharedir"
+append_config "docdir=\$(DESTDIR)$docdir"
+append_config "mandir=\$(DESTDIR)$mandir"
+
+append_config "MAKE=$make"
+append_config "CXX=$cxx"
+append_config "AR=$ar"
+append_config "RANLIB=$ranlib"
+append_config "LN=ln"
+
+append_config "MOCQT4=$mocqt4"
+append_config "UICQT4=$uicqt4"
+append_config "RCCQT4=$rccqt4"
+append_config "LUPDATEQT4=$lupdateqt4"
+append_config "LRELEASEQT4=$lreleaseqt4"
+
+append_config "BUILD_DYLIB=$dylib"
+append_config "BUILD_MINGW32=$mingw32"
+
+append_config "VERSION=$VERSION"
+
+if enabled dostrip; then
+  append_config "STRIP=$strip"
+  append_config "INSTALLSTRIP=$installstrip"
+else
+  append_config "STRIP=echo ignoring strip"
+  append_config "INSTALLSTRIP="
+fi
+append_config "EXTRALIBS=$extralibs"
+
+append_config "CFG_CPPFLAGS=$CPPFLAGS"
+append_config "OPTFLAGS=$CXXFLAGS"
+append_config "CFG_LDFLAGS=$LDFLAGS"
+append_config "INSTALL=$INSTALL"
+
+if enabled bigendian; then
+  append_config "WORDS_BIGENDIAN=yes"
+fi
+
+append_config "DEBUG=$debug"
+
+clean
+exit 0
