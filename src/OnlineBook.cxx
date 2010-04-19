@@ -139,6 +139,8 @@ OnlineBook::downloadList (void)
   QByteArray path;
   QNetworkRequest req (url);
 
+  this->setEnabled (false);
+
   this->treeBooks->clear ();
   this->rep = this->net->post (req, this->list_args);
 
@@ -236,6 +238,7 @@ OnlineBook::downloadFinished (void)
   }
 
   this->winBar->clearMessage ();
+  this->setEnabled (true);
 
   if (!treeBooks->topLevelItemCount ())
   {
@@ -531,4 +534,5 @@ OnlineBook::flush (void)
 
   this->smilqty = 0;
   this->progressDialog->reset ();
+  this->setEnabled (true);
 }
