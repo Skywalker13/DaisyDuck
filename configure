@@ -856,13 +856,13 @@ fi
 echolog "Checking for QtXml ..."
 check_lib_pkgcfg QtXml QtXml/QtXml QDomImplementation::invalidDataPolicy -lQtXml
 if [ "$?" != 0 ]; then
-  check_lib QtXml/QtXml QDomImplementation::invalidDataPolicy -lQtXml4 || die "Error, can't find QtGui !"
+  check_lib QtXml/QtXml QDomImplementation::invalidDataPolicy -lQtXml4 || die "Error, can't find QtXml !"
 fi
 
 echolog "Checking for QtNetwork ..."
 check_lib_pkgcfg QtNetwork QtNetwork/QtNetwork QNetworkInterface::interfaceFromName -lQtNetwork
 if [ "$?" != 0 ]; then
-  check_lib QtNetwork/QtNetwork QNetworkInterface::interfaceFromName -lQtNetwork4 || die "Error, can't find QtGui !"
+  check_lib QtNetwork/QtNetwork QNetworkInterface::interfaceFromName -lQtNetwork4 || die "Error, can't find QtNetwork !"
 fi
 
 echolog "Checking for Qt4 tools ..."
