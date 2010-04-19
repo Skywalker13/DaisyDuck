@@ -28,10 +28,23 @@
 
 #include "DaisyDuck.h"
 
+#ifdef Q_WS_X11
+#include <X11/Xlib.h>
+#endif /* Q_WS_X11 */
+
 
 int
 main (int argc, char **argv)
 {
+  /*
+   * This hack is needed to prevent races between Qt and libVLC. According
+   * to the fact that Qt is initialized before VLC, and VLC uses XInitThreads
+   * internally, it can have unexpected behaviours. With Qt 4.7.x,
+   * XInitThreads() will be called by QApplication.
+   */
+#ifdef Q_WS_X11
+  XInitThreads ();
+#endif /* Q_WS_X11 */
   int rc;
   DaisyDuck *winMain;
   QApplication app (argc, argv);

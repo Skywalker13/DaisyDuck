@@ -40,6 +40,7 @@ show_help(){
   echo "  --with-libqt4-dir           check for Qt4 installed in DIR"
   echo "  --with-libduck-dir          check for libduck in DIR"
   echo "  --with-libvlc-dir           check for libvlc in DIR"
+  echo "  --with-libX11-dir           check for libX11 in DIR"
   echo ""
   echo "Advanced options (experts only):"
   echo "  --arch=ARCH                 force architecture"
@@ -231,6 +232,19 @@ check_cpp(){
     cat >$TMPC
     log_file $TMPC
     check_cmd $cxx $CPPFLAGS $CXXFLAGS "$@" -E -o $TMPO $TMPC
+}
+
+check_cpp_define(){
+    log check_define "$@"
+    header=$1
+    define=$2
+    shift 2
+    check_cpp "$@" <<EOF
+#include <$header>
+#ifndef $define
+#error "unsatisfied condition: $define"
+#endif
+EOF
 }
 
 check_ld(){
@@ -495,6 +509,7 @@ INSTALL="install"
 VERSION=""
 pkgconfig_requires=""
 pkgconfig_libs=""
+x11="no"
 mocqt4=moc-qt4
 uicqt4=uic-qt4
 rccqt4=rcc-qt4
@@ -552,6 +567,8 @@ for opt do
   --with-libduck-dir=*) libduckdir="$optval";
   ;;
   --with-libvlc-dir=*) libvlcdir="$optval";
+  ;;
+  --with-libX11-dir=*) libx11dir="$optval";
   ;;
   --enable-pic) pic="yes";
   ;;
@@ -865,6 +882,9 @@ if [ "$?" != 0 ]; then
   check_lib QtNetwork/QtNetwork QNetworkInterface::interfaceFromName -lQtNetwork4 || die "Error, can't find QtNetwork !"
 fi
 
+check_cpp_define QtGui/QtGui Q_WS_X11
+[ "$?" = 0 ] && enable x11
+
 echolog "Checking for Qt4 tools ..."
 
 which $mocqt4 >/dev/null 2>&1
@@ -896,6 +916,20 @@ if [ "$?" != 0 ]; then
   which lrelease >/dev/null 2>&1
   [ "$?" != 0 ] && die "Error, can't find 'lrelease' !"
   lreleaseqt4=lrelease
+fi
+
+#################################################
+#   check for libX11
+#################################################
+if enabled x11; then
+  if [ -n "$libx11dir" ]; then
+    check_cppflags -I$libx11dir/include
+    check_ldflags -L$libx11dir/lib
+  fi
+
+  echolog "Checking for libX11 ..."
+  check_lib_pkgcfg x11 X11/Xlib.h XInitThreads -lX11
+  [ "$?" != 0 ] && die "Error, can't find libX11"
 fi
 
 #################################################
