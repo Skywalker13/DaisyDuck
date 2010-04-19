@@ -140,7 +140,6 @@ DaisyDuck::DaisyDuck (void)
 
   /* Configuration file */
   cfgfile = Config::configPath () + Config::configDefault ();
-  fprintf(stderr, "%s\n", cfgfile.toAscii ().data ());
   this->cfg = new Config (cfgfile);
 
   /* Online books */
