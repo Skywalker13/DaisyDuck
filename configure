@@ -757,8 +757,6 @@ if test -n "`$cxx -v 2>&1 | grep version | grep mingw`" \
   mingw32="yes"
 fi
 
-enabled mingw32 && fosmount="no"
-
 #################################################
 #   check for target specific flags
 #################################################
