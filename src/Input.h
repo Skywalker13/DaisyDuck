@@ -37,7 +37,7 @@ class Input : public QDialog, private Ui::dialogInput
     Input (QWidget *parent, Config *cfg);
     ~Input (void);
 
-    void showDialog (void);
+    int showDialog (void);
 
   signals:
     void endInput (void);

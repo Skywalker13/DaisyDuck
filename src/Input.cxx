@@ -65,7 +65,7 @@ Input::flush (void)
   this->resize (this->origSize);
 }
 
-void
+int
 Input::showDialog (void)
 {
   int i;
@@ -102,7 +102,11 @@ Input::showDialog (void)
   }
   while (name);
 
+  if (i == FIRST_LINE)
+    return -1;
+
   this->exec ();
+  return 0;
 }
 
 void

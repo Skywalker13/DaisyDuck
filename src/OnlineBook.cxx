@@ -239,8 +239,15 @@ OnlineBook::downloadFinished (void)
 
   if (!treeBooks->topLevelItemCount ())
   {
+    int rc;
+
     this->actionLoad->setEnabled (false);
-    this->input->showDialog ();
+    rc = this->input->showDialog ();
+    if (rc)
+      QMessageBox::warning (this, tr ("Network"),
+                            tr ("The list of books is not reachable. Please, "
+                                "check the values in the \"Settings\" dialog "
+                                "box."));
   }
   else
   {
