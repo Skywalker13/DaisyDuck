@@ -73,7 +73,17 @@
 <context>
     <name>OnlineBook</name>
     <message>
-        <location filename="../src/OnlineBook.cxx" line="+148"/>
+        <location filename="../src/OnlineBook.cxx" line="+46"/>
+        <source>Downloading Daisy files ...</source>
+        <translation>Téléchargement des fichiers Daisy ...</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cancel</source>
+        <translation>Annuler</translation>
+    </message>
+    <message>
+        <location line="+102"/>
         <source>Daisy Duck is trying to load a list...</source>
         <translation>Daisy Duck est en train d&apos;essayer de charger une liste...</translation>
     </message>
@@ -184,6 +194,59 @@
         <location line="-23"/>
         <source>The list of books is not reachable. Please, check that the informations below are rights. If necessary, the values can be configured in the &quot;Settings&quot; dialog box.</source>
         <translation>La liste des livres n&apos;est pas joignable. S&apos;il vous plaît, contrôlez que les informations ci-dessous sont correctes. Si nécessaire, les valeurs peuvent être configurées dans la boîte de dialogue &quot;Paramétrages&quot;.</translation>
+    </message>
+</context>
+<context>
+    <name>dialogOnlineBook</name>
+    <message>
+        <location filename="../src/dialogOnlineBook.ui" line="+23"/>
+        <source>Online Books</source>
+        <translation>Livres en ligne</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>URI:</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>&amp;Refresh the list</source>
+        <translation>&amp;Mettre à jour la liste</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Number</source>
+        <translation>Numéro</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Title</source>
+        <translation>Titre</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Creator</source>
+        <translation>Auteur</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Category</source>
+        <translation>Catégorie</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>&amp;Settings</source>
+        <translation>&amp;Paramétrages</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>&amp;Load</source>
+        <translation>&amp;Charger</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>&amp;Cancel</source>
+        <translation>&amp;Annuler</translation>
     </message>
 </context>
 <context>
@@ -301,7 +364,7 @@ Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: </tr
         <translation></translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+15"/>
         <source>&amp;Open</source>
         <translation>&amp;Ouvrir</translation>
     </message>
@@ -311,7 +374,7 @@ Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: </tr
         <translation></translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+15"/>
         <source>On&amp;line Books</source>
         <translation>&amp;Livres en ligne</translation>
     </message>
@@ -321,27 +384,27 @@ Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: </tr
         <translation></translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+24"/>
         <source>About Daisy Duck</source>
         <translation>A propos de Daisy Duck</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+12"/>
         <source>Player</source>
         <translation>Lecture</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+12"/>
         <source>Welcome</source>
         <translation>Accueil</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="-36"/>
         <source>&amp;Online access</source>
         <translation>&amp;Accès en ligne</translation>
     </message>
     <message>
-        <location line="-556"/>
+        <location line="-568"/>
         <source>Welcome in Daisy Duck, a Daisy 2.02 player for local (hard disc, CD, ...) and online audio books (web streaming).&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;How to open an audio book?&lt;/b&gt;&lt;br/&gt;
@@ -373,54 +436,40 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
 <context>
     <name>winOnlineBook</name>
     <message>
-        <location filename="../src/winOnlineBook.ui" line="+23"/>
         <source>Online Books</source>
-        <translation>Livres en ligne</translation>
+        <translation type="obsolete">Livres en ligne</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>URI:</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location line="+34"/>
         <source>Number</source>
-        <translation>Numéro</translation>
+        <translation type="obsolete">Numéro</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Title</source>
-        <translation>Titre</translation>
+        <translation type="obsolete">Titre</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Creator</source>
-        <translation>Auteur</translation>
+        <translation type="obsolete">Auteur</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Category</source>
-        <translation>Catégorie</translation>
+        <translation type="obsolete">Catégorie</translation>
     </message>
     <message>
-        <location line="-42"/>
         <source>&amp;Refresh the list</source>
-        <translation>&amp;Mettre à jour la liste</translation>
+        <translation type="obsolete">&amp;Mettre à jour la liste</translation>
     </message>
     <message>
-        <location line="+57"/>
         <source>&amp;Settings</source>
-        <translation>&amp;Paramétrages</translation>
+        <translation type="obsolete">&amp;Paramétrages</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>&amp;Load</source>
-        <translation>&amp;Charger</translation>
+        <translation type="obsolete">&amp;Charger</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>&amp;Cancel</source>
-        <translation>&amp;Annuler</translation>
+        <translation type="obsolete">&amp;Annuler</translation>
     </message>
 </context>
 </TS>
