@@ -258,8 +258,10 @@ Config::writeConfig (void)
     for (it  = this->listBookmark.begin ();
          it != this->listBookmark.end (); it++)
     {
+      QDomText text;
+
       tag = doc.createElement ("bookmark");
-      QDomText text = doc.createTextNode ((*it)->hash);
+      text = doc.createTextNode ((*it)->hash);
 
       stag = doc.createElement ("hash");
       stag.appendChild (text);
