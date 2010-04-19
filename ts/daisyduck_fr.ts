@@ -87,7 +87,7 @@
     <message>
         <location line="-292"/>
         <source>The download of the books list has failed. Check that the URI is correct and/or your Internet access.</source>
-        <translation>Le téléchargement de la liste des livres a échoué. Contrôlez que l&apos;URI is correcte et/ou votre accès Internet.</translation>
+        <translation>Le téléchargement de la liste des livres a échoué. Contrôlez que l&apos;URI est correcte et/ou votre accès Internet.</translation>
     </message>
     <message>
         <source>Download failed</source>
