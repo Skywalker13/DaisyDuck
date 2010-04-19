@@ -260,6 +260,9 @@ Config::writeConfig (void)
     {
       QDomText text;
 
+      if ((*it)->smilpos == 1 && (*it)->nodepos == 1)
+        continue;
+
       tag = doc.createElement ("bookmark");
       text = doc.createTextNode ((*it)->hash);
 
