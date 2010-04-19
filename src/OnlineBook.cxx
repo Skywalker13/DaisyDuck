@@ -43,7 +43,8 @@ OnlineBook::OnlineBook (QWidget *parent, Config *cfg) : QMainWindow (parent)
   this->net_smil = new QNetworkAccessManager (this);
 
   this->progressDialog =
-    new QProgressDialog ("Downloading Daisy files ...", "Cancel", 0, 99, this);
+    new QProgressDialog (tr ("Downloading Daisy files ..."),
+                         tr ("Cancel"), 0, 99, this);
   this->progressDialog->setAutoReset (true);
   this->progressDialog->setAutoClose (true);
   this->progressDialog->setWindowModality (Qt::WindowModal);
