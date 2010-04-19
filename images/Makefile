@@ -21,7 +21,7 @@ EXTRADIST = \
 
 all: qrc
 
-../src/qrc_images.cxx: images.qrc
+../src/qrc_images.cxx: $(EXTRADIST) images.qrc
 	$(RCCQT4) -name images images.qrc -o ../src/qrc_images.cxx
 
 qrc: ../src/qrc_images.cxx
