@@ -27,7 +27,7 @@ install: release
 	$(INSTALL) -m 644 $(QM) $(sharedir)/daisyduck/ts
 
 uninstall:
-	rm -rf $(sharedir)/daisyduck/ts
+	rm -rf $(sharedir)/daisyduck
 
 clean:
 	rm -f *.qm
