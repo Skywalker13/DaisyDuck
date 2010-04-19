@@ -4,7 +4,7 @@
 <context>
     <name></name>
     <message>
-        <location filename="../src/DaisyDuck.cxx" line="+646"/>
+        <location filename="../src/DaisyDuck.cxx" line="+645"/>
         <source>Unknown</source>
         <translation>Inconnu</translation>
     </message>
@@ -83,28 +83,34 @@
         <translation>Annuler</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+104"/>
         <source>Daisy Duck is trying to load a list...</source>
         <translation>Daisy Duck est en train d&apos;essayer de charger une liste...</translation>
     </message>
     <message>
         <location line="+14"/>
-        <location line="+197"/>
+        <location line="+85"/>
+        <location line="+120"/>
         <location line="+96"/>
         <source>Network</source>
         <translation>Réseau</translation>
     </message>
     <message>
-        <location line="-292"/>
+        <location line="-300"/>
         <source>The download of the books list has failed. Check that the URI is correct and/or your Internet access.</source>
         <translation>Le téléchargement de la liste des livres a échoué. Contrôlez que l&apos;URI est correcte et/ou votre accès Internet.</translation>
+    </message>
+    <message>
+        <location line="+85"/>
+        <source>The list of books is not reachable. Please, check the values in the &quot;Settings&quot; dialog box.</source>
+        <translation>La liste des livres n&apos;est pas joignable. S&apos;il vous plaît, contrôlez les valeurs dans la boîte de dialogue &quot;Paramétrages&quot;.</translation>
     </message>
     <message>
         <source>Download failed</source>
         <translation type="obsolete">Echec du téléchargement</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+119"/>
         <location line="+96"/>
         <source>Book download failed</source>
         <translation>Echec du téléchargement du livre</translation>
@@ -118,9 +124,9 @@
         <translation>A propos de Daisy Duck</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>Daisy Duck is a free software for playing online and local DTB (Digital Talking Books). It supports the Daisy specifications through the libduck library. It relies on Qt4 for the GUI and libVLC for the audio playing. </source>
-        <translation>Daisy Duck est un logiciel libre pour la lecture en ligne et locale de DTB (Digital Talking Books). Il supporte les spécifications Daisy via la bibliothèque libduck. Il compte sur Qt4 pour le GUI and libVLC pour la lecture audio.</translation>
+        <translation>Daisy Duck est un logiciel libre pour la lecture en ligne et locale de DTB (Digital Talking Books). Il supporte les spécifications Daisy via la bibliothèque libduck. Il se base sur Qt4 pour le GUI et libvlc pour la lecture audio.</translation>
     </message>
     <message utf8="true">
         <location line="+13"/>
