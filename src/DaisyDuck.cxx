@@ -729,7 +729,7 @@ DaisyDuck::openBook (QString book, QString summary)
       itemc->setData (0, Qt::UserRole, id);
       item[level - 2]->addChild (itemc);
 
-      if (!item[level - 1] || level_p > level)
+      if (!item[level - 1] || level_p >= level)
         item[level - 1] = itemc;
     }
 
