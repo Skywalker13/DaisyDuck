@@ -24,7 +24,7 @@
 
 #include <duck.h>
 
-#include "winOnlineBook.h"
+#include "dialogOnlineBook.h"
 
 class QNetworkAccessManager;
 class QNetworkReply;
@@ -39,7 +39,7 @@ struct DaisyFiles {
   int             smilpos;
 };
 
-class OnlineBook : public QMainWindow, private Ui::winOnlineBook
+class OnlineBook : public QDialog, private Ui::dialogOnlineBook
 {
   Q_OBJECT
 

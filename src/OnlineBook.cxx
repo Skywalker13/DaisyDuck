@@ -30,7 +30,7 @@
 #include "OnlineBook.h"
 
 
-OnlineBook::OnlineBook (QWidget *parent, Config *cfg) : QMainWindow (parent)
+OnlineBook::OnlineBook (QWidget *parent, Config *cfg) : QDialog (parent)
 {
   this->setupUi (this);
   this->cfg = cfg;

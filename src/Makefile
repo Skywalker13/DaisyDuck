@@ -35,8 +35,8 @@ UI = \
 	dialogAbout.ui \
 	dialogConfig.ui \
 	dialogInput.ui \
+	dialogOnlineBook.ui \
 	winMain.ui \
-	winOnlineBook.ui \
 
 MOCS = $(H_MOC:.h=_moc.cxx)
 UIS  = $(UI:.ui=.h)
