@@ -1,0 +1,15 @@
+syntax: regexp
+\.o
+\.so
+\.depend
+\.a
+\.qm
+\.swp
+~$
+config\.log
+config\.mak
+daisyduck$
+dialog.*\.h$
+win.*\.h$
+qrc_.*\.cxx$
+_moc\.cxx$
