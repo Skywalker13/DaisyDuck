@@ -38,7 +38,10 @@
    <iconset resource="../images/images.qrc">
     <normaloff>:/img/daisyduck.png</normaloff>:/img/daisyduck.png</iconset>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
+  <layout class="QGridLayout" name="gridLayout" columnminimumwidth="0,0">
+   <property name="horizontalSpacing">
+    <number>12</number>
+   </property>
    <item row="0" column="1">
     <widget class="QLabel" name="label">
      <property name="text">
