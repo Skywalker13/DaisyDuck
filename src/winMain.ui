@@ -620,6 +620,9 @@ The settings part is only intended to be used by the advanced users and speciall
    <property name="shortcut">
     <string>Ctrl+Q</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
   </action>
   <action name="actionOpen">
    <property name="checkable">
@@ -635,6 +638,12 @@ The settings part is only intended to be used by the advanced users and speciall
    <property name="shortcut">
     <string>Ctrl+O</string>
    </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionOnlineBooks">
    <property name="icon">
@@ -647,6 +656,9 @@ The settings part is only intended to be used by the advanced users and speciall
    <property name="shortcut">
     <string>Ctrl+L</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionOnlineAccess">
    <property name="icon">
@@ -655,6 +667,9 @@ The settings part is only intended to be used by the advanced users and speciall
    </property>
    <property name="text">
     <string>&amp;Online access</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
    </property>
   </action>
   <action name="actionAbout">
@@ -665,6 +680,9 @@ The settings part is only intended to be used by the advanced users and speciall
    <property name="text">
     <string>About Daisy Duck</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
   </action>
   <action name="actionPlayer">
    <property name="icon">
@@ -674,6 +692,9 @@ The settings part is only intended to be used by the advanced users and speciall
    <property name="text">
     <string>Player</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
   </action>
   <action name="actionHelp">
    <property name="icon">
@@ -682,6 +703,9 @@ The settings part is only intended to be used by the advanced users and speciall
    </property>
    <property name="text">
     <string>Welcome</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
    </property>
   </action>
  </widget>
