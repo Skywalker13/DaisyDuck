@@ -61,18 +61,24 @@ class Config
     void getBookmark (QString hash, int *smilpos, int *nodepos);
     void delBookmark (QString hash);
 
+    /* Custom items */
+    void getCustom (const QString **title, const QString **text);
+
     void writeConfig (void);
 
     static QString configPath (void);
     static QString configDefault (void);
 
   private:
+    void parseCustom (const QDomElement *item);
     void parseOnlinebook (const QDomElement *item);
     void parseBookmark (const QDomElement *item);
 
     bool remember;
     QString cfg;
     QString uri;
+    QString title;
+    QString text;
     QList<struct UriArgs *> uriArgs;
     QList<struct Bookmark *> listBookmark;
 };

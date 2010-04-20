@@ -43,6 +43,7 @@ DaisyDuck::DaisyDuck (void)
   const char *vlc_argv[16];
   char useragent[256];
   libvlc_event_manager_t *ev;
+  const QString *title, *text;
 
   this->setupUi (this);
   this->daisyState = DAISY_IS_SLEEPING;
@@ -155,6 +156,10 @@ DaisyDuck::DaisyDuck (void)
 
   /* Simple dialog box */
   this->dialogAbout = new About (this);
+
+  this->cfg->getCustom (&title, &text);
+  this->labelCustomTitle->setText (*title);
+  this->labelCustomText->setText (*text);
 }
 
 DaisyDuck::~DaisyDuck (void)

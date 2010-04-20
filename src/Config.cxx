@@ -57,7 +57,9 @@ Config::Config (QString cfg)
 
     it = node.toElement ();
 
-    if (it.tagName () == "onlinebook")
+    if (it.tagName () == "custom")
+      this->parseCustom (&it);
+    else if (it.tagName () == "onlinebook")
       this->parseOnlinebook (&it);
     else if (it.tagName () == "bookmark")
       this->parseBookmark (&it);
@@ -212,6 +214,13 @@ Config::delBookmark (QString hash)
 }
 
 void
+Config::getCustom (const QString **title, const QString **text)
+{
+  *title = &this->title;
+  *text  = &this->text;
+}
+
+void
 Config::writeConfig (void)
 {
   QDomDocument doc ("daisyduckcfg");
@@ -222,6 +231,25 @@ Config::writeConfig (void)
 
   root = doc.createElement ("daisyduckcfg");
   doc.appendChild (root);
+
+  tag = doc.createElement ("custom");
+  root.appendChild (tag);
+
+  if (!this->title.isEmpty ())
+  {
+    QDomText text = doc.createTextNode (this->title);
+    stag = doc.createElement ("title");
+    stag.appendChild (text);
+    tag.appendChild (stag);
+  }
+
+  if (!this->text.isEmpty ())
+  {
+    QDomText text = doc.createTextNode (this->text);
+    stag = doc.createElement ("text");
+    stag.appendChild (text);
+    tag.appendChild (stag);
+  }
 
   tag = doc.createElement ("onlinebook");
   root.appendChild (tag);
@@ -326,6 +354,36 @@ Config::configDefault (void)
 /*                               Private API                                */
 /*                                                                          */
 /****************************************************************************/
+
+void
+Config::parseCustom (const QDomElement *item)
+{
+  bool title_done = false, text_done = false;
+  QDomNode node;
+
+  node = item->firstChild ();
+
+  for (; !node.isNull (); node = node.nextSibling ())
+  {
+    QDomElement it;
+
+    it = node.toElement ();
+
+    if (!title_done && it.tagName () == "title")
+    {
+      this->title = it.text ();
+      title_done = true;
+    }
+    else if (!text_done && it.tagName () == "text")
+    {
+      this->text = it.text ();
+      text_done = true;
+    }
+
+    if (title_done && text_done)
+      break;
+  }
+}
 
 void
 Config::parseOnlinebook (const QDomElement *item)
