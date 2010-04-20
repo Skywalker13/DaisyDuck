@@ -189,6 +189,9 @@ The settings part is only intended to be used by the advanced users and speciall
               <property name="alignment">
                <set>Qt::AlignJustify|Qt::AlignTop</set>
               </property>
+              <property name="openExternalLinks">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item>
