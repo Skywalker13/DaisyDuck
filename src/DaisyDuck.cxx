@@ -376,7 +376,7 @@ DaisyDuck::playerPlay (void)
   QKeySequence keys;
 
   rc = duck_node_getinfo (this->duck, DUCK_NODE_S_AUDIO_URI, &res);
-  if (rc)
+  if (rc || !res.s)
     return;
 
   /*
@@ -660,7 +660,7 @@ DaisyDuck::customUpdate (void)
 
 #define BOOK_SETLABEL_INFO(l, e)                  \
   rc = duck_book_getinfo (this->duck, e, &res);   \
-  if (!rc)                                        \
+  if (!rc || !res.s)                              \
   {                                               \
     this->l->setText (res.s);                     \
     free (res.s);                                 \
@@ -736,6 +736,9 @@ DaisyDuck::openBook (QString book, QString summary)
     rc = duck_smilnode_getinfo (this->duck, DUCK_SMILNODE_S_HEADER, &res);
     if (rc)
       continue;
+
+    if (!res.s)
+      res.s = strdup (tr ("Undefined").toAscii ());
 
     if (level == 1)
     {
