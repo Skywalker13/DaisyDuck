@@ -33,7 +33,7 @@ SRCS_MOC = \
 
 UI = \
 	dialogAbout.ui \
-	dialogConfig.ui \
+	dialogConfigAccess.ui \
 	dialogInput.ui \
 	dialogOnlineBook.ui \
 	winMain.ui \

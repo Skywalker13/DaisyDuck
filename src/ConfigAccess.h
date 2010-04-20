@@ -22,7 +22,7 @@
 #ifndef CONFIGACCESS_H
 #define CONFIGACCESS_H
 
-#include "dialogConfig.h"
+#include "dialogConfigAccess.h"
 
 class Config;
 
