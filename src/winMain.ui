@@ -21,8 +21,8 @@
    <string>Daisy Duck</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>../images/daisyduck.png</normaloff>../images/daisyduck.png</iconset>
+   <iconset resource="../images/images.qrc">
+    <normaloff>:/img/daisyduck.png</normaloff>:/img/daisyduck.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">
