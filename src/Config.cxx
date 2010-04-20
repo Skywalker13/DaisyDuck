@@ -226,9 +226,9 @@ Config::writeConfig (void)
   tag = doc.createElement ("onlinebook");
   root.appendChild (tag);
 
-  if (!uri.isEmpty ())
+  if (!this->uri.isEmpty ())
   {
-    QDomText text = doc.createTextNode (uri);
+    QDomText text = doc.createTextNode (this->uri);
     stag = doc.createElement ("uri");
     stag.appendChild (text);
     tag.appendChild (stag);
