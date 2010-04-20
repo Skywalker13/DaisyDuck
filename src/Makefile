@@ -11,6 +11,7 @@ APPS_LDFLAGS = $(CFG_LDFLAGS) $(LDFLAGS)
 SRCS = \
 	Config.cxx \
 	ConfigAccess.cxx \
+	ConfigCustom.cxx \
 	DaisyDuck.cxx \
 	Input.cxx \
 	OnlineBook.cxx \
@@ -27,6 +28,7 @@ H_MOC = \
 
 SRCS_MOC = \
 	ConfigAccess_moc.cxx \
+	ConfigCustom_moc.cxx \
 	DaisyDuck_moc.cxx \
 	Input_moc.cxx \
 	OnlineBook_moc.cxx \
@@ -34,6 +36,7 @@ SRCS_MOC = \
 UI = \
 	dialogAbout.ui \
 	dialogConfigAccess.ui \
+	dialogConfigCustom.ui \
 	dialogInput.ui \
 	dialogOnlineBook.ui \
 	winMain.ui \

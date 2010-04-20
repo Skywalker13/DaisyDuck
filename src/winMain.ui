@@ -597,6 +597,7 @@ The settings part is only intended to be used by the advanced users and speciall
      <string>&amp;Settings</string>
     </property>
     <addaction name="actionOnlineAccess"/>
+    <addaction name="actionConfigCustom"/>
    </widget>
    <widget class="QMenu" name="menu_About">
     <property name="title">
@@ -738,6 +739,18 @@ The settings part is only intended to be used by the advanced users and speciall
    </property>
    <property name="text">
     <string>Welcome</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionConfigCustom">
+   <property name="icon">
+    <iconset resource="../images/images.qrc">
+     <normaloff>:/img/settings.png</normaloff>:/img/settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Customizations</string>
    </property>
    <property name="iconVisibleInMenu">
     <bool>false</bool>

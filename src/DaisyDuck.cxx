@@ -43,7 +43,6 @@ DaisyDuck::DaisyDuck (void)
   const char *vlc_argv[16];
   char useragent[256];
   libvlc_event_manager_t *ev;
-  const QString *title, *text;
 
   this->setupUi (this);
   this->daisyState = DAISY_IS_SLEEPING;
@@ -64,6 +63,8 @@ DaisyDuck::DaisyDuck (void)
            this, SLOT (actionOnlineBooks_activated ()));
   connect (actionOnlineAccess, SIGNAL (activated ()),
            this, SLOT (actionOnlineAccess_activated ()));
+  connect (actionConfigCustom, SIGNAL (activated ()),
+           this, SLOT (actionConfigCustom_activated ()));
   connect (actionPlayer, SIGNAL (activated ()),
            this, SLOT (actionPlayer_activated ()));
   connect (actionHelp, SIGNAL (activated ()),
@@ -154,12 +155,13 @@ DaisyDuck::DaisyDuck (void)
   /* Dialog to configure online access */
   this->dialogConfig = new ConfigAccess (this, this->cfg);
 
+  /* Dialog to configure custom informations */
+  this->dialogConfigCustom = new ConfigCustom (this, this->cfg);
+
   /* Simple dialog box */
   this->dialogAbout = new About (this);
 
-  this->cfg->getCustom (&title, &text);
-  this->labelCustomTitle->setText (*title);
-  this->labelCustomText->setText (*text);
+  this->customUpdate ();
 }
 
 DaisyDuck::~DaisyDuck (void)
@@ -236,6 +238,13 @@ void
 DaisyDuck::actionOnlineAccess_activated (void)
 {
   this->dialogConfig->showDialog ();
+}
+
+void
+DaisyDuck::actionConfigCustom_activated (void)
+{
+  this->dialogConfigCustom->showDialog ();
+  this->customUpdate ();
 }
 
 void
@@ -637,6 +646,16 @@ DaisyDuck::selectionUpdate (void)
   this->cfg->setBookmark (this->hash, smilpos, nodepos);
 
   emit this->treeUpdate ();
+}
+
+void
+DaisyDuck::customUpdate (void)
+{
+  const QString *title, *text;
+
+  this->cfg->getCustom (&title, &text);
+  this->labelCustomTitle->setText (*title);
+  this->labelCustomText->setText (*text);
 }
 
 #define BOOK_SETLABEL_INFO(l, e)                  \

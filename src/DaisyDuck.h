@@ -27,6 +27,7 @@
 
 #include "OnlineBook.h"
 #include "ConfigAccess.h"
+#include "ConfigCustom.h"
 
 #include "winMain.h"
 #include "dialogAbout.h"
@@ -62,6 +63,7 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
     void actionOpen_activated (void);
     void actionOnlineBooks_activated (void);
     void actionOnlineAccess_activated (void);
+    void actionConfigCustom_activated (void);
     void actionPlayer_activated (void);
     void actionHelp_activated (void);
     void actionAbout_activated (void);
@@ -94,6 +96,7 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
     void playerSeek (int smilpos, int smilnode);
 
     void selectionUpdate (void);
+    void customUpdate (void);
     void openBook (QString book, QString summary);
 
     static void vlc_event_cb (const libvlc_event_t *ev, void *data);
@@ -102,6 +105,7 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
     QString       hash;
     OnlineBook   *winOnlineBook;
     ConfigAccess *dialogConfig;
+    ConfigCustom *dialogConfigCustom;
     About        *dialogAbout;
     static const libvlc_event_type_t vlc_events_map[];
 
