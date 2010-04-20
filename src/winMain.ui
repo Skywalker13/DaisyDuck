@@ -17,6 +17,12 @@
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>845</width>
+    <height>700</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Daisy Duck</string>
   </property>
