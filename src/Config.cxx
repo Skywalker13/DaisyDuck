@@ -220,6 +220,15 @@ Config::getCustom (const QString **title, const QString **text)
   *text  = &this->text;
 }
 
+#define APPEND_DOMTEXT(s)                         \
+  if (!this->s.isEmpty ())                        \
+  {                                               \
+    QDomText text = doc.createTextNode (this->s); \
+    stag = doc.createElement (#s);                \
+    stag.appendChild (text);                      \
+    tag.appendChild (stag);                       \
+  }
+
 void
 Config::writeConfig (void)
 {
@@ -235,32 +244,13 @@ Config::writeConfig (void)
   tag = doc.createElement ("custom");
   root.appendChild (tag);
 
-  if (!this->title.isEmpty ())
-  {
-    QDomText text = doc.createTextNode (this->title);
-    stag = doc.createElement ("title");
-    stag.appendChild (text);
-    tag.appendChild (stag);
-  }
-
-  if (!this->text.isEmpty ())
-  {
-    QDomText text = doc.createTextNode (this->text);
-    stag = doc.createElement ("text");
-    stag.appendChild (text);
-    tag.appendChild (stag);
-  }
+  APPEND_DOMTEXT (title)
+  APPEND_DOMTEXT (text)
 
   tag = doc.createElement ("onlinebook");
   root.appendChild (tag);
 
-  if (!this->uri.isEmpty ())
-  {
-    QDomText text = doc.createTextNode (this->uri);
-    stag = doc.createElement ("uri");
-    stag.appendChild (text);
-    tag.appendChild (stag);
-  }
+  APPEND_DOMTEXT (uri)
 
   stag = doc.createElement ("uriparam");
   for (it = this->uriArgs.begin (); it != this->uriArgs.end (); it++)
