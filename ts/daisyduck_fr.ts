@@ -4,7 +4,7 @@
 <context>
     <name></name>
     <message>
-        <location filename="../src/DaisyDuck.cxx" line="+645"/>
+        <location filename="../src/DaisyDuck.cxx" line="+669"/>
         <source>Unknown</source>
         <translation>Inconnu</translation>
     </message>
@@ -30,7 +30,7 @@
 <context>
     <name>DaisyDuck</name>
     <message>
-        <location filename="../src/DaisyDuck.cxx" line="-439"/>
+        <location filename="../src/DaisyDuck.cxx" line="-456"/>
         <source>Open File</source>
         <translation>Ouvrir un fichier</translation>
     </message>
@@ -40,7 +40,7 @@
         <translation></translation>
     </message>
     <message>
-        <location line="+179"/>
+        <location line="+186"/>
         <source>Daisy Duck is reading...</source>
         <translation>Daisy Duck est en train de lire...</translation>
     </message>
@@ -50,7 +50,7 @@
         <translation>Daisy Duck est en train de dormir...</translation>
     </message>
     <message>
-        <location line="+272"/>
+        <location line="+282"/>
         <source>Not available</source>
         <translation>Non disponible</translation>
     </message>
@@ -60,7 +60,7 @@
         <translation>Ce livre a été interrompu, pressez &quot;lire&quot; pour reprendre.</translation>
     </message>
     <message>
-        <location line="-353"/>
+        <location line="-363"/>
         <source>Stop</source>
         <translation>Arrêt</translation>
     </message>
@@ -121,7 +121,7 @@
     <message>
         <location filename="../src/dialogAbout.ui" line="+35"/>
         <source>About Daisy Duck</source>
-        <translation>A propos de Daisy Duck</translation>
+        <translation>À propos de Daisy Duck</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -142,7 +142,7 @@
         <translation type="obsolete">Daisy Duck est un programme pour la lecture en ligne et locale de DTB (Digital Talking Books). Il supporte les spécifications Daisy via la bibliothèque libduck. Il compte sur Qt4 pour le GUI and libVLC pour la lecture audio.</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+16"/>
         <source>This program is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version.&lt;br/&gt;&lt;br/&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.&lt;br/&gt;&lt;br/&gt;You should have received a copy of the GNU Lesser General Public License along with this program; If not, see &amp;lt;&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;http://www.gnu.org/licenses/&lt;/a&gt;&amp;gt;.</source>
         <translation></translation>
     </message>
@@ -154,7 +154,7 @@
 <context>
     <name>dialogConfig</name>
     <message>
-        <location filename="../src/dialogConfig.ui" line="+35"/>
+        <location filename="../src/dialogConfigAccess.ui" line="+35"/>
         <source>Online access settings</source>
         <translation>Accès en ligne, paramétrages</translation>
     </message>
@@ -182,6 +182,29 @@
         <location line="+16"/>
         <source>If you press &quot;OK&quot;, the &quot;Value&quot; fields will be written as-are in the config file, even if you have unchecked &quot;remember&quot; in the Inputs dialog box (when trying to load a list of online books).</source>
         <translation>Si vous pressez &quot;OK&quot;, les champs &quot;Valeur&quot; seront écrits tel-quels dans le fichier de configuration, même si vous avez décohez &quot;se souvenir&quot; dans la boîte de dialogue &quot;Entrées&quot; (lors d&apos;une tentative de chargement d&apos;une liste de livres en ligne).</translation>
+    </message>
+</context>
+<context>
+    <name>dialogConfigCustom</name>
+    <message>
+        <location filename="../src/dialogConfigCustom.ui" line="+35"/>
+        <source>Customizations</source>
+        <translation>Personnalisations</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Title</source>
+        <translation>Titre</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Text</source>
+        <translation>Texte</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>The following values are shown in the &quot;Welcome&quot; frame.</source>
+        <translation>Les valeurs suivantes sont affichées dans le cadre &quot;Accueil&quot;.</translation>
     </message>
 </context>
 <context>
@@ -285,7 +308,7 @@ Pour les livres locaux, sélectionnez &quot;Fichier-&gt;Ouvrir&quot; or &lt;i&gt
 Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: </translation>
     </message>
     <message>
-        <location line="+182"/>
+        <location line="+217"/>
         <source>Chapters</source>
         <translation>Chapitres</translation>
     </message>
@@ -350,7 +373,7 @@ Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: </tr
         <translation>&amp;Paramétrages</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>&amp;Help</source>
         <translation>&amp;Aide</translation>
     </message>
@@ -392,7 +415,7 @@ Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: </tr
     <message>
         <location line="+24"/>
         <source>About Daisy Duck</source>
-        <translation>A propos de Daisy Duck</translation>
+        <translation>À propos de Daisy Duck</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -405,12 +428,17 @@ Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: </tr
         <translation>Accueil</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="+12"/>
+        <source>&amp;Customizations</source>
+        <translation>P&amp;ersonnalisations</translation>
+    </message>
+    <message>
+        <location line="-48"/>
         <source>&amp;Online access</source>
         <translation>&amp;Accès en ligne</translation>
     </message>
     <message>
-        <location line="-568"/>
+        <location line="-601"/>
         <source>Welcome in Daisy Duck, a Daisy 2.02 player for local (hard disc, CD, ...) and online audio books (web streaming).&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;How to open an audio book?&lt;/b&gt;&lt;br/&gt;
@@ -427,10 +455,10 @@ The settings part is only intended to be used by the advanced users and speciall
         <translation>Bienvenue dans Daisy Duck, un lecteur Daisy 2.02 pour livre audio locaux (disque dur, CD, ...) et en ligne (web streaming).&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;Comment ouvrir un livre audio?&lt;/b&gt;&lt;br/&gt;
-Pour les livres locaux, sélectionnez &quot;Fichier-&gt;Ouvrir&quot; or &lt;i&gt;CTRL-O&lt;/i&gt;. Pour les livres en ligne, sélectionnez &quot;Fichier-&gt;Livres en ligne&quot; ou &lt;i&gt;CTRL-L&lt;/i&gt;.&lt;br/&gt;
+Pour les livres locaux, sélectionnez &quot;Fichier-&gt;Ouvrir&quot; ou &lt;i&gt;CTRL-O&lt;/i&gt;. Pour les livres en ligne, sélectionnez &quot;Fichier-&gt;Livres en ligne&quot; ou &lt;i&gt;CTRL-L&lt;/i&gt;.&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;Comment contrôler la lecture?&lt;/b&gt;&lt;br/&gt;
-Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: &lt;i&gt;RETOUR&lt;/i&gt; pour lire et/ou arrêter, &lt;i&gt;FLECHE HAUT&lt;/i&gt; pour le chapitre précédent, &lt;i&gt;FLECHE BAS&lt;/i&gt; pour le chapitre suivant, &lt;i&gt;FLECHE GAUCHE&lt;/i&gt; pour le paragraphe précédent et &lt;i&gt;FLECHE DROITE&lt;/i&gt; pour le paragraphe suivant.&lt;br/&gt;
+Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: &lt;i&gt;RETOUR&lt;/i&gt; pour lire et/ou arrêter, &lt;i&gt;FLÈCHE HAUT&lt;/i&gt; pour le chapitre précédent, &lt;i&gt;FLÈCHE BAS&lt;/i&gt; pour le chapitre suivant, &lt;i&gt;FLÈCHE GAUCHE&lt;/i&gt; pour le paragraphe précédent et &lt;i&gt;FLÈCHE DROITE&lt;/i&gt; pour le paragraphe suivant.&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;Comment reprendre la lecture d&apos;un livre?&lt;/b&gt;&lt;br/&gt;
 Daisy Duck sauve automatiquement la position de chaque livre qui vous lisez. Quand un livre est ouvert, Daisy Duck cherche si une lecture précédente existe, et en fonction, la position (le chapitre et le paragraphe) est modifiée pour la lecture (un message est affiché dans la barre de status). Vous devez simplement presser le bouton &quot;Lire&quot; quand le livre est chargé.&lt;br/&gt;
