@@ -172,6 +172,8 @@ DaisyDuck::~DaisyDuck (void)
     delete this->winOnlineBook;
   if (this->dialogConfigAccess)
     delete this->dialogConfigAccess;
+  if (this->dialogConfigCustom)
+    delete this->dialogConfigCustom;
   if (this->dialogAbout)
     delete this->dialogAbout;
 
