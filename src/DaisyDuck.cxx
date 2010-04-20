@@ -153,7 +153,7 @@ DaisyDuck::DaisyDuck (void)
            this, SLOT (showOnlineAccess ()));
 
   /* Dialog to configure online access */
-  this->dialogConfig = new ConfigAccess (this, this->cfg);
+  this->dialogConfigAccess = new ConfigAccess (this, this->cfg);
 
   /* Dialog to configure custom informations */
   this->dialogConfigCustom = new ConfigCustom (this, this->cfg);
@@ -170,8 +170,8 @@ DaisyDuck::~DaisyDuck (void)
 
   if (this->winOnlineBook)
     delete this->winOnlineBook;
-  if (this->dialogConfig)
-    delete this->dialogConfig;
+  if (this->dialogConfigAccess)
+    delete this->dialogConfigAccess;
   if (this->dialogAbout)
     delete this->dialogAbout;
 
@@ -237,7 +237,7 @@ DaisyDuck::actionOnlineBooks_activated (void)
 void
 DaisyDuck::actionOnlineAccess_activated (void)
 {
-  this->dialogConfig->showDialog ();
+  this->dialogConfigAccess->showDialog ();
 }
 
 void
@@ -461,7 +461,7 @@ void
 DaisyDuck::showOnlineAccess (void)
 {
   this->winOnlineBook->hide ();
-  this->dialogConfig->showDialog ();
+  this->dialogConfigAccess->showDialog ();
   this->winOnlineBook->showWindow ();
 }
 

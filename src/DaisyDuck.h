@@ -104,7 +104,7 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
     Config       *cfg;
     QString       hash;
     OnlineBook   *winOnlineBook;
-    ConfigAccess *dialogConfig;
+    ConfigAccess *dialogConfigAccess;
     ConfigCustom *dialogConfigCustom;
     About        *dialogAbout;
     static const libvlc_event_type_t vlc_events_map[];
