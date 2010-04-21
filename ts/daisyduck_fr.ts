@@ -4,7 +4,7 @@
 <context>
     <name></name>
     <message>
-        <location filename="../src/DaisyDuck.cxx" line="+669"/>
+        <location filename="../src/DaisyDuck.cxx" line="+670"/>
         <source>Unknown</source>
         <translation>Inconnu</translation>
     </message>
@@ -12,7 +12,7 @@
 <context>
     <name>ConfigAccess</name>
     <message>
-        <location filename="../src/ConfigAccess.cxx" line="+52"/>
+        <location filename="../src/ConfigAccess.cxx" line="+51"/>
         <source>Name</source>
         <translation>Nom</translation>
     </message>
@@ -55,12 +55,17 @@
         <translation>Non disponible</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+37"/>
+        <source>Undefined</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>This book was interrupted, press &quot;Play&quot; to resume.</source>
         <translation>Ce livre a été interrompu, pressez &quot;lire&quot; pour reprendre.</translation>
     </message>
     <message>
-        <location line="-363"/>
+        <location line="-366"/>
         <source>Stop</source>
         <translation>Arrêt</translation>
     </message>
@@ -73,7 +78,7 @@
 <context>
     <name>OnlineBook</name>
     <message>
-        <location filename="../src/OnlineBook.cxx" line="+46"/>
+        <location filename="../src/OnlineBook.cxx" line="+45"/>
         <source>Downloading Daisy files ...</source>
         <translation>Téléchargement des fichiers Daisy ...</translation>
     </message>
@@ -133,6 +138,11 @@
         <source>Copyright (C) 2010 Mathieu Schroeter&lt;br/&gt;&lt;br/&gt;This application was originally developped for the auditors of the BSR (Bibliothèque Sonore Romande, &lt;a href=&quot;http://www.bsr-lausanne.ch&quot;&gt;www.bsr-lausanne.ch&lt;/a&gt;) to provide an audio streaming program for Daisy 2.02 books.</source>
         <translation>Copyright (C) 2010 Mathieu Schroeter&lt;br/&gt;&lt;br/&gt;Cette application a été originellement développée pour les auditeurs de la BSR (Bibliothèque Sonore Romande, &lt;a href=&quot;http://www.bsr-lausanne.ch&quot;&gt;www.bsr-lausanne.ch&lt;/a&gt;) afin de leur fournir un programme de streaming audio pour les livres Daisy 2.02.</translation>
     </message>
+    <message>
+        <location line="+19"/>
+        <source>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.&lt;br/&gt;&lt;br/&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.&lt;br/&gt;&lt;br/&gt;You should have received a copy of the GNU General Public License along with this program.   &amp;lt;&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;http://www.gnu.org/licenses/&lt;/a&gt;&amp;gt;.</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message utf8="true">
         <source>Copyright (C) 2010 Mathieu Schroeter&lt;br/&gt;&lt;br/&gt;It was originally developped for the auditors of the BSR (BibliothÃ¨que Sonore Romande, &lt;a href=&quot;http://www.bsr-lausanne.ch&quot;&gt;www.bsr-lausanne.ch&lt;/a&gt;) to provide an audio streaming program for Daisy 2.02 books.</source>
         <translation type="obsolete">Copyright (C) 2010 Mathieu Schroeter&lt;br/&gt;&lt;br/&gt;Il a été originellement développé pour les auditeurs de la BSR (Bibliothèque Sonore Romande, &lt;a href=&quot;http://www.bsr-lausanne.ch&quot;&gt;www.bsr-lausanne.ch&lt;/a&gt;) afin de fournir un programme de streaming audio pour les livres Daisy 2.02.</translation>
@@ -140,11 +150,6 @@
     <message>
         <source>Daisy Duck is a program for playing online and local DTB (Digital Talking Books). It supports the Daisy specifications through the libduck library. It relies on Qt4 for the GUI and libVLC for the audio playing. </source>
         <translation type="obsolete">Daisy Duck est un programme pour la lecture en ligne et locale de DTB (Digital Talking Books). Il supporte les spécifications Daisy via la bibliothèque libduck. Il compte sur Qt4 pour le GUI and libVLC pour la lecture audio.</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>This program is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version.&lt;br/&gt;&lt;br/&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.&lt;br/&gt;&lt;br/&gt;You should have received a copy of the GNU Lesser General Public License along with this program; If not, see &amp;lt;&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;http://www.gnu.org/licenses/&lt;/a&gt;&amp;gt;.</source>
-        <translation></translation>
     </message>
     <message utf8="true">
         <source>Copyright (C) 2010 Mathieu Schroeter&lt;br/&gt;&lt;br/&gt;It was originally developped for the auditors of the BSR (Bibliothèque Sonore Romande, &lt;a href=&quot;http://www.bsr-lausanne.ch&quot;&gt;www.bsr-lausanne.ch&lt;/a&gt;) to provide an audio streaming program for Daisy 2.02 books.</source>
@@ -281,7 +286,7 @@
 <context>
     <name>winMain</name>
     <message>
-        <location filename="../src/winMain.ui" line="+21"/>
+        <location filename="../src/winMain.ui" line="+27"/>
         <source>Daisy Duck</source>
         <translation></translation>
     </message>
@@ -308,7 +313,7 @@ Pour les livres locaux, sélectionnez &quot;Fichier-&gt;Ouvrir&quot; or &lt;i&gt
 Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: </translation>
     </message>
     <message>
-        <location line="+217"/>
+        <location line="+223"/>
         <source>Chapters</source>
         <translation>Chapitres</translation>
     </message>
@@ -438,7 +443,7 @@ Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: </tr
         <translation>&amp;Accès en ligne</translation>
     </message>
     <message>
-        <location line="-601"/>
+        <location line="-607"/>
         <source>Welcome in Daisy Duck, a Daisy 2.02 player for local (hard disc, CD, ...) and online audio books (web streaming).&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;How to open an audio book?&lt;/b&gt;&lt;br/&gt;
