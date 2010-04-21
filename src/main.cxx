@@ -63,7 +63,7 @@ main (int argc, char **argv)
   }
 
   ts1.load (QString ("qt_") + locale,
-                   QLibraryInfo::location (QLibraryInfo::TranslationsPath));
+            QLibraryInfo::location (QLibraryInfo::TranslationsPath));
   app.installTranslator (&ts1);
 
   ts2.load (QString ("daisyduck_") + locale, DAISYDUCK_TS_PATH);
