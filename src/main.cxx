@@ -49,7 +49,7 @@ main (int argc, char **argv)
   DaisyDuck *winMain;
   QApplication app (argc, argv);
   QString locale = QLocale::system ().name ();
-  QTranslator translator;
+  QTranslator ts1, ts2;
 
   if (QCoreApplication::arguments ().contains ("-h"))
   {
@@ -62,12 +62,12 @@ main (int argc, char **argv)
     return 0;
   }
 
-  translator.load (QString ("qt_") + locale,
+  ts1.load (QString ("qt_") + locale,
                    QLibraryInfo::location (QLibraryInfo::TranslationsPath));
-  app.installTranslator (&translator);
+  app.installTranslator (&ts1);
 
-  translator.load (QString ("daisyduck_") + locale, DAISYDUCK_TS_PATH);
-  app.installTranslator (&translator);
+  ts2.load (QString ("daisyduck_") + locale, DAISYDUCK_TS_PATH);
+  app.installTranslator (&ts2);
 
   winMain = new DaisyDuck ();
   if (!winMain)
