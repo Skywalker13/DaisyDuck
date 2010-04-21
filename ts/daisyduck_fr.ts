@@ -57,7 +57,7 @@
     <message>
         <location line="+37"/>
         <source>Undefined</source>
-        <translation type="unfinished"></translation>
+        <translation>Indéfini</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -141,7 +141,7 @@
     <message>
         <location line="+19"/>
         <source>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.&lt;br/&gt;&lt;br/&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.&lt;br/&gt;&lt;br/&gt;You should have received a copy of the GNU General Public License along with this program.   &amp;lt;&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;http://www.gnu.org/licenses/&lt;/a&gt;&amp;gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message utf8="true">
         <source>Copyright (C) 2010 Mathieu Schroeter&lt;br/&gt;&lt;br/&gt;It was originally developped for the auditors of the BSR (BibliothÃ¨que Sonore Romande, &lt;a href=&quot;http://www.bsr-lausanne.ch&quot;&gt;www.bsr-lausanne.ch&lt;/a&gt;) to provide an audio streaming program for Daisy 2.02 books.</source>
