@@ -837,6 +837,8 @@ check_cppflags -D_LARGEFILE_SOURCE
 check_cppflags -D_FILE_OFFSET_BITS=64
 check_cppflags -D_REENTRANT
 
+enabled mingw32 && add_ldflags -mwindows
+
 
 #################################################
 #   check for debug symbols
