@@ -41,6 +41,11 @@ show_help(){
   echo "  --with-libduck-dir          check for libduck in DIR"
   echo "  --with-libvlc-dir           check for libvlc in DIR"
   echo "  --with-libX11-dir           check for libX11 in DIR"
+  echo "  --with-mocqt4=BIN           use BIN for moc-qt4"
+  echo "  --with-uicqt4=BIN           use BIN for uic-qt4"
+  echo "  --with-rccqt4=BIN           use BIN for rcc-qt4"
+  echo "  --with-lupdateqt4=BIN       use BIN for lupdate-qt4"
+  echo "  --with-lreleaseqt4=BIN      use BIN for lrelease-qt4"
   echo ""
   echo "Advanced options (experts only):"
   echo "  --arch=ARCH                 force architecture"
@@ -569,6 +574,16 @@ for opt do
   --with-libvlc-dir=*) libvlcdir="$optval";
   ;;
   --with-libX11-dir=*) libx11dir="$optval";
+  ;;
+  --with-mocqt4=*) mocqt4="$optval";
+  ;;
+  --with-uicqt4=*) uicqt4="$optval";
+  ;;
+  --with-rccqt4=*) rccqt4="$optval";
+  ;;
+  --with-lupdateqt4=*) lupdateqt4="$optval";
+  ;;
+  --with-lreleaseqt4=*) lreleaseqt4="$optval";
   ;;
   --enable-pic) pic="yes";
   ;;
