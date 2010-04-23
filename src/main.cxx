@@ -45,6 +45,7 @@ main (int argc, char **argv)
   XInitThreads ();
 #endif /* Q_WS_X11 */
   int rc;
+  bool res = false;
   DaisyDuck *winMain;
   QApplication app (argc, argv);
   QString locale = QLocale::system ().name ();
@@ -65,7 +66,23 @@ main (int argc, char **argv)
             QLibraryInfo::location (QLibraryInfo::TranslationsPath));
   app.installTranslator (&ts1);
 
-  ts2.load (QString ("daisyduck_") + locale, DAISYDUCK_TS_PATH);
+#if _WIN32
+  res = ts2.load (QString ("daisyduck_") + locale,
+                  QCoreApplication::applicationDirPath ()
+                  + "/../usr/share/daisyduck/ts");
+#else
+#ifdef DAISYDUCK_TS_PATH
+  res = ts2.load (QString ("daisyduck_") + locale, QString (DAISYDUCK_TS_PATH));
+#endif /* DAISYDUCK_TS_PATH */
+  if (!res)
+    res = ts2.load (QString ("daisyduck_") + locale,
+                    QString ("/usr/local/share/daisyduck/ts"));
+  if (!res)
+    res = ts2.load (QString ("daisyduck_") + locale,
+                    QString ("/usr/share/daisyduck/ts"));
+#endif /* !_WIN32 */
+
+  if (res)
   app.installTranslator (&ts2);
 
   winMain = new DaisyDuck ();

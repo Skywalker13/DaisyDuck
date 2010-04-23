@@ -539,7 +539,7 @@ for opt do
   ;;
   --includedir=*) includedir="$optval"
   ;;
-  --sharedir=*) sharedir="$optval"
+  --sharedir=*) sharedir="$optval"; force_sharedir=yes
   ;;
   --docdir=*) docdir="$optval"; force_docdir=yes
   ;;
@@ -994,7 +994,7 @@ VERSION=`get_version DAISYDUCK common.h`
 [ -n "$pkgconfig_requires" ] && add_extralibs `pkg-config $pkgconfig_requires --libs`
 
 # Path for the translations
-add_cppflags -DDAISYDUCK_TS_PATH=\\\\\\\"$sharedir/daisyduck/ts\\\\\\\"
+enabled force_sharedir && add_cppflags -DDAISYDUCK_TS_PATH=\\\\\\\"$sharedir/daisyduck/ts\\\\\\\"
 
 
 #################################################
