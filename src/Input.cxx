@@ -25,6 +25,13 @@
 
 #define FIRST_LINE  2
 
+class LineEdit : public QLineEdit
+{
+  public:
+    LineEdit (QWidget *parent) : QLineEdit (parent) {};
+    QString name;
+};
+
 
 Input::Input (QWidget *parent, Config *cfg) : QDialog (parent)
 {
@@ -82,11 +89,11 @@ Input::showDialog (void)
     if (name)
     {
       QLabel    *wLabel = new QLabel (this);
-      QLineEdit *wValue = new QLineEdit (this);
+      LineEdit  *wValue = new LineEdit (this);
 
       wLabel->setText (*label);
       wValue->setText (*value);
-      wValue->setAccessibleName (*name);
+      wValue->name = *name;
 
       this->gridLayout->addWidget (wLabel, i, 0, 1, 1);
       this->gridLayout->addWidget (wValue, i, 1, 1, 1);
@@ -117,7 +124,7 @@ Input::writeConfig (void)
   for (i = FIRST_LINE; i < this->gridLayout->rowCount (); i++)
   {
     QLabel      *item1 = NULL;
-    QLineEdit   *item2 = NULL;
+    LineEdit    *item2 = NULL;
     QLayoutItem *il;
 
     il = this->gridLayout->itemAtPosition (i, 0);
@@ -126,12 +133,12 @@ Input::writeConfig (void)
 
     il = this->gridLayout->itemAtPosition (i, 1);
     if (il)
-      item2 = dynamic_cast<QLineEdit *> (il->widget ());
+      item2 = dynamic_cast<LineEdit *> (il->widget ());
 
     if (!item1 && !item2)
       continue;
 
-    this->cfg->addArgument (item2 ? item2->accessibleName () : QString (""),
+    this->cfg->addArgument (item2 ? item2->name : QString (""),
                             item2 ? item2->text () : QString (""),
                             item1 ? item1->text () : QString (""));
 
