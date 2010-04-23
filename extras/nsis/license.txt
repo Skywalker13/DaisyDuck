@@ -1,0 +1,19 @@
+THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND.
+
+
+This installer was created using NSIS (http://nsis.sourceforge.net).
+
+All programs and libraries incorporated into and distributed with this installer are free softwares.
+
+ daisyduck-0.0.1	GPL3		(http://daisy.geexbox.org)
+ qt-4.6.2		LGPL2.1 GPL3	(http://qt.nokia.com)
+ libduck-0.0.1	LGPL2.1		(http://libduck.geexbox.org)
+ libvlc-1.1.0	GPL2		(http://www.videolan.org)
+ libxml2		LGPL2.1?	(http://...)
+ libiconv		?		
+ ffmpeg		GPL2?		(http://www.ffmpeg.org)
+ gettext		?		
+
+Licenses for these packages are available from respective URLs listed above.
+
+By agreeing to use this installer, you are accepting all applicable terms of these packages' licenses.

@@ -1,0 +1,11 @@
+Var Name_SectionInstDaisyDuck
+Var Name_SectionInstConfiguration
+Var Name_SectionWriteUninstaller
+Var Name_SectionUninstConfiguration
+
+Var Desc_SectionInstConfiguration
+Var Desc_SectionUninstConfiguration
+
+Var Name_UninstallerLink
+
+Var Link_VisitWebsite

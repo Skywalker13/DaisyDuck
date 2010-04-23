@@ -13,6 +13,10 @@ EXTRADIST = \
 
 SUBDIRS = \
 	DOCS \
+	extras \
+	extras/nsis \
+	extras/nsis/configs \
+	extras/nsis/languages \
 	images \
 	src \
 	ts \
