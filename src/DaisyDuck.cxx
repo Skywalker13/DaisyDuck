@@ -56,19 +56,19 @@ DaisyDuck::DaisyDuck (void)
   else
     duck_verbosity (DUCK_MSG_ERROR);
 
-  connect (actionOpen, SIGNAL (activated ()),
+  connect (actionOpen, SIGNAL (triggered ()),
            this, SLOT (actionOpen_activated ()));
-  connect (actionOnlineBooks, SIGNAL (activated ()),
+  connect (actionOnlineBooks, SIGNAL (triggered ()),
            this, SLOT (actionOnlineBooks_activated ()));
-  connect (actionOnlineAccess, SIGNAL (activated ()),
+  connect (actionOnlineAccess, SIGNAL (triggered ()),
            this, SLOT (actionOnlineAccess_activated ()));
-  connect (actionConfigCustom, SIGNAL (activated ()),
+  connect (actionConfigCustom, SIGNAL (triggered ()),
            this, SLOT (actionConfigCustom_activated ()));
-  connect (actionPlayer, SIGNAL (activated ()),
+  connect (actionPlayer, SIGNAL (triggered ()),
            this, SLOT (actionPlayer_activated ()));
-  connect (actionHelp, SIGNAL (activated ()),
+  connect (actionHelp, SIGNAL (triggered ()),
            this, SLOT (actionHelp_activated ()));
-  connect (actionAbout, SIGNAL (activated ()),
+  connect (actionAbout, SIGNAL (triggered ()),
            this, SLOT (actionAbout_activated ()));
 
   connect (treeSmilnode, SIGNAL (itemClicked (QTreeWidgetItem *, int)),
