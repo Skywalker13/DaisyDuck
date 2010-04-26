@@ -30,8 +30,6 @@ CRCCheck on
 ; UI settings
 ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 !include MUI2.nsh
-!define MUI_ICON "daisyduck.ico"
-!define MUI_UNICON "daisyduck.ico"
 !define MUI_WELCOMEFINISHPAGE_BITMAP "side.bmp"
 !define MUI_UNWELCOMEFINISHPAGE_BITMAP "side.bmp"
 !define MUI_COMPONENTSPAGE_SMALLDESC
@@ -126,11 +124,13 @@ Function InstDaisyDuck
 
   File /r "bin"
   File /r "usr"
+  File "daisyduck.ico"
 
   CreateDirectory "$SMPROGRAMS\DaisyDuck"
   CreateShortCut "$SMPROGRAMS\DaisyDuck\DaisyDuck Player.lnk" \
-    "$INSTDIR\bin\daisyduck.exe"
-  CreateShortCut "$DESKTOP\DaisyDuck Player.lnk" "$INSTDIR\bin\daisyduck.exe" ""
+    "$INSTDIR\bin\daisyduck.exe" "" "$INSTDIR\daisyduck.ico"
+  CreateShortCut "$DESKTOP\DaisyDuck Player.lnk" \
+    "$INSTDIR\bin\daisyduck.exe" "" "$INSTDIR\daisyduck.ico"
   CreateShortCut "$SMPROGRAMS\DaisyDuck\$Name_UninstallerLink.lnk" \
     "$INSTDIR\uninstall.exe"
 FunctionEnd
