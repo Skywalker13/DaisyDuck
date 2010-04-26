@@ -20,6 +20,7 @@
 
 #include <cstdio>
 
+#include <QtGui/QMessageBox>
 #include <QtGui/QFileDialog>
 #include <QtCore/QFile>
 #include <QtCore/QCryptographicHash>
@@ -694,7 +695,21 @@ DaisyDuck::openBook (QString book, QString summary)
   if (this->daisyState == DAISY_IS_PLAYING)
     this->playerStop ();
 
-  duck_load (this->duck, book.toAscii (), DUCK_FORMAT_NCC);
+  rc = duck_load (this->duck, book.toAscii (), DUCK_FORMAT_NCC);
+  if (rc)
+  {
+    if (rc < 0)
+    {
+      QMessageBox::critical (this, tr ("Parsing"),
+                             tr ("This audio book can not be loaded by "
+                                 "DaisyDuck."));
+      return;
+    }
+
+    QMessageBox::warning (this, tr ("Parsing"),
+                          tr ("The parsing has failed somewhere! Probably that "
+                              "this audio book will not be fully readable."));
+  }
 
   /* flush */
   treeSmilnode->clear ();
