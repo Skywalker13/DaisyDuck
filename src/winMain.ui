@@ -621,8 +621,8 @@ The settings part is only intended to be used by the advanced users and speciall
     <property name="title">
      <string>&amp;Window</string>
     </property>
-    <addaction name="actionPlayer"/>
     <addaction name="actionHelp"/>
+    <addaction name="actionPlayer"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuConfiguration"/>
@@ -652,8 +652,8 @@ The settings part is only intended to be used by the advanced users and speciall
    <addaction name="actionOpen"/>
    <addaction name="actionOnlineBooks"/>
    <addaction name="separator"/>
-   <addaction name="actionPlayer"/>
    <addaction name="actionHelp"/>
+   <addaction name="actionPlayer"/>
    <addaction name="separator"/>
    <addaction name="actionQuit"/>
   </widget>
