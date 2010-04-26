@@ -140,7 +140,7 @@ Function InstConfig
   SetOutPath "$APPDATA\DaisyDuck"
 
   CreateDirectory "$APPDATA\DaisyDuck"
-  File daisyduck.conf
+  File /nonfatal "daisyduck.conf"
 FunctionEnd
 
 Function WriteUninstaller

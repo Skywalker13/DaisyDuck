@@ -72,6 +72,10 @@ translations:
 update-translations: clean
 	$(MAKE) -C ts update
 
+win32-installer:
+	$(MAKE) -C extras/nsis clean
+	$(MAKE) -C extras/nsis $(INSTALLER_CFG) nsis
+
 .PHONY: *clean *install* docs daisyduck images *translations
 
 dist:

@@ -3,8 +3,6 @@ $(error "../../config.mak is not present, run configure !")
 endif
 include ../../config.mak
 
-SEL = bsr
-
 NSI = daisyduck.nsi
 
 EXTRADIST = \
@@ -18,7 +16,7 @@ all: nsis
 bsr:
 	cp configs/bsr.daisyduck.conf daisyduck.conf
 
-nsis: $(SEL)
+nsis:
 	makensis $(NSI)
 
 clean:
