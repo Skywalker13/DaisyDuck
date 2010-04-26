@@ -616,7 +616,7 @@ DaisyDuck::treeSelectionUpdate (void)
   int rc;
   duck_hx_t hx;
   int *it, i = DUCK_MAX_LEVEL;
-  QTreeWidgetItem *item;
+  QTreeWidgetItem *item, *item_c;
 
   rc = duck_getheading (this->duck, &hx);
   if (rc || !hx.h1)
@@ -626,6 +626,8 @@ DaisyDuck::treeSelectionUpdate (void)
   if (!item)
     return;
 
+  item_c = this->treeSmilnode->currentItem ();
+
   /*
    * This part considers that the structure duck_hx_t is a list of int.
    * It selects the right item accordingly to the heading numbers.
@@ -634,7 +636,7 @@ DaisyDuck::treeSelectionUpdate (void)
   while (*++it && --i && item)
     item = item->child (*it - 1);
 
-  if (item)
+  if (item && item != item_c)
     this->treeSmilnode->setCurrentItem (item);
 }
 
