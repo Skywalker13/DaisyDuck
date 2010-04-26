@@ -148,5 +148,5 @@ Input::writeConfig (void)
 
   this->cfg->writeConfig ();
 
-  this->emit endInput ();
+  emit endInput ();
 }
