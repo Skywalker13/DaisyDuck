@@ -242,6 +242,12 @@ The settings part is only intended to be used by the advanced users and speciall
               <height>0</height>
              </size>
             </property>
+            <property name="accessibleName">
+             <string>chapters</string>
+            </property>
+            <property name="accessibleDescription">
+             <string>list of chapters in the current book</string>
+            </property>
             <property name="animated">
              <bool>true</bool>
             </property>
@@ -293,6 +299,12 @@ The settings part is only intended to be used by the advanced users and speciall
               </item>
               <item row="1" column="1">
                <widget class="QLabel" name="labelAuthor">
+                <property name="accessibleName">
+                 <string>author</string>
+                </property>
+                <property name="accessibleDescription">
+                 <string>author's name</string>
+                </property>
                 <property name="text">
                  <string notr="true"/>
                 </property>
@@ -300,6 +312,12 @@ The settings part is only intended to be used by the advanced users and speciall
               </item>
               <item row="0" column="1">
                <widget class="QLabel" name="labelBook">
+                <property name="accessibleName">
+                 <string>book</string>
+                </property>
+                <property name="accessibleDescription">
+                 <string>title of the current book</string>
+                </property>
                 <property name="text">
                  <string notr="true"/>
                 </property>
@@ -324,6 +342,12 @@ The settings part is only intended to be used by the advanced users and speciall
               </item>
               <item row="2" column="1">
                <widget class="QLabel" name="labelNarrator">
+                <property name="accessibleName">
+                 <string>narrator</string>
+                </property>
+                <property name="accessibleDescription">
+                 <string>narrator's name</string>
+                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -406,6 +430,12 @@ The settings part is only intended to be used by the advanced users and speciall
             </item>
             <item>
              <widget class="QLabel" name="labelSummary">
+              <property name="accessibleName">
+               <string>summary</string>
+              </property>
+              <property name="accessibleDescription">
+               <string>summary of the current book</string>
+              </property>
               <property name="text">
                <string/>
               </property>
@@ -443,6 +473,12 @@ The settings part is only intended to be used by the advanced users and speciall
                   <height>64</height>
                  </size>
                 </property>
+                <property name="accessibleName">
+                 <string>previous chapter</string>
+                </property>
+                <property name="accessibleDescription">
+                 <string>go to the previous chapter</string>
+                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -471,6 +507,12 @@ The settings part is only intended to be used by the advanced users and speciall
                   <width>0</width>
                   <height>64</height>
                  </size>
+                </property>
+                <property name="accessibleName">
+                 <string>previous paragraph</string>
+                </property>
+                <property name="accessibleDescription">
+                 <string>go to the previous paragraph</string>
                 </property>
                 <property name="text">
                  <string/>
@@ -511,6 +553,12 @@ The settings part is only intended to be used by the advanced users and speciall
                   <bold>true</bold>
                  </font>
                 </property>
+                <property name="accessibleName">
+                 <string>action</string>
+                </property>
+                <property name="accessibleDescription">
+                 <string>play or stop a reading</string>
+                </property>
                 <property name="text">
                  <string>Play</string>
                 </property>
@@ -529,6 +577,12 @@ The settings part is only intended to be used by the advanced users and speciall
                   <width>0</width>
                   <height>64</height>
                  </size>
+                </property>
+                <property name="accessibleName">
+                 <string>next paragraph</string>
+                </property>
+                <property name="accessibleDescription">
+                 <string>go to the next paragraph</string>
                 </property>
                 <property name="text">
                  <string/>
@@ -555,6 +609,12 @@ The settings part is only intended to be used by the advanced users and speciall
                   <width>0</width>
                   <height>64</height>
                  </size>
+                </property>
+                <property name="accessibleName">
+                 <string>next chapter</string>
+                </property>
+                <property name="accessibleDescription">
+                 <string>go to the next chapter</string>
                 </property>
                 <property name="text">
                  <string/>

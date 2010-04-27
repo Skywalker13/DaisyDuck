@@ -48,10 +48,23 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="editUri"/>
+        <widget class="QLineEdit" name="editUri">
+         <property name="accessibleName">
+          <string>address</string>
+         </property>
+         <property name="accessibleDescription">
+          <string>address where is located the list of online books</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QPushButton" name="actionRefresh">
+         <property name="accessibleName">
+          <string>refresh the list</string>
+         </property>
+         <property name="accessibleDescription">
+          <string>refresh the list of online books</string>
+         </property>
          <property name="text">
           <string>&amp;Refresh the list</string>
          </property>
@@ -63,6 +76,12 @@
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QTreeWidget" name="treeBooks">
+         <property name="accessibleName">
+          <string>online books</string>
+         </property>
+         <property name="accessibleDescription">
+          <string>list of available online books</string>
+         </property>
          <property name="animated">
           <bool>true</bool>
          </property>
@@ -109,6 +128,12 @@
        </property>
        <item>
         <widget class="QPushButton" name="actionSettings">
+         <property name="accessibleName">
+          <string>settings</string>
+         </property>
+         <property name="accessibleDescription">
+          <string>settings for the only books feature</string>
+         </property>
          <property name="text">
           <string>&amp;Settings</string>
          </property>
@@ -129,6 +154,12 @@
        </item>
        <item>
         <widget class="QPushButton" name="actionLoad">
+         <property name="accessibleName">
+          <string>load one book</string>
+         </property>
+         <property name="accessibleDescription">
+          <string>load the book selected in the list</string>
+         </property>
          <property name="text">
           <string>&amp;Load</string>
          </property>
@@ -136,6 +167,12 @@
        </item>
        <item>
         <widget class="QPushButton" name="actionCancel">
+         <property name="accessibleName">
+          <string>cancel</string>
+         </property>
+         <property name="accessibleDescription">
+          <string>close this window without any changes</string>
+         </property>
          <property name="text">
           <string>&amp;Cancel</string>
          </property>

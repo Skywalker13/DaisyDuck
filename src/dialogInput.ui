@@ -73,6 +73,12 @@
    </item>
    <item row="1" column="1">
     <widget class="QCheckBox" name="checkValues">
+     <property name="accessibleName">
+      <string>remember</string>
+     </property>
+     <property name="accessibleDescription">
+      <string>to remember the options below</string>
+     </property>
      <property name="text">
       <string>remember</string>
      </property>

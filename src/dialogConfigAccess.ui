@@ -63,6 +63,12 @@
      <height>271</height>
     </rect>
    </property>
+   <property name="accessibleName">
+    <string>arguments</string>
+   </property>
+   <property name="accessibleDescription">
+    <string>list of arguments for the location</string>
+   </property>
    <property name="verticalScrollBarPolicy">
     <enum>Qt::ScrollBarAlwaysOff</enum>
    </property>
@@ -128,6 +134,12 @@
      <width>461</width>
      <height>26</height>
     </rect>
+   </property>
+   <property name="accessibleName">
+    <string>address</string>
+   </property>
+   <property name="accessibleDescription">
+    <string>address where is located the list of online books</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">

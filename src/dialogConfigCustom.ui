@@ -63,6 +63,12 @@
      <height>26</height>
     </rect>
    </property>
+   <property name="accessibleName">
+    <string>title</string>
+   </property>
+   <property name="accessibleDescription">
+    <string>optional title shown in the &quot;welcome&quot; frame</string>
+   </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -98,6 +104,12 @@
      <width>361</width>
      <height>171</height>
     </rect>
+   </property>
+   <property name="accessibleName">
+    <string>text</string>
+   </property>
+   <property name="accessibleDescription">
+    <string>optional text shown in the &quot;welcome&quot; frame</string>
    </property>
    <property name="tabChangesFocus">
     <bool>true</bool>
