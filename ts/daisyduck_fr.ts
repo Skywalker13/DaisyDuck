@@ -4,7 +4,7 @@
 <context>
     <name></name>
     <message>
-        <location filename="../src/DaisyDuck.cxx" line="+670"/>
+        <location filename="../src/DaisyDuck.cxx" line="+673"/>
         <source>Unknown</source>
         <translation>Inconnu</translation>
     </message>
@@ -30,7 +30,7 @@
 <context>
     <name>DaisyDuck</name>
     <message>
-        <location filename="../src/DaisyDuck.cxx" line="-456"/>
+        <location filename="../src/DaisyDuck.cxx" line="-458"/>
         <source>Open File</source>
         <translation>Ouvrir un fichier</translation>
     </message>
@@ -50,7 +50,23 @@
         <translation>Daisy Duck est en train de dormir...</translation>
     </message>
     <message>
-        <location line="+282"/>
+        <location line="+279"/>
+        <location line="+6"/>
+        <source>Parsing</source>
+        <translation>Analyse syntaxique</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>This audio book can not be loaded by DaisyDuck.</source>
+        <translation>Ce livre audio ne peut pas être chargé par DaisyDuck.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>The parsing has failed somewhere! Probably that this audio book will not be fully readable.</source>
+        <translation>L&apos;analyse syntaxique a échoué quelque part. Probablement que ce livre audio ne sera pas complètement lisible.</translation>
+    </message>
+    <message>
+        <location line="+12"/>
         <source>Not available</source>
         <translation>Non disponible</translation>
     </message>
@@ -65,7 +81,7 @@
         <translation>Ce livre a été interrompu, pressez &quot;lire&quot; pour reprendre.</translation>
     </message>
     <message>
-        <location line="-366"/>
+        <location line="-382"/>
         <source>Stop</source>
         <translation>Arrêt</translation>
     </message>
@@ -139,9 +155,14 @@
         <translation>Copyright (C) 2010 Mathieu Schroeter&lt;br/&gt;&lt;br/&gt;Cette application a été originellement développée pour les auditeurs de la BSR (Bibliothèque Sonore Romande, &lt;a href=&quot;http://www.bsr-lausanne.ch&quot;&gt;www.bsr-lausanne.ch&lt;/a&gt;) afin de leur fournir un programme de streaming audio pour les livres Daisy 2.02.</translation>
     </message>
     <message>
-        <location line="+19"/>
-        <source>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.&lt;br/&gt;&lt;br/&gt;This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.&lt;br/&gt;&lt;br/&gt;You should have received a copy of the GNU General Public License along with this program.   &amp;lt;&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;http://www.gnu.org/licenses/&lt;/a&gt;&amp;gt;.</source>
-        <translation></translation>
+        <location line="+97"/>
+        <source>license</source>
+        <translation>licence</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>the license of DaisyDuck</source>
+        <translation>la licence de DaisyDuck</translation>
     </message>
     <message utf8="true">
         <source>Copyright (C) 2010 Mathieu Schroeter&lt;br/&gt;&lt;br/&gt;It was originally developped for the auditors of the BSR (BibliothÃ¨que Sonore Romande, &lt;a href=&quot;http://www.bsr-lausanne.ch&quot;&gt;www.bsr-lausanne.ch&lt;/a&gt;) to provide an audio streaming program for Daisy 2.02 books.</source>
@@ -164,7 +185,17 @@
         <translation>Accès en ligne, paramétrages</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+32"/>
+        <source>arguments</source>
+        <translation>arguments</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>list of arguments for the location</source>
+        <translation>liste des arguments pour la localisation</translation>
+    </message>
+    <message>
+        <location line="+45"/>
         <source>Name</source>
         <translation>Nom</translation>
     </message>
@@ -179,7 +210,25 @@
         <translation>Libellé</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+14"/>
+        <source>address</source>
+        <translation>adresse</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>address where is located the list of online books</source>
+        <translation>adresse où est localisée la liste des livres en ligne</translation>
+    </message>
+    <message>
+        <source>location</source>
+        <translation type="obsolete">localisation</translation>
+    </message>
+    <message>
+        <source>the location where is the list of online books</source>
+        <translation type="obsolete">la localisation de la liste des livres en ligne</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>URI for the list of books :</source>
         <translation>URI pour la liste des livres :</translation>
     </message>
@@ -197,7 +246,17 @@
         <translation>Personnalisations</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+32"/>
+        <source>title</source>
+        <translation>titre</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>optional title shown in the &quot;welcome&quot; frame</source>
+        <translation>titre optionnel affiché dans le cadre &quot;accueil&quot;</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Title</source>
         <translation>Titre</translation>
     </message>
@@ -207,7 +266,17 @@
         <translation>Texte</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+13"/>
+        <source>text</source>
+        <translation>texte</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>optional text shown in the &quot;welcome&quot; frame</source>
+        <translation>texte optionnel affiché dans le cadre &quot;accueil&quot;</translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>The following values are shown in the &quot;Welcome&quot; frame.</source>
         <translation>Les valeurs suivantes sont affichées dans le cadre &quot;Accueil&quot;.</translation>
     </message>
@@ -221,11 +290,17 @@
     </message>
     <message>
         <location line="+42"/>
+        <location line="+6"/>
         <source>remember</source>
         <translation>se souvenir</translation>
     </message>
     <message>
-        <location line="-23"/>
+        <location line="-3"/>
+        <source>to remember the options below</source>
+        <translation>se souvenir des options ci-dessous</translation>
+    </message>
+    <message>
+        <location line="-26"/>
         <source>The list of books is not reachable. Please, check that the informations below are rights. If necessary, the values can be configured in the &quot;Settings&quot; dialog box.</source>
         <translation>La liste des livres n&apos;est pas joignable. S&apos;il vous plaît, contrôlez que les informations ci-dessous sont correctes. Si nécessaire, les valeurs peuvent être configurées dans la boîte de dialogue &quot;Paramétrages&quot;.</translation>
     </message>
@@ -243,12 +318,42 @@
         <translation></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+7"/>
+        <source>address</source>
+        <translation>adresse</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>address where is located the list of online books</source>
+        <translation>adresse où est localisée la liste des livres en ligne</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>refresh the list</source>
+        <translation>mettre à jour la liste</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>refresh the list of online books</source>
+        <translation>mettre à jour la liste des livres en ligne</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>&amp;Refresh the list</source>
         <translation>&amp;Mettre à jour la liste</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+11"/>
+        <source>online books</source>
+        <translation>livres en ligne</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>list of available online books</source>
+        <translation>liste des livres en ligne disponibles</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Number</source>
         <translation>Numéro</translation>
     </message>
@@ -269,16 +374,46 @@
     </message>
     <message>
         <location line="+15"/>
+        <source>settings</source>
+        <translation>paramètres</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>settings for the only books feature</source>
+        <translation>paramètres pour la fonctionalité des livres en ligne</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>&amp;Settings</source>
         <translation>&amp;Paramétrages</translation>
     </message>
     <message>
         <location line="+20"/>
+        <source>load one book</source>
+        <translation>charger un livre</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>load the book selected in the list</source>
+        <translation>charger le livre sélectionné dans la liste</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>&amp;Load</source>
         <translation>&amp;Charger</translation>
     </message>
     <message>
         <location line="+7"/>
+        <source>cancel</source>
+        <translation>annuler</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>close this window without any changes</source>
+        <translation>fermer cette fenêtre sans aucun changement</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Annuler</translation>
     </message>
@@ -313,7 +448,17 @@ Pour les livres locaux, sélectionnez &quot;Fichier-&gt;Ouvrir&quot; or &lt;i&gt
 Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: </translation>
     </message>
     <message>
-        <location line="+223"/>
+        <location line="+219"/>
+        <source>chapters</source>
+        <translation>chapitres</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>list of chapters in the current book</source>
+        <translation>liste des chapitres dans le livre en cours</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Chapters</source>
         <translation>Chapitres</translation>
     </message>
@@ -323,12 +468,42 @@ Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: </tr
         <translation>Livre :</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+10"/>
+        <source>author</source>
+        <translation>auteur</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>author&apos;s name</source>
+        <translation>nom de l&apos;auteur</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>book</source>
+        <translation>livre</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>title of the current book</source>
+        <translation>titre du livre en cours</translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Author :</source>
         <translation>Auteur :</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+10"/>
+        <source>narrator</source>
+        <translation>lecteur</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>narrator&apos;s name</source>
+        <translation>nom du lecteur</translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Narrator :</source>
         <translation>Lecteur :</translation>
     </message>
@@ -338,17 +513,57 @@ Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: </tr
         <translation>Extrait</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+10"/>
+        <source>summary</source>
+        <translation>extrait</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>summary of the current book</source>
+        <translation>extrait du livre en cours</translation>
+    </message>
+    <message>
+        <location line="+40"/>
+        <source>previous chapter</source>
+        <translation>chapitre précédent</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>go to the previous chapter</source>
+        <translation>aller au chapitre précédent</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Up</source>
         <translation></translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+16"/>
+        <source>previous paragraph</source>
+        <translation>paragraphe précédent</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>go to the previous paragraph</source>
+        <translation>aller au paragraphe précédent</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Left</source>
         <translation></translation>
     </message>
     <message>
         <location line="+26"/>
+        <source>action</source>
+        <translation>action</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>play or stop a reading</source>
+        <translation>commencer ou arrêter une lecture</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Play</source>
         <translation>Lire</translation>
     </message>
@@ -358,12 +573,32 @@ Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: </tr
         <translation></translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+16"/>
+        <source>next paragraph</source>
+        <translation>paragraphe suivant</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>go to the next paragraph</source>
+        <translation>aller au paragraphe suivant</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Right</source>
         <translation></translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+13"/>
+        <source>next chapter</source>
+        <translation>chapitre suivant</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>go to the next chapter</source>
+        <translation>aller au chapitre suivant</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Down</source>
         <translation></translation>
     </message>
@@ -443,7 +678,7 @@ Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: </tr
         <translation>&amp;Accès en ligne</translation>
     </message>
     <message>
-        <location line="-607"/>
+        <location line="-667"/>
         <source>Welcome in Daisy Duck, a Daisy 2.02 player for local (hard disc, CD, ...) and online audio books (web streaming).&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;How to open an audio book?&lt;/b&gt;&lt;br/&gt;
