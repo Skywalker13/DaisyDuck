@@ -24,7 +24,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Daisy Duck</string>
+   <string>DaisyDuck</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../images/images.qrc">
@@ -107,7 +107,7 @@
             <item>
              <widget class="QLabel" name="label_5">
               <property name="text">
-               <string>Welcome in Daisy Duck, a Daisy 2.02 player for local (hard disc, CD, ...) and online audio books (web streaming).&lt;br/&gt;
+               <string>Welcome in DaisyDuck, a Daisy 2.02 player for local (hard disc, CD, ...) and online audio books (web streaming).&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;How to open an audio book?&lt;/b&gt;&lt;br/&gt;
 For local books, just select &quot;File-&gt;Open&quot; or &lt;i&gt;CTRL+O&lt;/i&gt;. For online books, select &quot;File-&gt;Online Books&quot; or &lt;i&gt;CTRL+L&lt;/i&gt;.&lt;br/&gt;
@@ -116,7 +116,7 @@ For local books, just select &quot;File-&gt;Open&quot; or &lt;i&gt;CTRL+O&lt;/i&
 You can use the mouse, or the keyboard with the following shortcuts: &lt;i&gt;CTRL+SPACE&lt;/i&gt; to play and/or stop, &lt;i&gt;CTRL+UP ARROW&lt;/i&gt; for the previous chapter, &lt;i&gt;CTRL+BOTTOM ARROW&lt;/i&gt; for the next chapter, &lt;i&gt;CTRL+LEFT ARROW&lt;/i&gt; for the previous paragraph and &lt;i&gt;CTRL+RIGHT ARROW&lt;/i&gt; for the next paragraph.&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;How to resume the reading of a book?&lt;/b&gt;&lt;br/&gt;
-Daisy Duck saves automatically the position of every book that you have read. When a book is opened, Daisy Duck searchs if a previous reading exists, and accordingly it sets the position (the chapter and the paragraph) in the player (a message is printed in the status bar). You must simply press the &quot;Play&quot; button when the book is loaded.&lt;br/&gt;
+DaisyDuck saves automatically the position of every book that you have read. When a book is opened, DaisyDuck searchs if a previous reading exists, and accordingly it sets the position (the chapter and the paragraph) in the player (a message is printed in the status bar). You must simply press the &quot;Play&quot; button when the book is loaded.&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;What about &quot;Settings&quot;?&lt;/b&gt;&lt;br/&gt;
 The settings part is only intended to be used by the advanced users and specially for the online accesses.</string>
@@ -786,7 +786,7 @@ The settings part is only intended to be used by the advanced users and speciall
      <normaloff>:/img/daisyduck.png</normaloff>:/img/daisyduck.png</iconset>
    </property>
    <property name="text">
-    <string>About Daisy Duck</string>
+    <string>About DaisyDuck</string>
    </property>
    <property name="iconVisibleInMenu">
     <bool>false</bool>
