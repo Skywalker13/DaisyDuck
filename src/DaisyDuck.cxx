@@ -37,7 +37,7 @@ const libvlc_event_type_t DaisyDuck::vlc_events_map[] = {
 
 DaisyDuck::DaisyDuck (void)
 {
-  QString cfgfile;
+  QString cfgfile, title;
   bool verbose = false;
   unsigned int vlc_argc = 0, i, ver;
   const char *vlc_argv[16];
@@ -46,6 +46,9 @@ DaisyDuck::DaisyDuck (void)
 
   this->setupUi (this);
   this->daisyState = DAISY_IS_SLEEPING;
+
+  title = this->windowTitle ();
+  this->setWindowTitle (title + " - " DAISYDUCK_VERSION_STR);
 
   this->actionHelp_activated ();
 
