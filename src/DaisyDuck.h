@@ -40,7 +40,17 @@ class About : public QDialog, private Ui::dialogAbout
   public:
     About (QWidget *parent) : QDialog (parent)
     {
+      unsigned int v;
+      QString deps;
+
       this->setupUi (this);
+
+      v = libduck_version ();
+      deps  = QString ("   libduck-%1.%2.%3\n")
+              .arg (v >> 16).arg ((v >> 8) & 0xF).arg (v & 0xF);
+      deps += "   libvlc-" + QString (libvlc_get_version ()) + "\n";
+      deps += "   libqt4-" + QString (qVersion ());
+      this->labelDeps->setText (deps);
     }
 };
 

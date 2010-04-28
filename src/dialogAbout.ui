@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>640</width>
-    <height>480</height>
+    <height>550</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -22,13 +22,13 @@
   <property name="minimumSize">
    <size>
     <width>640</width>
-    <height>480</height>
+    <height>550</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>640</width>
-    <height>480</height>
+    <height>550</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -55,7 +55,7 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="1">
+   <item row="5" column="1">
     <widget class="QLabel" name="label_2">
      <property name="text">
       <string>Copyright (C) 2010 Mathieu Schroeter&lt;br/&gt;&lt;br/&gt;This application was originally developped for the auditors of the BSR (Bibliothèque Sonore Romande, &lt;a href=&quot;http://www.bsr-lausanne.ch&quot;&gt;www.bsr-lausanne.ch&lt;/a&gt;) to provide an audio streaming program for Daisy 2.02 books.</string>
@@ -74,7 +74,7 @@
      </property>
     </widget>
    </item>
-   <item row="7" column="1">
+   <item row="10" column="1">
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -84,7 +84,7 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="0" rowspan="3">
+   <item row="0" column="0" rowspan="6">
     <widget class="QLabel" name="label_4">
      <property name="text">
       <string notr="true"/>
@@ -97,14 +97,14 @@
      </property>
     </widget>
    </item>
-   <item row="4" column="1">
+   <item row="7" column="1">
     <widget class="Line" name="line">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
-   <item row="1" column="1">
+   <item row="4" column="1">
     <spacer name="verticalSpacer_4">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -120,7 +120,7 @@
      </property>
     </spacer>
    </item>
-   <item row="3" column="1">
+   <item row="6" column="1">
     <spacer name="verticalSpacer_2">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -136,7 +136,7 @@
      </property>
     </spacer>
    </item>
-   <item row="5" column="1">
+   <item row="8" column="1">
     <spacer name="verticalSpacer_3">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -152,7 +152,7 @@
      </property>
     </spacer>
    </item>
-   <item row="6" column="1">
+   <item row="9" column="1">
     <widget class="QPlainTextEdit" name="plainTextEdit">
      <property name="accessibleName">
       <string>license</string>
@@ -847,6 +847,50 @@ Public License instead of this License.  But first, please read
      </property>
      <property name="textInteractionFlags">
       <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>5</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLabel" name="labelDeps">
+     <property name="font">
+      <font>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string notr="true"/>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
+     </property>
+     <property name="openExternalLinks">
+      <bool>true</bool>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse</set>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Dependencies :</string>
      </property>
     </widget>
    </item>
