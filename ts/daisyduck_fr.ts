@@ -4,7 +4,7 @@
 <context>
     <name></name>
     <message>
-        <location filename="../src/DaisyDuck.cxx" line="+673"/>
+        <location filename="../src/DaisyDuck.cxx" line="+676"/>
         <source>Unknown</source>
         <translation>Inconnu</translation>
     </message>
@@ -140,14 +140,22 @@
 <context>
     <name>dialogAbout</name>
     <message>
-        <location filename="../src/dialogAbout.ui" line="+35"/>
         <source>About Daisy Duck</source>
-        <translation>À propos de Daisy Duck</translation>
+        <translation type="obsolete">À propos de Daisy Duck</translation>
+    </message>
+    <message>
+        <source>Daisy Duck is a free software for playing online and local DTB (Digital Talking Books). It supports the Daisy specifications through the libduck library. It relies on Qt4 for the GUI and libVLC for the audio playing. </source>
+        <translation type="obsolete">Daisy Duck est un logiciel libre pour la lecture en ligne et locale de DTB (Digital Talking Books). Il supporte les spécifications Daisy via la bibliothèque libduck. Il se base sur Qt4 pour le GUI et libvlc pour la lecture audio.</translation>
+    </message>
+    <message>
+        <location filename="../src/dialogAbout.ui" line="+35"/>
+        <source>About DaisyDuck</source>
+        <translation>À propos de DaisyDuck</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Daisy Duck is a free software for playing online and local DTB (Digital Talking Books). It supports the Daisy specifications through the libduck library. It relies on Qt4 for the GUI and libVLC for the audio playing. </source>
-        <translation>Daisy Duck est un logiciel libre pour la lecture en ligne et locale de DTB (Digital Talking Books). Il supporte les spécifications Daisy via la bibliothèque libduck. Il se base sur Qt4 pour le GUI et libvlc pour la lecture audio.</translation>
+        <source>DaisyDuck is a free software for playing online and local DTB (Digital Talking Books). It supports the Daisy specifications through the libduck library. It relies on Qt4 for the GUI and libVLC for the audio playing. </source>
+        <translation>DaisyDuck est un logiciel libre pour la lecture en ligne et locale de DTB (Digital Talking Books). Il supporte les spécifications Daisy via la bibliothèque libduck. Il se base sur Qt4 pour le GUI et libVLC pour la lecture audio.</translation>
     </message>
     <message utf8="true">
         <location line="+13"/>
@@ -163,6 +171,11 @@
         <location line="+3"/>
         <source>the license of DaisyDuck</source>
         <translation>la licence de DaisyDuck</translation>
+    </message>
+    <message>
+        <location line="+732"/>
+        <source>Dependencies :</source>
+        <translation>Dépendances :</translation>
     </message>
     <message utf8="true">
         <source>Copyright (C) 2010 Mathieu Schroeter&lt;br/&gt;&lt;br/&gt;It was originally developped for the auditors of the BSR (BibliothÃ¨que Sonore Romande, &lt;a href=&quot;http://www.bsr-lausanne.ch&quot;&gt;www.bsr-lausanne.ch&lt;/a&gt;) to provide an audio streaming program for Daisy 2.02 books.</source>
@@ -421,11 +434,6 @@
 <context>
     <name>winMain</name>
     <message>
-        <location filename="../src/winMain.ui" line="+27"/>
-        <source>Daisy Duck</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Welcome in Daisy Duck, a Daisy 2.02 player for local (hard disc, CD, ...) and online audio books (web streaming).&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;How to open an audio book?&lt;/b&gt;&lt;br/&gt;
@@ -448,7 +456,6 @@ Pour les livres locaux, sélectionnez &quot;Fichier-&gt;Ouvrir&quot; or &lt;i&gt
 Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: </translation>
     </message>
     <message>
-        <location line="+83"/>
         <source>Welcome in Daisy Duck, a Daisy 2.02 player for local (hard disc, CD, ...) and online audio books (web streaming).&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;How to open an audio book?&lt;/b&gt;&lt;br/&gt;
@@ -462,7 +469,7 @@ Daisy Duck saves automatically the position of every book that you have read. Wh
 &lt;br/&gt;
 &lt;b&gt;What about &quot;Settings&quot;?&lt;/b&gt;&lt;br/&gt;
 The settings part is only intended to be used by the advanced users and specially for the online accesses.</source>
-        <translation>Bienvenue dans Daisy Duck, un lecteur Daisy 2.02 pour livre audio locaux (disque dur, CD, ...) et en ligne (web streaming).&lt;br/&gt;
+        <translation type="obsolete">Bienvenue dans Daisy Duck, un lecteur Daisy 2.02 pour livre audio locaux (disque dur, CD, ...) et en ligne (web streaming).&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;Comment ouvrir un livre audio?&lt;/b&gt;&lt;br/&gt;
 Pour les livres locaux, sélectionnez &quot;Fichier-&gt;Ouvrir&quot; ou &lt;i&gt;CTRL+O&lt;/i&gt;. Pour les livres en ligne, sélectionnez &quot;Fichier-&gt;Livres en ligne&quot; ou &lt;i&gt;CTRL+L&lt;/i&gt;.&lt;br/&gt;
@@ -477,7 +484,7 @@ Daisy Duck sauve automatiquement la position de chaque livre qui vous lisez. Qua
 La partie concernant les paramétrages est destinée à être utilisée par les utilisateurs avancés et spécialement pour les accès en ligne.</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location filename="../src/winMain.ui" line="+246"/>
         <source>chapters</source>
         <translation>chapitres</translation>
     </message>
@@ -587,12 +594,51 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
         <translation></translation>
     </message>
     <message>
-        <location line="-121"/>
+        <location line="+156"/>
+        <source>About DaisyDuck</source>
+        <translation>À propos de DaisyDuck</translation>
+    </message>
+    <message>
+        <location line="-277"/>
         <source>previous paragraph</source>
         <translation>paragraphe précédent</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-485"/>
+        <source>DaisyDuck</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+83"/>
+        <source>Welcome in DaisyDuck, a Daisy 2.02 player for local (hard disc, CD, ...) and online audio books (web streaming).&lt;br/&gt;
+&lt;br/&gt;
+&lt;b&gt;How to open an audio book?&lt;/b&gt;&lt;br/&gt;
+For local books, just select &quot;File-&gt;Open&quot; or &lt;i&gt;CTRL+O&lt;/i&gt;. For online books, select &quot;File-&gt;Online Books&quot; or &lt;i&gt;CTRL+L&lt;/i&gt;.&lt;br/&gt;
+&lt;br/&gt;
+&lt;b&gt;How to control the reading?&lt;/b&gt;&lt;br/&gt;
+You can use the mouse, or the keyboard with the following shortcuts: &lt;i&gt;CTRL+SPACE&lt;/i&gt; to play and/or stop, &lt;i&gt;CTRL+UP ARROW&lt;/i&gt; for the previous chapter, &lt;i&gt;CTRL+BOTTOM ARROW&lt;/i&gt; for the next chapter, &lt;i&gt;CTRL+LEFT ARROW&lt;/i&gt; for the previous paragraph and &lt;i&gt;CTRL+RIGHT ARROW&lt;/i&gt; for the next paragraph.&lt;br/&gt;
+&lt;br/&gt;
+&lt;b&gt;How to resume the reading of a book?&lt;/b&gt;&lt;br/&gt;
+DaisyDuck saves automatically the position of every book that you have read. When a book is opened, DaisyDuck searchs if a previous reading exists, and accordingly it sets the position (the chapter and the paragraph) in the player (a message is printed in the status bar). You must simply press the &quot;Play&quot; button when the book is loaded.&lt;br/&gt;
+&lt;br/&gt;
+&lt;b&gt;What about &quot;Settings&quot;?&lt;/b&gt;&lt;br/&gt;
+The settings part is only intended to be used by the advanced users and specially for the online accesses.</source>
+        <translation>Bienvenue dans DaisyDuck, un lecteur Daisy 2.02 pour livre audio locaux (disque dur, CD, ...) et en ligne (web streaming).&lt;br/&gt;
+&lt;br/&gt;
+&lt;b&gt;Comment ouvrir un livre audio?&lt;/b&gt;&lt;br/&gt;
+Pour les livres locaux, sélectionnez &quot;Fichier-&gt;Ouvrir&quot; ou &lt;i&gt;CTRL+O&lt;/i&gt;. Pour les livres en ligne, sélectionnez &quot;Fichier-&gt;Livres en ligne&quot; ou &lt;i&gt;CTRL+L&lt;/i&gt;.&lt;br/&gt;
+&lt;br/&gt;
+&lt;b&gt;Comment contrôler la lecture?&lt;/b&gt;&lt;br/&gt;
+Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: &lt;i&gt;CTRL+ESPACE&lt;/i&gt; pour lire et/ou arrêter, &lt;i&gt;CTRL+FLÈCHE HAUT&lt;/i&gt; pour le chapitre précédent, &lt;i&gt;CTRL+FLÈCHE BAS&lt;/i&gt; pour le chapitre suivant, &lt;i&gt;CTRL+FLÈCHE GAUCHE&lt;/i&gt; pour le paragraphe précédent et &lt;i&gt;CTRL+FLÈCHE DROITE&lt;/i&gt; pour le paragraphe suivant.&lt;br/&gt;
+&lt;br/&gt;
+&lt;b&gt;Comment reprendre la lecture d&apos;un livre?&lt;/b&gt;&lt;br/&gt;
+DaisyDuck sauve automatiquement la position de chaque livre qui vous lisez. Quand un livre est ouvert, DaisyDuck cherche si une lecture précédente existe, et en fonction, la position (le chapitre et le paragraphe) est modifiée pour la lecture (un message est affiché dans la barre de status). Vous devez simplement presser le bouton &quot;Lire&quot; quand le livre est chargé.&lt;br/&gt;
+&lt;br/&gt;
+&lt;b&gt;Et concernant &quot;Paramétrages&quot;?&lt;/b&gt;&lt;br/&gt;
+La partie concernant les paramétrages est destinée à être utilisée par les utilisateurs avancés et spécialement pour les accès en ligne.</translation>
+    </message>
+    <message>
+        <location line="+405"/>
         <source>go to the previous paragraph</source>
         <translation>aller au paragraphe précédent</translation>
     </message>
@@ -682,12 +728,11 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
         <translation></translation>
     </message>
     <message>
-        <location line="+24"/>
         <source>About Daisy Duck</source>
-        <translation>À propos de Daisy Duck</translation>
+        <translation type="obsolete">À propos de Daisy Duck</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+36"/>
         <source>Player</source>
         <translation>Lecture</translation>
     </message>
