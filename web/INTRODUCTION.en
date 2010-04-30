@@ -1,0 +1,60 @@
+<h1>The DaisyDuck project</h1>
+<p>
+Welcome on the DaisyDuck project website, a free software for playing digital
+audio books (Daisy 2.02).
+</p>
+<p>
+The goal of this project, is to provide the playback of online books and the
+playback of local books (reachable directly on a physical media). The interface
+is simplified for a quick handling, even for people with an handicap like
+partially sighted persons.<br/>
+Intuitive keyboard shortcuts provide an easy way in order to access the
+functionalities of the application and in order to navigate in the books (by
+chapter and by paragraph). DaisyDuck saves automatically the position where
+the playback of a book was interrupted. Then, when this book is reloaded, the
+start of the playback begins on the last position, without any action of the
+auditor.
+</p>
+
+<h2>News</h2>
+<p>
+The current release of <a href="@@DOWNLOAD@@.@@LANG@@.html">DaisyDuck</a> is
+1.0.0, with the following changes :
+</p>
+<ul>
+  <li>Initial release</li>
+  <li>Support for Daisy 2.02 books</li>
+</ul>
+
+<h2>Licenses</h2>
+<p>
+These programs are free softwares - you can redistribute them and/or modify
+them under the terms of their own licenses. The "GNU General Public License"
+(GNU/GPL) version 3+ and the "GNU Lesser General Public License" (GNU/LGPL)
+version 2.1+.<br/>
+They are distributed in the hope that they will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the licenses for more details.
+</p>
+
+<h1>Target systems</h1>
+<p>
+This software is available for the GNU/Linux and Windows platforms. No version
+is currently envisaged for the Mac OS X systems. An installer is provided with
+the Windows version. About GNU/Linux, packages for Ubuntu Lucid Lynx are
+available. See the section
+"<a href="@@DOWNLOAD@@.@@LANG@@.html">__DOWNLOAD__</a>" of this site.
+</p>
+
+<h1>Project origins</h1>
+<p>
+This project was created by a member of the
+<a href="http://www.geexbox.org">GeeXboX</a> team (which is the reason why the
+project is hosted on the GeeXboX server), for his
+"<a href="http://www.servicecivil.ch/pgs/scbref.html">non-military
+national service (fr)</a>"; and in particular for the auditors of the
+"<a href="http://www.bsr-lausanne.ch">Bibliothèque Sonore Romande (fr)</a>" in
+Lausanne. The online books playback was one of the main goals for this work.
+Nevertheless the application can be used for playing Daisy 2.02 in their common
+format.
+</p>

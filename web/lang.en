@@ -1,0 +1,33 @@
+lang="INTRODUCTION DOCUMENTATION DOWNLOAD DEVELOPER TITLE MASCOT TOINDEX LIBRARY VERSION LICENSE SITE PAGE"
+lang="$lang XMLCFG_TITLE XMLCFG_TEXT XMLCFG_USERNAME XMLCFG_PASSWORD"
+lang="$lang XMLOB_TITLE1 XMLOB_CATEGORY1 XMLOB_SUMMARY1"
+lang="$lang XMLOB_TITLE2 XMLOB_AUTHOR2 XMLOB_CATEGORY2 XMLOB_SUMMARY2"
+
+__INTRODUCTION__="Introduction"
+__DOCUMENTATION__="Documentation"
+__DOWNLOAD__="Download"
+__DEVELOPER__="Development"
+
+__TITLE__="a free player for Daisy 2.02 audio books"
+__MASCOT__="Mascot of the DaisyDuck project"
+__TOINDEX__="Back on the to select the language"
+
+__LIBRARY__="Library"
+__VERSION__="Version"
+__LICENSE__="License"
+__SITE__="Site"
+__PAGE__="Page"
+
+__XMLCFG_TITLE__="DaisyDuck Title Welcome"
+__XMLCFG_TEXT__="DaisyDuck Text Welcome"
+__XMLCFG_USERNAME__="User"
+__XMLCFG_PASSWORD__="Password"
+
+__XMLOB_TITLE1__="Just for Fun: The Story of an Accidental Revolutionary"
+__XMLOB_CATEGORY1__="Autobiography"
+__XMLOB_SUMMARY1__="« Once upon a time Linus Torvalds was a skinny unknown, just another nerdy Helsinki techie who had been fooling around with computers since childhood. Then he wrote a groundbreaking Operating System Kernel and distributed it via the internet — for free. Today Torvalds is an international folk hero. And his creation of the Linux kernel is used by over 12 million people as well as by companies such as IBM. »"
+
+__XMLOB_TITLE2__="Free as in Freedom: Richard Stallman's Crusade for Free Software"
+__XMLOB_AUTHOR2__="Sam Williams"
+__XMLOB_CATEGORY2__="Biography"
+__XMLOB_SUMMARY2__="« Free as in Freedom interweaves biographical snapshots of GNU project founder Richard Stallman with the political, social and economic history of the free software movement. Starting with how it all began--a desire for software code from Xerox to make the printing more efficient--to the continuing quest for free software that exists today. It is a movement that Stallman has at turns defined, directed and manipulated. Like Alan Greenspan in the financial sector, Stallman has assumed the role of tribal elder in a community that bills itself as anarchic and immune to central authority. Free as in Freedom looks at how the latest twists and turns in the software marketplace have done little to throw Stallman off his pedestal. Discover how the Richard's childhood and teenage experiences made him the man he is today. If anything, they have made Stallman's logic-based rhetoric and immovable personality more persuasive. In a rapidly changing world people need a fixed reference point, and Stallman has become that reference point for many in the software world. »"

@@ -1,0 +1,61 @@
+<h1>Le projet DaisyDuck</h1>
+<p>
+Bienvenue sur le site internet du projet DaisyDuck, un logiciel libre pour la
+lecture de livres audio digitaux (Daisy 2.02).
+</p>
+<p>
+L'objectif du projet, est de permettre la lecture de livres en ligne ainsi
+que la lecture de livres locaux (accessiblent directement via un media
+physique). L'interface est simplifiée pour une prise en main rapide, également
+pour les personnes souffrant d'un handicape tel que les malvoyants.<br/>
+Des raccourcis claviers intuitifs permettent de rapidement profiter des
+fonctionalités de l'application et de naviguer dans les livres (par chapitre et
+par paragraphe). DaisyDuck enregistre automatiquement la position où la
+lecture d'un livre a été interrompu. Puis lorsque ce livre est rechargé, le
+lancement de la lecture reprend à la dernière position, sans aucune
+intervention de l'auditeur.
+</p>
+
+<h2>Nouveautés</h2>
+<p>
+La version actuelle de <a href="@@DOWNLOAD@@.@@LANG@@.html">DaisyDuck</a> est
+la 1.0.0, avec les changements suivants :
+</p>
+<ul>
+  <li>Version initiale</li>
+  <li>Support des livres Daisy 2.02</li>
+</ul>
+
+<h2>Licences</h2>
+<p>
+Ces programmes sont des logiciels libres - vous pouvez les redistribuer et/ou
+les modifier suivant les termes de leurs licences respectives. La "GNU General
+Public License" (GNU/GPL) version 3+ et la "GNU Lesser General Public License"
+(GNU/LGPL) version 2.1+.<br/>
+Ils sont distribués dans l'espoir qu'ils vous seront utiles, mais SANS AUCUNE
+GARANTIE; sans même la garantie implicite de COMMERCIALISABILITÉ ni
+d'ADÉQUATION À UN OBJECTIF PARTICULIER. Consultez les licences pour plus
+de détails.
+</p>
+
+<h1>Systèmes cibles</h1>
+<p>
+Le logiciel est disponible pour les plateformes GNU/Linux et Windows. Aucune
+version n'est pour le moment prévue pour les systèmes Mac OS X. Un installateur
+est fourni avec la version pour Windows. Concernant GNU/Linux, des paquets pour
+Ubuntu Lucid Lynx sont disponibles. Voir la section
+"<a href="@@DOWNLOAD@@.@@LANG@@.html">__DOWNLOAD__</a>" du site.
+</p>
+
+<h1>Origines du projet</h1>
+<p>
+Ce projet a été réalisé par un membre du team
+<a href="http://www.geexbox.org">GeeXboX</a> (d'où l'hébergement sur le
+serveur des projets GeeXboX), dans le cadre de son
+<a href="http://www.servicecivil.ch/pgs/scbref.html">Service Civil</a>; et
+plus particulièrement pour les auditeurs de la
+<a href="http://www.bsr-lausanne.ch">Bibliothèque Sonore Romande</a> de
+Lausanne. La lecture de livres en ligne était un des objectif principaux
+de ce travail. Néanmoins l'application peut être utilisée également pour
+la lecture de livres Daisy 2.02 sous leur format habituel.
+</p>

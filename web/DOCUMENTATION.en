@@ -1,0 +1,116 @@
+<h1>User documentation</h1>
+<p>
+At the start of the application, a brief documentation gives the keyboard
+shortcuts in order to reach the important items to load a book as well as to
+navigate in the book.
+</p>
+
+<h2>Keyboard shortcuts</h2>
+<ul>
+  <li><pre class="shortcut">CTRL+O             </pre>: to open a local audio book (on a physical media).</li>
+  <li><pre class="shortcut">CTRL+L             </pre>: to reach to the list of online audio books.</li>
+  <li><pre class="shortcut">CTRL+Q             </pre>: to quit DaisyDuck.</li>
+  <li><pre class="shortcut">CTRL+SPACE         </pre>: to play and/or to stop.</li>
+  <li><pre class="shortcut">CTRL+UP ARROW      </pre>: to go to the previous chapter.</li>
+  <li><pre class="shortcut">CTRL+BOTTOM ARROW  </pre>: to go to the next chapter.</li>
+  <li><pre class="shortcut">CTRL+LEFT ARROW    </pre>: to go to the previous paragraph.</li>
+  <li><pre class="shortcut">CTRL+RIGHT ARROW   </pre>: to go to the next paragraph.</li>
+</ul>
+
+<h2>Welcome and Player</h2>
+<p>
+The following screenshots (click on the pictures for zooming) show the
+welcome frame as well as the player frame. The welcome gives a brief
+description of DaisyDuck and more especially, gives the list of the keyboard
+shortcuts. The player, in some words, has a list of chapters (on the left)
+of the loaded book, some informations on the book (like the summary), and
+the buttons to navigate in the book at the bottom to the right in the frame.
+</p>
+<div class="frame_gui">
+  <a href="gui-welcome.@@LANG@@.png">
+    <img src="gui-welcome.@@LANG@@.png" alt="GUI Welcome" title="Screenshot of the welcome"/>
+  </a>
+  <br/><br/>Welcome Frame
+</div>
+<div class="frame_gui">
+  <a href="gui-player.@@LANG@@.png">
+    <img src="gui-player.@@LANG@@.png" alt="GUI Player" title="Screenshot of the player"/>
+  </a>
+  <br/><br/>Player Frame
+</div>
+
+<h2>Online books</h2>
+<p>
+To access to the list of online books, click on the "Online books" button from
+the main screen, or press <i>CTRL+L</i>.
+</p>
+<p>
+The access on the list depends of the link in the "URI" field. If this list is
+not directly available, a window "Inputs" with the list of parameters displays
+(this list of parameters can be different according to the software settings).
+The following example (screenshot), shows this window which is waiting on a
+user number and on a password. Of course, if no link is specified in the "URI"
+field, the "Inputs" window is not shown.
+</p>
+<div class="frame_gui" style="float: none">
+  <a href="gui-onlinebooks.@@LANG@@.png">
+    <img src="gui-onlinebooks.@@LANG@@.png" alt="GUI Online books" title="Screenshot of the access to the online books"/>
+  </a>
+  <br/><br/>Access to the online books
+</div>
+
+<h1>Documentation for the advanced users</h1>
+<p>
+The advanced documentation addresses only people who want to modify
+manually the configuration file or to create a list of books for the
+online playback.
+</p>
+
+<h2>Configuration file</h2>
+<p>
+The configuration file contains the global settings of DaisyDuck as well as
+the automatic records of the books partially read. In principle it is not
+necessary to do the changes directly in the configuration file. The global
+settings are reachable from the "Settings" menu.
+</p>
+<p>
+If you wish to do changes manually in the file, this one is located (according
+to the operating system), in
+<i>$HOME/.config/daisyduck/</i> under GNU/Linux, and <i>$APPDATA/daisyduck/</i>
+under Windows.
+</p>
+<p>
+The configuration appears like a simple XML file :
+</p>
+@@INCLUDE:xml.config@@
+<p>
+The content above is a fake example. The tag &lt;custom&gt; must be unique.
+It contains a customized title and text which is shown on the welcome frame.
+The tag &lt;onlinebook&gt; must be unique too. The tag &lt;uri&gt; can be used
+for the location of the list of online books. The tags &lt;param&gt; in
+&lt;uriparam&gt; are arbitrary arguments, and are used to create the "Inputs"
+window. Each of them is sent via the POST method (HTTP), to the link introduced
+in the tag &lt;uri&gt;. Note, please, that these parameters are configurable
+from the graphical interface of DaisyDuck.
+</p>
+<p>
+The tags &lt;bookmark&gt; concern the interrupted playbacks. In principle,
+there is no need of changing anything.
+</p>
+
+<h2>Online books list file</h2>
+<p>
+In the configuration file which was previously presented, the list is
+a PHP file. Of course, this is fully arbitrary. It is possible to use
+a static page (XML) and without parameter in the tag &lt;uriparam&gt;.
+</p>
+<p>
+The following example presents a such list with two books.
+</p>
+@@INCLUDE:xml.onlinebooks@@
+<p>
+The quantity of books is unlimited. The tag &lt;uriparam&gt; must exist
+one time. It contains the arguments to use in GET (HTTP) with the address
+of the NCC files (tag &lt;uri&gt;) and all files forming the Daisy book.
+This list of parameters is arbitrary too.
+</p>

@@ -1,0 +1,14 @@
+<table>
+<tr>
+  <th>x86-64</th>
+  <th>i386</th>
+</tr>
+<tr>
+  <td><a href="releases/libduck1_1.0.0-1_amd64.deb">libduck1_1.0.0-1_amd64.deb</a></td>
+  <td><a href="releases/libduck1_1.0.0-1_i386.deb">libduck1_1.0.0-1_i386.deb</a></td>
+</tr>
+<tr>
+  <td><a href="releases/daisyduck_1.0.0-1_amd64.deb">daisyduck_1.0.0-1_amd64.deb</a></td>
+  <td><a href="releases/daisyduck_1.0.0-1_i386.deb">daisyduck_1.0.0-1_i386.deb</a></td>
+</tr>
+</table>

@@ -1,0 +1,126 @@
+<h1>Pour les développeurs</h1>
+<p>
+Le projet DaisyDuck se présente en deux projets distincts. L'interface
+graphique (DaisyDuck) est séparée de l'analyseur des fichiers Daisy (libduck).
+DaisyDuck est écrit en C++ tandis que libduck est écrit en C.
+</p>
+
+<h2>DaisyDuck</h2>
+<p>
+DaisyDuck est basé sur les bibliothèques Qt. A l'exception de la lecture
+audio qui est assurée par libVLC, et la gestion des fichiers Daisy 2.02, qui
+est réalisée par libduck. Ce logiciel est sous licence GPL3+.
+</p>
+<ul>
+  <li>Qt4 : <a href="http://qt.nokia.comi/downloads">http://qt.nokia.com/downloads</a></li>
+  <li>libVLC : <a href="http://www.videolan.org/developers/vlc.html">http://www.videolan.org/developers/vlc.html</a></li>
+</ul>
+
+<h2>libduck</h2>
+<p>
+L'analyse des fichiers Daisy 2.02, NCC et SMIL est réalisée entièrement par
+libduck. Cette bibliothèque est sous licence LGPL2.1+. Bien que
+tous les fichiers Daisy 2.02 devraient être lisibles, tous les aspects des
+spécifications ne sont pas supportés. Cette bibliothèque a été écrite
+principalement pour l'application graphique DaisyDuck. Ainsi les particularités
+comme le support des fichiers XHTML (balise &lt;text&gt; dans les fichiers SMIL)
+sont tout simplement ignorées.<br/>
+Il est de même pour une partie des méta-données misent à dispositions par
+les différents fichiers Daisy 2.02. Seuls les champs utilisés par DaisyDuck
+(en principe) sont accessibles via l'API publique de la bibliothèque. Notez
+bien qu'il est aisé d'en rajouter, si nécessaire. L'analyse syntaxique est
+réalisée à l'aide de libxml2.
+</p>
+<ul>
+  <li>libxml2 : <a href="http://xmlsoft.org/downloads.html">http://xmlsoft.org/downloads.html</a></li>
+</ul>
+<p>
+Le travail sur libduck est inspiré de la bibliothèque libdaisy du projet
+"<a href="http://developer.skolelinux.no/info/studentgrupper/2006-hig-daisyplayer/">The
+DaisyPlayer Project</a>".
+</p>
+
+<h1>Les sources / Mercurial</h1>
+<p>
+Les sources sont disponibles en ligne à l'aide de Mercurial, un système de
+gestion de versions décentralisées, dont le but est similaire aux outils CVS,
+SCCS, SVN et Arch. Il est utilisé afin de suivre les changements réalisés
+dans les sources et pour aider les développeurs à combiner et manipuler des
+changements réalisés par plusieurs personnes à des instants différents.
+</p>
+<p>
+Il y a actuellement deux moyens d'accéder à l'arborescence Mercurial. Via la
+ligne de commande ou (pour voir un changement sur un fichier en particulier,
+par exemple) via l'interface web avec votre navigateur internet :
+</p>
+<p>
+<a href="http://hg.geexbox.org/daisyduck">daisyduck</a> et
+<a href="http://hg.geexbox.org/libduck">libduck</a>
+</p>
+<p>
+Afin d'accéder à Mercurial via la ligne de commande, procédez ainsi
+(assurez-vous d'avoir installé le paquet mercurial).
+</p>
+<ul>
+  <li>Pour rappatrier une copie de chaque dépôt Mercurial :
+      <pre class="sh">hg clone http://hg.geexbox.org/libduck</pre>
+      <pre class="sh">hg clone http://hg.geexbox.org/daisyduck</pre>
+  </li>
+  <li>Pour mettre à jour votre copie locale d'un dépôt, en synchronisant avec
+      notre serveur :
+      <pre class="sh">hg pull -u</pre></li>
+</ul>
+
+<h2>Compilation</h2>
+<p>
+La compilation de libduck et de DaisyDuck se fait de façon traditionnelle via
+la commande `make` (aussi bien la compilation pour GNU/Linux que pour Windows).
+Bien que DaisyDuck soit basé sur Qt4, les Makefiles ne dépendent pas de
+`qmake` et celui-ci ne doit donc pas être utilisé.
+</p>
+<pre class="sh">
+./configure\n
+make\n
+make install
+</pre>
+<p>
+Pour effectuer une compilation croisée, rien de plus simple (exemple pour la
+cible Windows):
+</p>
+<pre class="sh">
+./configure --cross-compile --cross-prefix=i586-mingw32msvc- --prefix=/usr/i586-mingw32msvc\n
+make\n
+make install
+</pre>
+<p>
+Le script configure s'appuie fortement sur pkg-config. Dans le cas particulier
+de Qt4 avec DaisyDuck, veillez à ce que les fichiers .pc pour QtCore, QtGui,
+QtXml et QtNetwork soient disponibles. Dans le cas contraire, vous devrez
+passer tous les arguments nécessaires CXXFLAGS et LDFLAGS ou alors générer
+manuellement les fichiers pkg-config.<br/>
+Selon la configuration de votre système, il peut être nécessaire de procéder
+ainsi (et spécialement dans le cas d'un compilation croisée pour Windows) :
+</p>
+<pre class="sh">
+export PKG_CONFIG_PATH=/usr/i586-mingw32msvc/lib/pkgconfig\n
+export PKG_CONFIG_LIBDIR=/usr/i586-mingw32msvc/lib\n
+./configure --cross-compile --cross-prefix=i586-mingw32msvc- --prefix=/usr/i586-mingw32msvc\n
+make\n
+make install
+</pre>
+<p>
+Si le script configure échoue, consultez le fichier config.log généré à la
+racine des sources.
+</p>
+
+<h1>Feed-back</h1>
+<p>
+L'auteur de DaisyDuck et de libduck, Mathieu Schroeter, peut être contacté
+par <a href="mailto:mathieu.schroeter@gamesover.ch">e-mail</a>.
+</p>
+<p>
+S'il vous plaît, envoyez les rapports de bugs, des suggestions, des idées,
+des commentaires ou des patches à la
+<a href="https://www.geexbox.org/sympa/info/devel">liste de développement</a>
+GeeXboX : <a href="mailto:devel@geexbox.org">devel@geexbox.org</a>.
+</p>

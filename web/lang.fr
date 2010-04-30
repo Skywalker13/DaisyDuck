@@ -1,0 +1,33 @@
+lang="INTRODUCTION DOCUMENTATION DOWNLOAD DEVELOPER TITLE MASCOT TOINDEX LIBRARY VERSION LICENSE SITE PAGE"
+lang="$lang XMLCFG_TITLE XMLCFG_TEXT XMLCFG_USERNAME XMLCFG_PASSWORD"
+lang="$lang XMLOB_TITLE1 XMLOB_CATEGORY1 XMLOB_SUMMARY1"
+lang="$lang XMLOB_TITLE2 XMLOB_AUTHOR2 XMLOB_CATEGORY2 XMLOB_SUMMARY2"
+
+__INTRODUCTION__="Introduction"
+__DOCUMENTATION__="Documentation"
+__DOWNLOAD__="Téléchargement"
+__DEVELOPER__="Développement"
+
+__TITLE__="un lecteur libre de livres audio Daisy 2.02"
+__MASCOT__="Mascotte du projet DaisyDuck"
+__TOINDEX__="Revenir sur la page du choix de la langue"
+
+__LIBRARY__="Bibliothèque"
+__VERSION__="Version"
+__LICENSE__="Licence"
+__SITE__="Site"
+__PAGE__="page"
+
+__XMLCFG_TITLE__="DaisyDuck Titre Accueil"
+__XMLCFG_TEXT__="DaisyDuck Texte Accueil"
+__XMLCFG_USERNAME__="Utilisateur"
+__XMLCFG_PASSWORD__="Mot de passe"
+
+__XMLOB_TITLE1__="Il était une fois Linux"
+__XMLOB_CATEGORY1__="Autobiographie"
+__XMLOB_SUMMARY1__="« II y a aujourd'hui dix ans, un étudiant finlandais nommé Linus Torvalds s'enfermait plusieurs mois dans sa chambre, rideaux tirés, pour un long tête-à-tête avec son ordinateur. Le résultat : un nouveau système d'exploitation. Qu'allait-il en faire ? Le garder pour son usage personnel ? Le vendre à une société de logiciels ? Rien de tout cela. Linus décide de rendre le fruit de son travail librement accessible sur Internet en invitant toute personne intéressée à l'améliorer. L'UNIX libre de Linus, baptisé Linux, était né et avec lui, une nouvelle manière de concevoir les logiciels qui allait bouleverser l'univers de l'informatique. »"
+
+__XMLOB_TITLE2__="Richard Stallman et la révolution du logiciel libre"
+__XMLOB_AUTHOR2__="Richard Matthew Stallman, Sam Williams, Christophe Masutti"
+__XMLOB_CATEGORY2__="Biographie autorisée"
+__XMLOB_SUMMARY2__="« Chaque génération a son philosophe, écrivain ou artiste qui saisit et incarne l'imaginaire du moment. Il arrive que ces philosophes soient reconnus de leur vivant, mais le plus souvent il faut attendre que la patine du temps fasse son effet. Que cette reconnaissance soit immédiate ou différée, une époque est marquée par ces hommes qui expriment leurs idéaux, dans les murmures d'un poème ou dans le grondement d'un mouvement politique. Notre génération a un philosophe. Ce n'est ni un artiste ni un écrivain. C'est un informaticien. »"

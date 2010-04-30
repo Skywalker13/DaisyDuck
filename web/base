@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="@@LANG@@">
+  <!--
+    This web site is (C) 2010 Mathieu Schroeter
+
+    HomePage for the DaisyDuck Project (http://daisy.geexbox.org)
+    Feel free to get inspiration from this site, as long as you leave this
+    comment here.
+  //-->
+  <head>
+    <title>DaisyDuck - __TITLE__</title>
+    <meta http-equiv="Content-language" content="@@LANG@@"/>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+    <meta name="description" content="DaisyDuck Player for Digital Talking Books."/>
+    <meta name="author" content="Mathieu Schroeter"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="keywords" content="daisy,2.02,dtb,digital,talking,book,player,libduck,libvlc"/>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div id="page">
+      <div id="header">
+        <div id="title_img">
+          <a href="index.html" title="__TOINDEX__">
+            <img src="daisyduck.png" alt="__MASCOT__"/>
+          </a>
+        </div>
+        <div id="title">DaisyDuck</div>
+        <div id="title_text">__TITLE__</div>
+      </div>
+      <div id="contents">
+        <div class="item">
+          <a href="@@INTRODUCTION@@.@@LANG@@.html" title="__INTRODUCTION__" accesskey="1">__INTRODUCTION__</a>
+        </div>
+        <div class="item">
+          <a href="@@DOCUMENTATION@@.@@LANG@@.html" title="__DOCUMENTATION__" accesskey="2">__DOCUMENTATION__</a>
+        </div>
+        <div class="item">
+          <a href="@@DOWNLOAD@@.@@LANG@@.html" title="__DOWNLOAD__" accesskey="3">__DOWNLOAD__</a>
+        </div>
+        <div class="item">
+          <a href="@@DEVELOPER@@.@@LANG@@.html" title="__DEVELOPER__" accesskey="4">__DEVELOPER__</a>
+        </div>
+      </div>
+      <div id="include">
+        @@INCLUDE:PAGE@@
+      </div>
+      <div id="footer">
+        <span id="valid"><img src="valid-xhtml11-small.png" alt="valid xhtml 1.1"/></span>
+        <span id="gx"><a href="http://www.geexbox.org">GeeXboX.org</a></span>
+      </div>
+    </div>
+  </body>
+</html>

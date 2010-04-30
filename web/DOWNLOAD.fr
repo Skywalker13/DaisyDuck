@@ -1,0 +1,38 @@
+<h1>Télécharger DaisyDuck</h1>
+<p>
+DaisyDuck est disponible pour Windows et pour GNU/Linux.
+</p>
+
+<h2>DaisyDuck pour Windows</h2>
+<p>
+Pour télécharger l'installateur :
+<a href="releases/daisyduck-win32-installer-1.0.0.exe">daisyduck-win32-installer-1.0.0.exe</a>
+</p>
+<p>
+Cette version a été compilée à l'aide de
+<a href="http://www.mingw.org">MinGW</a>
+et embarque les bibliothèques suivantes :
+</p>
+@@INCLUDE:table.packages@@
+<p>
+Pour télécharger l'archive source complète (7-Zip) :
+<a href="releases/daisyduck-full-dist-1.0.0.7z">daisyduck-full-dist-1.0.0.7z</a>
+</p>
+
+<h2>DaisyDuck pour GNU/Linux</h2>
+<p>
+La version GNU/Linux est distribuée en tant que paquets pour Ubuntu Lucid Lynx.
+</p>
+@@INCLUDE:table.ubuntu@@
+
+<h1>Sources</h2>
+<p>
+Les sources peuvent être téléchargées avec les liens suivants :
+</p>
+<ul>
+  <li><a href="releases/libduck-1.0.0.tar.bz2">libduck-1.0.0.tar.bz2</a></li>
+  <li><a href="releases/daisyduck-1.0.0.tar.bz2">daisyduck-1.0.0.tar.bz2</a></li>
+</ul>
+<p>
+Les versions de développement sont disponibles sur la page "<a href="@@DEVELOPER@@.@@LANG@@.html">__DEVELOPER__</a>".
+</p>

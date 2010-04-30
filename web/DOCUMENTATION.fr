@@ -1,0 +1,121 @@
+<h1>Documentation utilisateur</h1>
+<p>
+Au lancement de l'application, une brève documentation indique les touches de
+raccourcis permettant d'atteindre les éléments importants pour charger un livre
+ainsi que pour naviguer dans le livre.
+</p>
+
+<h2>Raccourcis clavier</h2>
+<ul>
+  <li><pre class="shortcut">CTRL+O             </pre>: ouvrir un livre audio local (sur un média physique).</li>
+  <li><pre class="shortcut">CTRL+L             </pre>: accéder à la liste des livres audio en ligne.</li>
+  <li><pre class="shortcut">CTRL+Q             </pre>: quitter DaisyDuck.</li>
+  <li><pre class="shortcut">CTRL+ESPACE        </pre>: lire et/ou arrêter.</li>
+  <li><pre class="shortcut">CTRL+FLÈCHE HAUT   </pre>: aller au chapitre précédent.</li>
+  <li><pre class="shortcut">CTRL+FLÈCHE BAS    </pre>: aller au chapitre suivant.</li>
+  <li><pre class="shortcut">CTRL+FLÈCHE GAUCHE </pre>: aller au paragraphe précédent.</li>
+  <li><pre class="shortcut">CTRL+FLÈCHE DROITE </pre>: aller au paragraphe suivant.</li>
+</ul>
+
+<h2>Accueil et Lecture</h2>
+<p>
+Les photos d'écran ci-dessous (cliquez sur les images pour les agrandir)
+présentent le cadre d'accueil ainsi que le cadre du lecteur. L'accueil donne
+une brève description de DaisyDuck et surtout, donne la liste des raccourcis
+clavier. Le lecteur se résume en la liste des chapitres (sur la gauche) du
+livre chargé, quelques informations sur le livre (dont l'extrait), et les
+boutons pour naviguer dans le livre en bas à droite du cadre.
+</p>
+<div class="frame_gui">
+  <a href="gui-welcome.@@LANG@@.png">
+    <img src="gui-welcome.@@LANG@@.png" alt="GUI Accueil" title="Photo d'écran de l'accueil"/>
+  </a>
+  <br/><br/>Cadre Accueil
+</div>
+<div class="frame_gui">
+  <a href="gui-player.@@LANG@@.png">
+    <img src="gui-player.@@LANG@@.png" alt="GUI Lecteur" title="Photo d'écran du lecteur"/>
+  </a>
+  <br/><br/>Cadre Lecteur
+</div>
+
+<h2>Livres en ligne</h2>
+<p>
+Pour accéder à la liste de livres en ligne, cliquez sur le bouton "Livres en
+ligne" depuis l'écran principal, ou pressez <i>CTRL+L</i>.
+</p>
+<p>
+L'accès à une liste dépend du lien dans le champ "URI". Si la liste n'est pas
+directement disponible, une fenêtre "Entrées" contenant une liste de paramètres
+s'affiche (cette liste de paramètres peut être différente selon la configuration
+du logiciel). L'exemple ci-dessous (photo d'écran), montre cette fenêtre en
+attente d'un numéro d'utilisateur et d'un mot de passe. Bien entendu, si aucun
+lien n'est spécifié dans le champ "URI", la fenêtre "Entrées" n'est pas
+affichée.
+</p>
+<div class="frame_gui" style="float: none">
+  <a href="gui-onlinebooks.@@LANG@@.png">
+    <img src="gui-onlinebooks.@@LANG@@.png" alt="GUI Livres en ligne" title="Photo d'écran pour l'accès aux livres en ligne"/>
+  </a>
+  <br/><br/>Accès aux livres en ligne
+</div>
+
+<h1>Documentation pour les utilisateurs avancés</h1>
+<p>
+La documentation avancée s'adresse uniquement au personnes qui désirent
+modifier manuellement le fichier de configuration ou de créer une liste de
+livres pour la lecture en ligne.
+</p>
+
+<h2>Fichier de configuration</h2>
+<p>
+Le fichier de configuration contient les paramètres généraux de DaisyDuck
+ainsi que les enregistrements automatiques des livres partiellement lus.
+En principe il n'est pas nécessaire de faire les modifications directement
+dans le fichier de configuration. Les paramètres généraux sont accessibles
+depuis le menu "Paramétrages".
+</p>
+<p>
+Si vous désirez faire des modifications manuellement dans le fichier, celui-ci
+est localisé (selon le système d'exploitation), dans
+<i>$HOME/.config/daisyduck/</i> sous GNU/Linux, et <i>$APPDATA/daisyduck/</i>
+sous Windows.
+</p>
+<p>
+La configuration se présente en tant que simple fichier XML :
+</p>
+@@INCLUDE:xml.config@@
+<p>
+Le contenu ci-dessus est un exemple factice. La balise &lt;custom&gt; doit
+être unique. Elle contient un titre et un texte personnalisé qui s'affiche
+sur le cadre d'accueil. La balise &lt;onlinebook&gt; doit également être
+unique. La balise &lt;uri&gt; permet de donner l'adresse sur la liste
+des livres en ligne. Les balises &lt;param&gt; dans &lt;uriparam&gt;
+sont des arguments arbitraires, utilisés pour créer la fenêtre "Entrées".
+Chacun d'eux est envoyé via la méthode POST (HTTP), au lien indiqué dans la
+balise &lt;uri&gt;. Notez bien que ces paramètres sont tous configurable
+depuis l'interface graphique de DaisyDuck.
+</p>
+<p>
+Les balises &lt;bookmark&gt; concernent les lectures interrompues. En
+principe, il n'y a jamais besoin d'y apporter de modifications.
+</p>
+
+<h2>Fichier de liste de livres en ligne</h2>
+<p>
+Dans le fichier de configuration présenté précédemment, la liste pointe
+sur un fichier PHP. Bien entendu, ceci est complètement arbitraire. Il
+est tout à fait possible de pointer directement sur une page static (XML)
+et sans avoir le moindre paramètre dans la balise &lt;uriparam&gt;.
+</p>
+<p>
+L'exemple suivant présente une telle liste avec deux livres.
+</p>
+@@INCLUDE:xml.onlinebooks@@
+<p>
+Il n'y a pas de limite sur la quantité de livres. La balise &lt;uriparam&gt;
+doit exister une seule fois. Elle contient les arguments à utiliser en GET
+(HTTP) avec l'adresse des fichiers NCC (balise &lt;uri&gt;) et tous les
+fichiers formant le livre Daisy. Cette liste de paramètres est également
+arbitraire.
+</p>
