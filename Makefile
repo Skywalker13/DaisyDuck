@@ -6,6 +6,7 @@ include config.mak
 DISTFILE = daisyduck-$(VERSION).tar.bz2
 
 EXTRADIST = \
+	ChangeLog \
 	configure \
 	COPYING \
 	README \

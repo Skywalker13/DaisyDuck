@@ -1,0 +1,5 @@
+YYYY-MM-DD  Mathieu Schroeter  <mathieu.schroeter@gamesover.ch>
+
+	* Initial project release (v1.0.0).
+	* Support for Daisy 2.02 DTB playback of local and online
+	  audio books.
