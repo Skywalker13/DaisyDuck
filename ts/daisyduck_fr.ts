@@ -695,7 +695,7 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
     <message>
         <location line="+6"/>
         <source>&amp;Window</source>
-        <translation>&amp;Fenêtres</translation>
+        <translation>F&amp;enêtres</translation>
     </message>
     <message>
         <location line="+44"/>
