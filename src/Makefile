@@ -47,12 +47,16 @@ OBJS = $(SRCS:.cxx=.o) $(SRCS_MOC:.cxx=.o) $(SRCS_QRC:.cxx=.o)
 
 MANS = $(DAISYDUCK).1
 
+DESKTOP = $(DAISYDUCK).desktop
+ICON = ../images/$(DAISYDUCK).png
+
 EXTRADIST = \
 	common.h \
 	Config.h \
 	$(UI) \
 	$(H_MOC) \
-	$(MANS)
+	$(MANS) \
+	$(DESKTOP) \
 
 .SUFFIXES: .ui .h _moc.cxx .cxx .o
 
@@ -85,7 +89,7 @@ clean:
 	rm -f $(DAISYDUCK)
 	rm -f .depend
 
-install: install-apps install-man
+install: install-apps install-man install-data
 
 install-apps: apps
 	$(INSTALL) -d $(bindir)
@@ -98,7 +102,13 @@ install-man: $(MANS)
 	  $(INSTALL) -m 644 $$m $(mandir)/man$$section; \
 	done
 
-uninstall: uninstall-apps uninstall-man
+install-data: $(DESKTOP) $(ICON)
+	$(INSTALL) -d $(sharedir)/pixmaps
+	$(INSTALL) -d $(sharedir)/applications
+	$(INSTALL) -c -m 644 $(ICON) $(sharedir)/pixmaps
+	$(INSTALL) -c -m 644 $(DESKTOP) $(sharedir)/applications
+
+uninstall: uninstall-apps uninstall-man uninstall-data
 
 uninstall-apps:
 	rm -f $(bindir)/$(DAISYDUCK)
@@ -108,6 +118,10 @@ uninstall-man:
 	  section=`echo $$m | sed -e 's/^.*\\.//'`; \
 	  rm -f $(mandir)/man$$section/$$m; \
 	done
+
+uninstall-data:
+	rm -f $(sharedir)/pixmaps/$(DAISYDUCK).png
+	rm -f $(sharedir)/applications/$(DAISYDUCK).desktop
 
 .PHONY: *clean *install* apps*
 

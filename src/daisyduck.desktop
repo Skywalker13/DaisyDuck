@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=DaisyDuck
+GenericName=Digital Talking Book player
+Comment=Digital Talking Book player for Daisy 2.02
+Icon=daisyduck
+Exec=daisyduck
+Terminal=false
+Categories=AudioVideo;Player;
