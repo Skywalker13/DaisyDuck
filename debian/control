@@ -1,0 +1,17 @@
+Source: daisyduck
+Section: misc
+Priority: optional
+Maintainer: Mathieu Schroeter <mathieu.schroeter@gamesover.ch>
+Build-Depends: debhelper (>= 7.0.50), pkg-config (>= 0.20), libduck-dev (>= 1.0)
+Standards-Version: 3.8.4
+Homepage: http://daisy.geexbox.org
+Vcs-Hg: http://hg.geexbox.org/daisyduck
+Vcs-Browser: http://hg.geexbox.org/daisyduck/summary
+
+Package: daisyduck
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: a free player for Daisy 2.02 audio books
+ DaisyDuck is a player for Daisy 2.02 DTB (Digital Talking Book).
+ It provides the ability to play online books through the VideoLAN
+ library.
