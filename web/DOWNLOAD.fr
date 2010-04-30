@@ -25,7 +25,7 @@ La version GNU/Linux est distribuée en tant que paquets pour Ubuntu Lucid Lynx.
 </p>
 @@INCLUDE:table.ubuntu@@
 
-<h1>Sources</h2>
+<h1>Sources</h1>
 <p>
 Les sources peuvent être téléchargées avec les liens suivants :
 </p>
