@@ -13,3 +13,4 @@ dialog.*\.h$
 win.*\.h$
 qrc_.*\.cxx$
 _moc\.cxx$
+^web/site.*
