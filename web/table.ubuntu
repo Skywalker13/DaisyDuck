@@ -11,4 +11,15 @@
   <td><a href="releases/daisyduck_1.0.0-1_amd64.deb">daisyduck_1.0.0-1_amd64.deb</a></td>
   <td><a href="releases/daisyduck_1.0.0-1_i386.deb">daisyduck_1.0.0-1_i386.deb</a></td>
 </tr>
+<tr>
+  <td colspan="2" style="border-bottom: solid 1px \#aaaaaa"></td>
+</tr>
+<tr>
+  <td><a href="releases/libduck-dbg_1.0.0-1_amd64.deb">libduck-dbg_1.0.0-1_amd64.deb</a></td>
+  <td><a href="releases/libduck-dbg_1.0.0-1_i386.deb">libduck-dbg_1.0.0-1_i386.deb</a></td>
+</tr>
+<tr>
+  <td><a href="releases/libduck-dev_1.0.0-1_amd64.deb">libduck-dev_1.0.0-1_amd64.deb</a></td>
+  <td><a href="releases/libduck-dev_1.0.0-1_i386.deb">libduck-dev_1.0.0-1_i386.deb</a></td>
+</tr>
 </table>
