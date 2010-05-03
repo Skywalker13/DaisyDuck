@@ -1,0 +1,14 @@
+--- a/modules/Makefile.in	2010-04-17 00:15:36.000000000 +0200
++++ b/modules/Makefile.in2	2010-04-23 10:19:24.621452030 +0200
+@@ -1014,11 +1014,7 @@
+ 	$(AM_V_at)touch stamp-cache
+ 
+ install-exec-hook:
+-	if test -z "$(DESTDIR)"; then \
+-		../bin/vlc-cache-gen$(EXEEXT) "$(vlclibdir)/plugins" ; \
+-	else \
+ 		echo "Staged installation: cache generation skipped!" ; \
+-	fi
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

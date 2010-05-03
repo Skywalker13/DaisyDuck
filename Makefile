@@ -15,6 +15,7 @@ EXTRADIST = \
 SUBDIRS = \
 	DOCS \
 	extras \
+	extras/mingw \
 	extras/nsis \
 	extras/nsis/configs \
 	extras/nsis/languages \

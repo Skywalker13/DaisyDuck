@@ -1,0 +1,12 @@
+# Configuration
+
+HOST="i586-mingw32msvc"
+CROSS_PREFIX="i586-mingw32msvc-"
+MINGW_SYSROOT="/usr/i586-mingw32msvc"
+PREFIX="$(pwd)/usr"
+
+ICONV_VER="1.13.1"
+XML2_VER="2.7.7"
+DUCK_VER="0.0.1"
+FFMPEG_VER="r21465"
+VLC_VER="1.1.0-pre3"
