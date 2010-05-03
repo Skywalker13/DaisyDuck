@@ -40,12 +40,14 @@ DaisyDuck::DaisyDuck (void)
   QString cfgfile, title;
   bool verbose = false;
   unsigned int vlc_argc = 0, i, ver;
-  const char *vlc_argv[16];
+  const char *vlc_argv[32];
   char useragent[256];
   libvlc_event_manager_t *ev;
 
   this->setupUi (this);
   this->daisyState = DAISY_IS_SLEEPING;
+  this->vlc_rate = 100;
+  this->labelSpeed->setText (tr ("Speed %1% :").arg (this->vlc_rate));
 
   title = this->windowTitle ();
   this->setWindowTitle (title + " - " DAISYDUCK_VERSION_STR);
@@ -90,6 +92,12 @@ DaisyDuck::DaisyDuck (void)
            this, SLOT (playerNodeNext ()));
   connect (pushNodePrev, SIGNAL (clicked ()),
            this, SLOT (playerNodePrev ()));
+  connect (pushSpeedReset, SIGNAL (clicked ()),
+           this, SLOT (playerSpeedReset ()));
+  connect (pushSpeedUp, SIGNAL (clicked ()),
+           this, SLOT (playerSpeedUp ()));
+  connect (pushSpeedDown, SIGNAL (clicked ()),
+           this, SLOT (playerSpeedDown ()));
 
   connect (this, SIGNAL (playerEvEndReached ()),
            this, SLOT (playerSmilnodeNext ()));
@@ -107,6 +115,9 @@ DaisyDuck::DaisyDuck (void)
   vlc_argv[vlc_argc++] = "--no-video";
   vlc_argv[vlc_argc++] = "--no-media-library";
   vlc_argv[vlc_argc++] = "--no-auto-preparse";
+
+  /* ensure that audio pitch is preserved */
+  vlc_argv[vlc_argc++] = "--audio-time-stretch";
 
   /* Network */
   vlc_argv[vlc_argc++] = "--http-reconnect";
@@ -405,6 +416,9 @@ DaisyDuck::playerPlay (void)
   this->winBar->showMessage (tr ("Daisy Duck is reading..."), 2000);
   this->pushNodeNext->setEnabled (true);
   this->pushNodePrev->setEnabled (true);
+  this->pushSpeedReset->setEnabled (true);
+  this->pushSpeedUp->setEnabled (true);
+  this->pushSpeedDown->setEnabled (true);
 
   keys = this->pushAction->shortcut ();
   this->pushAction->setText (tr ("Stop"));
@@ -427,6 +441,9 @@ DaisyDuck::playerStop (void)
   this->winBar->showMessage (tr ("Daisy Duck is sleeping..."), 2000);
   this->pushNodeNext->setEnabled (false);
   this->pushNodePrev->setEnabled (false);
+  this->pushSpeedReset->setEnabled (false);
+  this->pushSpeedUp->setEnabled (false);
+  this->pushSpeedDown->setEnabled (false);
 
   keys = this->pushAction->shortcut ();
   this->pushAction->setText (tr ("Play"));
@@ -453,6 +470,38 @@ DaisyDuck::playerTimeChanged (long time)
     this->playerNodePrev (false);
 
   this->selectionUpdate ();
+}
+
+void
+DaisyDuck::playerSpeedReset (void)
+{
+  if (!this->vlc_mp)
+    return;
+
+  this->vlc_rate = 100;
+  this->playerSpeed ();
+}
+
+void
+DaisyDuck::playerSpeedUp (void)
+{
+  if (!this->vlc_mp)
+    return;
+
+  this->vlc_rate += this->vlc_rate_inc;
+  this->playerSpeed ();
+}
+
+void
+DaisyDuck::playerSpeedDown (void)
+{
+  if (!this->vlc_mp)
+    return;
+
+  this->vlc_rate -= this->vlc_rate_inc;
+  if (this->vlc_rate < 0)
+    this->vlc_rate = 0;
+  this->playerSpeed ();
 }
 
 void
@@ -644,6 +693,13 @@ DaisyDuck::treeSelectionUpdate (void)
     this->treeSmilnode->setCurrentItem (item);
 }
 
+inline void
+DaisyDuck::playerSpeed (void)
+{
+  this->labelSpeed->setText (tr ("Speed %1% :").arg (this->vlc_rate));
+  libvlc_media_player_set_rate (this->vlc_mp, this->vlc_rate / 100.0);
+}
+
 void
 DaisyDuck::selectionUpdate (void)
 {
@@ -793,6 +849,7 @@ DaisyDuck::openBook (QString book, QString summary)
                                    "\"Play\" to resume."));
 
   this->actionPlayer_activated ();
+  this->playerSpeedReset ();
 }
 
 void

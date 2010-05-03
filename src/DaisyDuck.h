@@ -90,6 +90,9 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
     void playerPlay (void);
     void playerStop (void);
     void playerTimeChanged (long time);
+    void playerSpeedReset (void);
+    void playerSpeedUp (void);
+    void playerSpeedDown (void);
 
     /* Online Books */
     void onlineBook (QString book, QString hash, QString summary);
@@ -103,6 +106,7 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
     void playerNodeNext (bool check_time);
     void playerNodePrev (bool check_time);
     void playerSeek (int smilpos, int smilnode);
+    inline void playerSpeed (void);
 
     void selectionUpdate (void);
     void customUpdate (void);
@@ -130,6 +134,8 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
     /* libvlc */
     libvlc_instance_t     *vlc_core;
     libvlc_media_player_t *vlc_mp;
+    int vlc_rate;
+    static const int vlc_rate_inc = 10;
 };
 
 #endif /* DAISYDUCK_H */
