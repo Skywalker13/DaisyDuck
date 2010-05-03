@@ -10,7 +10,7 @@ ainsi que pour naviguer dans le livre.
   <li><pre class="shortcut">CTRL+O             </pre>: ouvrir un livre audio local (sur un média physique).</li>
   <li><pre class="shortcut">CTRL+L             </pre>: accéder à la liste des livres audio en ligne.</li>
   <li><pre class="shortcut">CTRL+Q             </pre>: quitter DaisyDuck.</li>
-  <li><pre class="shortcut">CTRL+ESPACE        </pre>: lire et/ou arrêter.</li>
+  <li><pre class="shortcut">CTRL+ENTRÉE        </pre>: lire et/ou arrêter.</li>
   <li><pre class="shortcut">CTRL+FLÈCHE HAUT   </pre>: aller au chapitre précédent.</li>
   <li><pre class="shortcut">CTRL+FLÈCHE BAS    </pre>: aller au chapitre suivant.</li>
   <li><pre class="shortcut">CTRL+FLÈCHE GAUCHE </pre>: aller au paragraphe précédent.</li>
