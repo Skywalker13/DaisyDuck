@@ -610,7 +610,7 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
     </message>
     <message>
         <location line="+35"/>
-        <source>Ctrl+Space</source>
+        <source>Ctrl+Enter</source>
         <translation></translation>
     </message>
     <message>
@@ -684,7 +684,38 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
         <translation></translation>
     </message>
     <message>
-        <location line="+347"/>
+        <location line="-521"/>
+        <source>Welcome in DaisyDuck, a Daisy 2.02 player for local (hard disc, CD, ...) and online audio books (web streaming).&lt;br/&gt;
+&lt;br/&gt;
+&lt;b&gt;How to open an audio book?&lt;/b&gt;&lt;br/&gt;
+For local books, just select &quot;File-&gt;Open&quot; or &lt;i&gt;CTRL+O&lt;/i&gt;. For online books, select &quot;File-&gt;Online Books&quot; or &lt;i&gt;CTRL+L&lt;/i&gt;.&lt;br/&gt;
+&lt;br/&gt;
+&lt;b&gt;How to control the reading?&lt;/b&gt;&lt;br/&gt;
+You can use the mouse, or the keyboard with the following shortcuts: &lt;i&gt;CTRL+ENTER&lt;/i&gt; to play and/or stop, &lt;i&gt;CTRL+UP ARROW&lt;/i&gt; for the previous chapter, &lt;i&gt;CTRL+BOTTOM ARROW&lt;/i&gt; for the next chapter, &lt;i&gt;CTRL+LEFT ARROW&lt;/i&gt; for the previous paragraph and &lt;i&gt;CTRL+RIGHT ARROW&lt;/i&gt; for the next paragraph.&lt;br/&gt;
+The playback speed can be controlled with &lt;i&gt;CTRL+PLUS&lt;/i&gt; to increase speed of 10%, &lt;i&gt;CTRL+MINUS&lt;/i&gt; to decrease speed of 10% and &lt;i&gt;CTRL+ASTERISK&lt;/i&gt; to set the normal speed.&lt;br/&gt;
+&lt;br/&gt;
+&lt;b&gt;How to resume the reading of a book?&lt;/b&gt;&lt;br/&gt;
+DaisyDuck saves automatically the position of every book that you have read. When a book is opened, DaisyDuck searchs if a previous reading exists, and accordingly it sets the position (the chapter and the paragraph) in the player (a message is printed in the status bar). You must simply press the &quot;Play&quot; button when the book is loaded.&lt;br/&gt;
+&lt;br/&gt;
+&lt;b&gt;What about &quot;Settings&quot;?&lt;/b&gt;&lt;br/&gt;
+The settings part is only intended to be used by the advanced users and specially for the online accesses.</source>
+        <translation>Bienvenue dans DaisyDuck, un lecteur Daisy 2.02 pour livre audio locaux (disque dur, CD, ...) et en ligne (web streaming).&lt;br/&gt;
+&lt;br/&gt;
+&lt;b&gt;Comment ouvrir un livre audio?&lt;/b&gt;&lt;br/&gt;
+Pour les livres locaux, sélectionnez &quot;Fichier-&gt;Ouvrir&quot; ou &lt;i&gt;CTRL+O&lt;/i&gt;. Pour les livres en ligne, sélectionnez &quot;Fichier-&gt;Livres en ligne&quot; ou &lt;i&gt;CTRL+L&lt;/i&gt;.&lt;br/&gt;
+&lt;br/&gt;
+&lt;b&gt;Comment contrôler la lecture?&lt;/b&gt;&lt;br/&gt;
+Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: &lt;i&gt;CTRL+ENTRÉE&lt;/i&gt; pour lire et/ou arrêter, &lt;i&gt;CTRL+FLÈCHE HAUT&lt;/i&gt; pour le chapitre précédent, &lt;i&gt;CTRL+FLÈCHE BAS&lt;/i&gt; pour le chapitre suivant, &lt;i&gt;CTRL+FLÈCHE GAUCHE&lt;/i&gt; pour le paragraphe précédent et &lt;i&gt;CTRL+FLÈCHE DROITE&lt;/i&gt; pour le paragraphe suivant.&lt;br/&gt;
+La vitesse de lecture peut être contrôlée avec &lt;i&gt;CTRL+PLUS&lt;/i&gt; pour augmenter la vitesse de 10%, &lt;i&gt;CTRL+MOINS&lt;/i&gt; pour diminuer la vitesse de 10% et &lt;i&gt;CTRL+ASTÉRISQUE&lt;/i&gt; pour utiliser la vitesse normal.&lt;br/&gt;
+&lt;br/&gt;
+&lt;b&gt;Comment reprendre la lecture d&apos;un livre?&lt;/b&gt;&lt;br/&gt;
+DaisyDuck sauve automatiquement la position de chaque livre qui vous lisez. Quand un livre est ouvert, DaisyDuck cherche si une lecture précédente existe, et en fonction, la position (le chapitre et le paragraphe) est modifiée pour la lecture (un message est affiché dans la barre de status). Vous devez simplement presser le bouton &quot;Lire&quot; quand le livre est chargé.&lt;br/&gt;
+&lt;br/&gt;
+&lt;b&gt;Et concernant &quot;Paramétrages&quot;?&lt;/b&gt;&lt;br/&gt;
+La partie concernant les paramétrages est destinée à être utilisée par les utilisateurs avancés et spécialement pour les accès en ligne.</translation>
+    </message>
+    <message>
+        <location line="+868"/>
         <source>About DaisyDuck</source>
         <translation>À propos de DaisyDuck</translation>
     </message>
@@ -762,7 +793,6 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
         <translation>chapitre suivant</translation>
     </message>
     <message>
-        <location line="-502"/>
         <source>Welcome in DaisyDuck, a Daisy 2.02 player for local (hard disc, CD, ...) and online audio books (web streaming).&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;How to open an audio book?&lt;/b&gt;&lt;br/&gt;
@@ -777,7 +807,7 @@ DaisyDuck saves automatically the position of every book that you have read. Whe
 &lt;br/&gt;
 &lt;b&gt;What about &quot;Settings&quot;?&lt;/b&gt;&lt;br/&gt;
 The settings part is only intended to be used by the advanced users and specially for the online accesses.</source>
-        <translation>Bienvenue dans DaisyDuck, un lecteur Daisy 2.02 pour livre audio locaux (disque dur, CD, ...) et en ligne (web streaming).&lt;br/&gt;
+        <translation type="obsolete">Bienvenue dans DaisyDuck, un lecteur Daisy 2.02 pour livre audio locaux (disque dur, CD, ...) et en ligne (web streaming).&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;Comment ouvrir un livre audio?&lt;/b&gt;&lt;br/&gt;
 Pour les livres locaux, sélectionnez &quot;Fichier-&gt;Ouvrir&quot; ou &lt;i&gt;CTRL+O&lt;/i&gt;. Pour les livres en ligne, sélectionnez &quot;Fichier-&gt;Livres en ligne&quot; ou &lt;i&gt;CTRL+L&lt;/i&gt;.&lt;br/&gt;
@@ -793,7 +823,7 @@ DaisyDuck sauve automatiquement la position de chaque livre qui vous lisez. Quan
 La partie concernant les paramétrages est destinée à être utilisée par les utilisateurs avancés et spécialement pour les accès en ligne.</translation>
     </message>
     <message>
-        <location line="+505"/>
+        <location line="+3"/>
         <source>go to the next chapter</source>
         <translation>aller au chapitre suivant</translation>
     </message>
