@@ -29,7 +29,7 @@
 <context>
     <name>DaisyDuck</name>
     <message>
-        <location filename="../src/DaisyDuck.cxx" line="+229"/>
+        <location filename="../src/DaisyDuck.cxx" line="+230"/>
         <source>Open File</source>
         <translation>Ouvrir un fichier</translation>
     </message>
@@ -65,7 +65,17 @@
         <translation>L&apos;analyse syntaxique a échoué quelque part. Probablement que ce livre audio ne sera pas complètement lisible.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+17"/>
+        <source>H &apos;hours&apos; m &apos;minutes&apos; s &apos;seconds&apos;</source>
+        <translation>H &apos;heures&apos; m &apos;minutes&apos; s &apos;secondes&apos;</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Unknown</source>
+        <translation>Inconnu</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Not available</source>
         <translation>Non disponible</translation>
     </message>
@@ -80,7 +90,7 @@
         <translation>Ce livre a été interrompu, pressez &quot;lire&quot; pour reprendre.</translation>
     </message>
     <message>
-        <location line="-394"/>
+        <location line="-405"/>
         <source>Stop</source>
         <translation>Arrêt</translation>
     </message>
@@ -549,6 +559,21 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
         <translation>Lecteur :</translation>
     </message>
     <message>
+        <location line="+16"/>
+        <source>Duration :</source>
+        <translation>Durée :</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>duration</source>
+        <translation>durée</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>duration of this book</source>
+        <translation>durée de ce livre</translation>
+    </message>
+    <message>
         <location line="+58"/>
         <source>Summary</source>
         <translation>Extrait</translation>
@@ -669,7 +694,7 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
         <translation>paragraphe précédent</translation>
     </message>
     <message>
-        <location line="-489"/>
+        <location line="-518"/>
         <source>DaisyDuck</source>
         <translation></translation>
     </message>
@@ -702,7 +727,7 @@ DaisyDuck sauve automatiquement la position de chaque livre qui vous lisez. Quan
 La partie concernant les paramétrages est destinée à être utilisée par les utilisateurs avancés et spécialement pour les accès en ligne.</translation>
     </message>
     <message>
-        <location line="+492"/>
+        <location line="+521"/>
         <source>go to the previous paragraph</source>
         <translation>aller au paragraphe précédent</translation>
     </message>
@@ -737,7 +762,7 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
         <translation>chapitre suivant</translation>
     </message>
     <message>
-        <location line="-473"/>
+        <location line="-502"/>
         <source>Welcome in DaisyDuck, a Daisy 2.02 player for local (hard disc, CD, ...) and online audio books (web streaming).&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;How to open an audio book?&lt;/b&gt;&lt;br/&gt;
@@ -768,7 +793,7 @@ DaisyDuck sauve automatiquement la position de chaque livre qui vous lisez. Quan
 La partie concernant les paramétrages est destinée à être utilisée par les utilisateurs avancés et spécialement pour les accès en ligne.</translation>
     </message>
     <message>
-        <location line="+476"/>
+        <location line="+505"/>
         <source>go to the next chapter</source>
         <translation>aller au chapitre suivant</translation>
     </message>
