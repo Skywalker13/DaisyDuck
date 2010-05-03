@@ -15,7 +15,13 @@ navigate in the book.
   <li><pre class="shortcut">CTRL+BOTTOM ARROW  </pre>: to go to the next chapter.</li>
   <li><pre class="shortcut">CTRL+LEFT ARROW    </pre>: to go to the previous paragraph.</li>
   <li><pre class="shortcut">CTRL+RIGHT ARROW   </pre>: to go to the next paragraph.</li>
+  <li><pre class="shortcut">CTRL+PLUS          </pre>: to increase the playback speed of 10%.</li>
+  <li><pre class="shortcut">CTRL+MINUS         </pre>: to decrease the playback speed of 10%.</li>
+  <li><pre class="shortcut">CTRL+ASTERISK      </pre>: to reset the playback speed.</li>
 </ul>
+<p>
+The speed changes preserve the audio pitch (time stretching).
+</p>
 
 <h2>Welcome and Player</h2>
 <p>
