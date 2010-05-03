@@ -29,6 +29,7 @@ export CPPFLAGS="-I${MINGW_SYSROOT}/include -I${PREFIX}/include"
 
 export PATH="${MINGW_SYSROOT}/bin:$PATH"
 
+mkdir -p ${PREFIX}
 
 if [ ! -d "libiconv-$ICONV_VER" ]; then
   tar -zxf libiconv-$ICONV_VER.tar.gz
