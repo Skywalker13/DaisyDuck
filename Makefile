@@ -10,7 +10,6 @@ EXTRADIST = \
 	configure \
 	COPYING \
 	README \
-	TODO \
 
 SUBDIRS = \
 	DOCS \
