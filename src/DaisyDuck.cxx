@@ -24,7 +24,7 @@
 #include <QtGui/QFileDialog>
 #include <QtCore/QFile>
 #include <QtCore/QCryptographicHash>
-#include <QtCore/QDateTime>
+#include <QtCore/QTime>
 
 #include "common.h"
 #include "Config.h"
