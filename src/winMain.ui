@@ -646,7 +646,7 @@ The settings part is only intended to be used by the advanced users and speciall
                    <enum>Qt::Horizontal</enum>
                   </property>
                   <property name="sizeType">
-                   <enum>QSizePolicy::Expanding</enum>
+                   <enum>QSizePolicy::Ignored</enum>
                   </property>
                   <property name="sizeHint" stdset="0">
                    <size>
@@ -669,7 +669,7 @@ The settings part is only intended to be used by the advanced users and speciall
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>50</width>
+                    <width>55</width>
                     <height>16777215</height>
                    </size>
                   </property>
@@ -706,7 +706,7 @@ The settings part is only intended to be used by the advanced users and speciall
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>25</width>
+                    <width>30</width>
                     <height>16777215</height>
                    </size>
                   </property>
@@ -743,7 +743,7 @@ The settings part is only intended to be used by the advanced users and speciall
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>50</width>
+                    <width>55</width>
                     <height>16777215</height>
                    </size>
                   </property>
