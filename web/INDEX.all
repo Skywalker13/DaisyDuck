@@ -1,0 +1,11 @@
+<h1 style="text-align: center">Choose your language | Choisissez votre langue</h1>
+<div class="lang">
+<div class="lang_text">
+  <a href="INTRODUCTION.en.html" title="English" accesskey="1">English</a>
+</div>
+</div>
+<div class="lang">
+<div class="lang_text">
+  <a href="INTRODUCTION.fr.html" title="Français" accesskey="2">Français</a>
+</div>
+</div>
