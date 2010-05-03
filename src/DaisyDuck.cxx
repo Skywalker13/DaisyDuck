@@ -305,6 +305,36 @@ DaisyDuck::treeClicked (QTreeWidgetItem *item,
 }
 
 void
+DaisyDuck::treeSelectionUpdate (void)
+{
+  int rc;
+  duck_hx_t hx;
+  int *it, i = DUCK_MAX_LEVEL;
+  QTreeWidgetItem *item, *item_c;
+
+  rc = duck_getheading (this->duck, &hx);
+  if (rc || !hx.h1)
+    return;
+
+  item = this->treeSmilnode->topLevelItem (hx.h1 - 1);
+  if (!item)
+    return;
+
+  item_c = this->treeSmilnode->currentItem ();
+
+  /*
+   * This part considers that the structure duck_hx_t is a list of int.
+   * It selects the right item accordingly to the heading numbers.
+   */
+  it = reinterpret_cast<int *> (&hx);
+  while (*++it && --i && item)
+    item = item->child (*it - 1);
+
+  if (item && item != item_c)
+    this->treeSmilnode->setCurrentItem (item);
+}
+
+void
 DaisyDuck::playerAction (void)
 {
   int smilpos = 0, nodepos = 0;
@@ -661,36 +691,6 @@ DaisyDuck::playerSeek (int smilpos, int nodepos)
 
   this->playerPlay ();
   this->daisyNodeSeek ();
-}
-
-void
-DaisyDuck::treeSelectionUpdate (void)
-{
-  int rc;
-  duck_hx_t hx;
-  int *it, i = DUCK_MAX_LEVEL;
-  QTreeWidgetItem *item, *item_c;
-
-  rc = duck_getheading (this->duck, &hx);
-  if (rc || !hx.h1)
-    return;
-
-  item = this->treeSmilnode->topLevelItem (hx.h1 - 1);
-  if (!item)
-    return;
-
-  item_c = this->treeSmilnode->currentItem ();
-
-  /*
-   * This part considers that the structure duck_hx_t is a list of int.
-   * It selects the right item accordingly to the heading numbers.
-   */
-  it = reinterpret_cast<int *> (&hx);
-  while (*++it && --i && item)
-    item = item->child (*it - 1);
-
-  if (item && item != item_c)
-    this->treeSmilnode->setCurrentItem (item);
 }
 
 inline void
