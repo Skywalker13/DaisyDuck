@@ -24,6 +24,7 @@
 #include <QtGui/QFileDialog>
 #include <QtCore/QFile>
 #include <QtCore/QCryptographicHash>
+#include <QtCore/QDateTime>
 
 #include "common.h"
 #include "Config.h"
@@ -776,6 +777,17 @@ DaisyDuck::openBook (QString book, QString summary)
   BOOK_SETLABEL_INFO (labelBook,      DUCK_BOOK_S_TITLE)
   BOOK_SETLABEL_INFO (labelAuthor,    DUCK_BOOK_S_AUTHOR)
   BOOK_SETLABEL_INFO (labelNarrator,  DUCK_BOOK_S_NARRATOR)
+
+  rc = duck_book_getinfo (this->duck, DUCK_BOOK_I_DURATION, &res);
+  if (!rc)
+  {
+    QTime time = QTime (0, 0, 0, 0);
+    time = time.addSecs (res.i);
+    this->labelDuration->setText
+      (time.toString (tr ("H 'hours' m 'minutes' s 'seconds'")));
+  }
+  else
+    this->labelDuration->setText (tr ("Unknown"));
 
   if (summary.isEmpty ())
     summary = tr ("Not available");
