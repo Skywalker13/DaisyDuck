@@ -113,7 +113,7 @@
 For local books, just select &quot;File-&gt;Open&quot; or &lt;i&gt;CTRL+O&lt;/i&gt;. For online books, select &quot;File-&gt;Online Books&quot; or &lt;i&gt;CTRL+L&lt;/i&gt;.&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;How to control the reading?&lt;/b&gt;&lt;br/&gt;
-You can use the mouse, or the keyboard with the following shortcuts: &lt;i&gt;CTRL+SPACE&lt;/i&gt; to play and/or stop, &lt;i&gt;CTRL+UP ARROW&lt;/i&gt; for the previous chapter, &lt;i&gt;CTRL+BOTTOM ARROW&lt;/i&gt; for the next chapter, &lt;i&gt;CTRL+LEFT ARROW&lt;/i&gt; for the previous paragraph and &lt;i&gt;CTRL+RIGHT ARROW&lt;/i&gt; for the next paragraph.&lt;br/&gt;
+You can use the mouse, or the keyboard with the following shortcuts: &lt;i&gt;CTRL+ENTER&lt;/i&gt; to play and/or stop, &lt;i&gt;CTRL+UP ARROW&lt;/i&gt; for the previous chapter, &lt;i&gt;CTRL+BOTTOM ARROW&lt;/i&gt; for the next chapter, &lt;i&gt;CTRL+LEFT ARROW&lt;/i&gt; for the previous paragraph and &lt;i&gt;CTRL+RIGHT ARROW&lt;/i&gt; for the next paragraph.&lt;br/&gt;
 The playback speed can be controlled with &lt;i&gt;CTRL+PLUS&lt;/i&gt; to increase speed of 10%, &lt;i&gt;CTRL+MINUS&lt;/i&gt; to decrease speed of 10% and &lt;i&gt;CTRL+ASTERISK&lt;/i&gt; to set the normal speed.&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;How to resume the reading of a book?&lt;/b&gt;&lt;br/&gt;
@@ -596,7 +596,7 @@ The settings part is only intended to be used by the advanced users and speciall
                  <string>Play</string>
                 </property>
                 <property name="shortcut">
-                 <string>Ctrl+Space</string>
+                 <string>Ctrl+Enter</string>
                 </property>
                </widget>
               </item>
