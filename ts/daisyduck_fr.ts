@@ -4,9 +4,8 @@
 <context>
     <name></name>
     <message>
-        <location filename="../src/DaisyDuck.cxx" line="+676"/>
         <source>Unknown</source>
-        <translation>Inconnu</translation>
+        <translation type="obsolete">Inconnu</translation>
     </message>
 </context>
 <context>
@@ -30,7 +29,7 @@
 <context>
     <name>DaisyDuck</name>
     <message>
-        <location filename="../src/DaisyDuck.cxx" line="-458"/>
+        <location filename="../src/DaisyDuck.cxx" line="+229"/>
         <source>Open File</source>
         <translation>Ouvrir un fichier</translation>
     </message>
@@ -45,12 +44,12 @@
         <translation>Daisy Duck est en train de lire...</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+25"/>
         <source>Daisy Duck is sleeping...</source>
         <translation>Daisy Duck est en train de dormir...</translation>
     </message>
     <message>
-        <location line="+279"/>
+        <location line="+321"/>
         <location line="+6"/>
         <source>Parsing</source>
         <translation>Analyse syntaxique</translation>
@@ -81,12 +80,18 @@
         <translation>Ce livre a été interrompu, pressez &quot;lire&quot; pour reprendre.</translation>
     </message>
     <message>
-        <location line="-382"/>
+        <location line="-424"/>
         <source>Stop</source>
         <translation>Arrêt</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="-374"/>
+        <location line="+649"/>
+        <source>Speed %1% :</source>
+        <translation>Vitesse %1% :</translation>
+    </message>
+    <message>
+        <location line="-250"/>
         <source>Play</source>
         <translation>Lire</translation>
     </message>
@@ -559,7 +564,7 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
         <translation>extrait du livre en cours</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+43"/>
         <source>previous chapter</source>
         <translation>chapitre précédent</translation>
     </message>
@@ -584,27 +589,87 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
         <translation></translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+84"/>
+        <source>decrease speed</source>
+        <translation>diminuer la vitesse</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>decrease the playback speed</source>
+        <translation>diminuer la vitesse de lecture</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>-10%</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Ctrl+-</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>normal speed</source>
+        <translation>vitesse normal</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>reset the playback speed</source>
+        <translation>remettre la vitesse normal de lecture</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>0</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Ctrl+*</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>increase speed</source>
+        <translation>augmenter la vitesse</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>increase the playback speed</source>
+        <translation>augmenter la vitesse de lecture</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>+10%</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Ctrl++</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location line="+37"/>
         <source>Ctrl+Right</source>
         <translation></translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-172"/>
         <source>Ctrl+Down</source>
         <translation></translation>
     </message>
     <message>
-        <location line="+156"/>
+        <location line="+347"/>
         <source>About DaisyDuck</source>
         <translation>À propos de DaisyDuck</translation>
     </message>
     <message>
-        <location line="-277"/>
+        <location line="-433"/>
         <source>previous paragraph</source>
         <translation>paragraphe précédent</translation>
     </message>
     <message>
-        <location line="-485"/>
+        <location line="-488"/>
         <source>DaisyDuck</source>
         <translation></translation>
     </message>
@@ -638,7 +703,7 @@ DaisyDuck sauve automatiquement la position de chaque livre qui vous lisez. Quan
 La partie concernant les paramétrages est destinée à être utilisée par les utilisateurs avancés et spécialement pour les accès en ligne.</translation>
     </message>
     <message>
-        <location line="+405"/>
+        <location line="+408"/>
         <source>go to the previous paragraph</source>
         <translation>aller au paragraphe précédent</translation>
     </message>
@@ -658,7 +723,7 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
         <translation>Lire</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+188"/>
         <source>next paragraph</source>
         <translation>paragraphe suivant</translation>
     </message>
@@ -668,7 +733,7 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
         <translation>aller au paragraphe suivant</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="-175"/>
         <source>next chapter</source>
         <translation>chapitre suivant</translation>
     </message>
@@ -678,7 +743,7 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
         <translation>aller au chapitre suivant</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+234"/>
         <source>&amp;File</source>
         <translation>&amp;Fichier</translation>
     </message>
