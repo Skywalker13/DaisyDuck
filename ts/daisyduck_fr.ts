@@ -784,7 +784,7 @@ Pour les livres locaux, sélectionnez &quot;Fichier-&gt;Ouvrir&quot; ou &lt;i&gt
 &lt;br/&gt;
 &lt;b&gt;Comment contrôler la lecture?&lt;/b&gt;&lt;br/&gt;
 Vous pouvez utiliser la souris, ou le clavier avec les raccourcis suivants: &lt;i&gt;CTRL+ESPACE&lt;/i&gt; pour lire et/ou arrêter, &lt;i&gt;CTRL+FLÈCHE HAUT&lt;/i&gt; pour le chapitre précédent, &lt;i&gt;CTRL+FLÈCHE BAS&lt;/i&gt; pour le chapitre suivant, &lt;i&gt;CTRL+FLÈCHE GAUCHE&lt;/i&gt; pour le paragraphe précédent et &lt;i&gt;CTRL+FLÈCHE DROITE&lt;/i&gt; pour le paragraphe suivant.&lt;br/&gt;
-La vitesse de lecture peut être contrôlée avec &lt;i&gt;CTRL+PLUS&lt;/i&gt; pour augmenter la vitesse de 10%, &lt;i&gt;CTRL+MOINS&lt;/i&gt; pour diminuer la vitesse de 10% et &lt;i&gt;CTRL+ASTERISQUE&lt;/i&gt; pour utiliser la vitesse normal.&lt;br/&gt;
+La vitesse de lecture peut être contrôlée avec &lt;i&gt;CTRL+PLUS&lt;/i&gt; pour augmenter la vitesse de 10%, &lt;i&gt;CTRL+MOINS&lt;/i&gt; pour diminuer la vitesse de 10% et &lt;i&gt;CTRL+ASTÉRISQUE&lt;/i&gt; pour utiliser la vitesse normal.&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;Comment reprendre la lecture d&apos;un livre?&lt;/b&gt;&lt;br/&gt;
 DaisyDuck sauve automatiquement la position de chaque livre qui vous lisez. Quand un livre est ouvert, DaisyDuck cherche si une lecture précédente existe, et en fonction, la position (le chapitre et le paragraphe) est modifiée pour la lecture (un message est affiché dans la barre de status). Vous devez simplement presser le bouton &quot;Lire&quot; quand le livre est chargé.&lt;br/&gt;
