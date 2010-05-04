@@ -485,11 +485,12 @@ OnlineBook::downloadSmilFinished (QNetworkReply *rep)
 
   duck_walk (this->duck, (*it)->smilpos, 1);
   rc = duck_node_getinfo (this->duck, DUCK_NODE_S_AUDIO_URI, &res);
-  if (rc)
+  if (rc || !res.s)
     return;
 
   uri = this->uri_base + QString (res.s) + this->uri_args;
   data.replace (res.s, Qt::escape (uri).toAscii ());
+  free (res.s);
 
   /* Rewrite the SMIL file with the URI replacements. */
   (*it)->smil->open ();
