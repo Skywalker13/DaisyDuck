@@ -36,6 +36,7 @@ OnlineBook::OnlineBook (QWidget *parent, Config *cfg) : QDialog (parent)
 
   this->smilqty = 0;
   this->duck = NULL;
+  this->rep = NULL;
 
   this->net      = new QNetworkAccessManager (this);
   this->net_ncc  = new QNetworkAccessManager (this);
