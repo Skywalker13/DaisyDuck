@@ -56,9 +56,9 @@ class Config
     void setUri (QString uri);
 
     /* Bookmarks handling */
-    void setBookmark (QString *hash, int smilpos, int nodepos);
-    void getBookmark (QString *hash, int *smilpos, int *nodepos);
-    void delBookmark (QString *hash);
+    void setBookmark (const QString *hash, int smilpos, int nodepos);
+    void getBookmark (const QString *hash, int *smilpos, int *nodepos);
+    void delBookmark (const QString *hash);
 
     /* Custom items */
     void setCustom (QString title, QString text);

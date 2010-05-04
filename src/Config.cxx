@@ -164,7 +164,7 @@ Config::setUri (QString uri)
 }
 
 void
-Config::setBookmark (QString *hash, int smilpos, int nodepos)
+Config::setBookmark (const QString *hash, int smilpos, int nodepos)
 {
   struct Bookmark *bm;
   QList<struct Bookmark *>::iterator it;
@@ -186,7 +186,7 @@ Config::setBookmark (QString *hash, int smilpos, int nodepos)
 }
 
 void
-Config::getBookmark (QString *hash, int *smilpos, int *nodepos)
+Config::getBookmark (const QString *hash, int *smilpos, int *nodepos)
 {
   QList<struct Bookmark *>::iterator it;
 
@@ -203,7 +203,7 @@ Config::getBookmark (QString *hash, int *smilpos, int *nodepos)
 }
 
 void
-Config::delBookmark (QString *hash)
+Config::delBookmark (const QString *hash)
 {
   unsigned int i = 0;
   QList<struct Bookmark *>::iterator it;
