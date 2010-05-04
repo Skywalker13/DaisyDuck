@@ -1,0 +1,30 @@
+<pre class="code">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;\n
+&lt;daisyduck version="1.0"&gt;\n
+  &lt;audiobook&gt;\n
+    &lt;number&gt;1&lt;/number&gt;\n
+    &lt;title&gt;__XMLOB_TITLE1__&lt;/title&gt;\n
+    &lt;creator&gt;Linus Torvalds, David Diamond&lt;/creator&gt;\n
+    &lt;category&gt;__XMLOB_CATEGORY1__&lt;/category&gt;\n
+    &lt;summary&gt;\n
+      __XMLOB_SUMMARY1__\n
+    &lt;/summary&gt;\n
+    &lt;uri&gt;http://daisy.geexbox.org/torvalds/ncc.html&lt;/uri&gt;\n
+  &lt;/audiobook&gt;\n
+  &lt;audiobook&gt;\n
+    &lt;number&gt;2&lt;/number&gt;\n
+    &lt;title&gt;__XMLOB_TITLE2__&lt;/title&gt;\n
+    &lt;creator&gt;__XMLOB_AUTHOR2__&lt;/creator&gt;\n
+    &lt;category&gt;__XMLOB_CATEGORY2__&lt;/category&gt;\n
+    &lt;summary&gt;\n
+      __XMLOB_SUMMARY2__\n
+    &lt;/summary&gt;\n
+    &lt;uri&gt;http://daisy.geexbox.org/stallman/ncc.html&lt;/uri&gt;\n
+  &lt;/audiobook&gt;\n
+  &lt;uriparam&gt;\n
+    &lt;param name="Policy" value="foobar"/&gt;\n
+    &lt;param name="Signature" value="foobar"/&gt;\n
+    &lt;param name="Key-Pair-Id" value="fooid"/&gt;\n
+  &lt;/uriparam&gt;\n
+&lt;/daisyduck&gt;
+</pre>
