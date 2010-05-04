@@ -164,13 +164,13 @@ Config::setUri (QString uri)
 }
 
 void
-Config::setBookmark (QString hash, int smilpos, int nodepos)
+Config::setBookmark (QString *hash, int smilpos, int nodepos)
 {
   struct Bookmark *bm;
   QList<struct Bookmark *>::iterator it;
 
   for (it = this->listBookmark.begin (); it != this->listBookmark.end (); it++)
-    if ((*it)->hash == hash)
+    if ((*it)->hash == *hash)
     {
       (*it)->smilpos = smilpos;
       (*it)->nodepos = nodepos;
@@ -179,19 +179,19 @@ Config::setBookmark (QString hash, int smilpos, int nodepos)
 
   /* nothing found, then new bookmark */
   bm = new struct Bookmark;
-  bm->hash    = hash;
+  bm->hash    = *hash;
   bm->smilpos = smilpos;
   bm->nodepos = nodepos;
   this->listBookmark << bm;
 }
 
 void
-Config::getBookmark (QString hash, int *smilpos, int *nodepos)
+Config::getBookmark (QString *hash, int *smilpos, int *nodepos)
 {
   QList<struct Bookmark *>::iterator it;
 
   for (it = this->listBookmark.begin (); it != this->listBookmark.end (); it++)
-    if ((*it)->hash == hash)
+    if ((*it)->hash == *hash)
     {
       *smilpos = (*it)->smilpos;
       *nodepos = (*it)->nodepos;
@@ -203,14 +203,14 @@ Config::getBookmark (QString hash, int *smilpos, int *nodepos)
 }
 
 void
-Config::delBookmark (QString hash)
+Config::delBookmark (QString *hash)
 {
   unsigned int i = 0;
   QList<struct Bookmark *>::iterator it;
 
   for (it  = this->listBookmark.begin ();
        it != this->listBookmark.end (); it++, i++)
-    if ((*it)->hash == hash)
+    if ((*it)->hash == *hash)
     {
       delete this->listBookmark.takeAt (i);
       break;
@@ -456,5 +456,5 @@ Config::parseBookmark (const QDomElement *item)
   if (!smilpos || !nodepos)
     return;
 
-  this->setBookmark (hash, smilpos, nodepos);
+  this->setBookmark (&hash, smilpos, nodepos);
 }

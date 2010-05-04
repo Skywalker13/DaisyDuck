@@ -340,7 +340,7 @@ DaisyDuck::playerAction (void)
 {
   int smilpos = 0, nodepos = 0;
 
-  this->cfg->getBookmark (this->hash, &smilpos, &nodepos);
+  this->cfg->getBookmark (&this->hash, &smilpos, &nodepos);
 
   switch (this->daisyState)
   {
@@ -368,7 +368,7 @@ DaisyDuck::playerSmilnodeNext (void)
   if (rc)
   {
     /* We assume that the end of this book was reached. */
-    this->cfg->delBookmark (this->hash);
+    this->cfg->delBookmark (&this->hash);
     return;
   }
 
@@ -707,7 +707,7 @@ DaisyDuck::selectionUpdate (void)
   int smilpos = 0, nodepos = 0;
 
   duck_getpos (this->duck, &smilpos, &nodepos);
-  this->cfg->setBookmark (this->hash, smilpos, nodepos);
+  this->cfg->setBookmark (&this->hash, smilpos, nodepos);
 
   emit this->treeUpdate ();
 }
@@ -855,7 +855,7 @@ DaisyDuck::openBook (QString book, QString summary)
   /* got to the first heading */
   duck_walk (this->duck, first, 1);
 
-  this->cfg->getBookmark (this->hash, &smilpos, &nodepos);
+  this->cfg->getBookmark (&this->hash, &smilpos, &nodepos);
   if ((smilpos > 1 && nodepos) || (smilpos == 1 && nodepos > 1))
     this->winBar->showMessage (tr ("This book was interrupted, press "
                                    "\"Play\" to resume."));
