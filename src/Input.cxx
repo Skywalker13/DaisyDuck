@@ -23,6 +23,7 @@
 #include "Config.h"
 #include "Input.h"
 
+/* First line in the dialog gridLayout where are put the widgets. */
 #define FIRST_LINE  2
 
 class LineEdit : public QLineEdit
@@ -54,6 +55,7 @@ Input::flush (void)
 {
   int i, j;
 
+  /* Delete all widgets dynamically added. */
   for (i = FIRST_LINE; i < this->gridLayout->rowCount (); i++)
     for (j = 0; j < 2; j++)
     {
@@ -101,6 +103,7 @@ Input::showDialog (void)
       if (i == FIRST_LINE)
         wValue->setFocus (Qt::OtherFocusReason);
 
+      /* Resize the dialog to fit with the new widgets. */
       size.setHeight (size.height () + wValue->height () + 5);
       this->resize (size);
       i++;
