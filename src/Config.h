@@ -51,7 +51,8 @@ class Config
                       const QString **value,
                       const QString **label);
     void flushArguments (void);
-    void addArgument (QString name, QString value, QString label);
+    void addArgument (const QString &name,
+                      const QString &value, const QString &label);
     void rememberArgsVal (bool remember);
     void setUri (QString uri);
 
