@@ -29,7 +29,7 @@
 #include "Config.h"
 
 
-Config::Config (QString cfg)
+Config::Config (const QString &cfg)
 {
   QDomDocument doc;
   QDomElement  root;

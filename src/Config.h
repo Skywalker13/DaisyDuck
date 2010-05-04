@@ -41,7 +41,7 @@ struct Bookmark {
 class Config
 {
   public:
-    Config (QString cfg);
+    Config (const QString &cfg);
     ~Config (void);
 
     /* URI + Arguments handling */
