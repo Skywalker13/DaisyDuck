@@ -792,7 +792,7 @@ DaisyDuck::openBook (const QString &book, const QString &summary)
   if (summary.isEmpty ())
     this->labelSummary->setText (tr ("Not available"));
   else
-  this->labelSummary->setText (summary);
+    this->labelSummary->setText (summary);
 
   /* fill tree */
   child = 0;
