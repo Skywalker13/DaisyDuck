@@ -159,7 +159,7 @@ Config::rememberArgsVal (bool remember)
 }
 
 void
-Config::setUri (QString uri)
+Config::setUri (const QString &uri)
 {
   this->uri = uri;
 }

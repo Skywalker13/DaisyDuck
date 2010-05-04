@@ -54,7 +54,7 @@ class Config
     void addArgument (const QString &name,
                       const QString &value, const QString &label);
     void rememberArgsVal (bool remember);
-    void setUri (QString uri);
+    void setUri (const QString &uri);
 
     /* Bookmarks handling */
     void setBookmark (const QString *hash, int smilpos, int nodepos);
