@@ -99,8 +99,6 @@ OnlineBook::~OnlineBook (void)
 
   delete this->progressDialog;
   delete this->input;
-
-  duck_uninit (this->duck);
 }
 
 void
@@ -540,6 +538,12 @@ OnlineBook::flush (void)
     if (it->smil)
       delete it->smil;
     delete it;
+  }
+
+  if (this->duck)
+  {
+    duck_uninit (this->duck);
+    this->duck = NULL;
   }
 
   this->smilqty = 0;
