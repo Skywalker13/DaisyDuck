@@ -52,7 +52,8 @@ class Config
                       const QString **label);
     void flushArguments (void);
     void addArgument (const QString &name,
-                      const QString &value, const QString &label);
+                      const QString &value,
+                      const QString &label);
     void rememberArgsVal (bool remember);
     void setUri (const QString &uri);
 

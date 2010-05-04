@@ -139,7 +139,8 @@ Config::flushArguments (void)
 
 void
 Config::addArgument (const QString &name,
-                     const QString &value, const QString &label)
+                     const QString &value,
+                     const QString &label)
 {
   struct UriArgs *args = new struct UriArgs;
 
