@@ -95,7 +95,9 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
     void playerSpeedDown (void);
 
     /* Online Books */
-    void onlineBook (QString book, QString hash, QString summary);
+    void onlineBook (const QString &book,
+                     const QString &hash,
+                     const QString &summary);
     void showOnlineAccess (void);
 
   private:

@@ -162,8 +162,12 @@ DaisyDuck::DaisyDuck (void)
   /* Online books */
   this->winOnlineBook = new OnlineBook (this, this->cfg);
 
-  connect (this->winOnlineBook, SIGNAL (bookPath (QString, QString, QString)),
-           this, SLOT (onlineBook (QString, QString, QString)));
+  connect (this->winOnlineBook, SIGNAL (bookPath (const QString &,
+                                                  const QString &,
+                                                  const QString &)),
+           this, SLOT (onlineBook (const QString &,
+                                   const QString &,
+                                   const QString &)));
   connect (this->winOnlineBook, SIGNAL (showSettings ()),
            this, SLOT (showOnlineAccess ()));
 
@@ -536,7 +540,8 @@ DaisyDuck::playerSpeedDown (void)
 }
 
 void
-DaisyDuck::onlineBook (QString book, QString hash, QString summary)
+DaisyDuck::onlineBook (const QString &book,
+                       const QString &hash, const QString &summary)
 {
   this->hash = hash;
   this->openBook (book, summary);

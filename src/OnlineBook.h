@@ -44,7 +44,9 @@ class OnlineBook : public QDialog, private Ui::dialogOnlineBook
 
   signals:
     void showSettings (void);
-    void bookPath (QString path, QString hash, QString summary);
+    void bookPath (const QString &path,
+                   const QString &hash,
+                   const QString &summary);
     void actionLoad_end (void);
     void downloadNcc (void);
     void downloadSmil (char *anchor, struct DaisyFiles *df);
