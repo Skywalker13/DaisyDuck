@@ -110,7 +110,7 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
 
     void selectionUpdate (void);
     void customUpdate (void);
-    void openBook (QString book, QString summary);
+    void openBook (const QString &book, const QString &summary);
 
     static void vlc_event_cb (const libvlc_event_t *ev, void *data);
 

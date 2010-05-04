@@ -733,7 +733,7 @@ DaisyDuck::customUpdate (void)
     this->l->setText (tr ("Unknown"));
 
 void
-DaisyDuck::openBook (QString book, QString summary)
+DaisyDuck::openBook (const QString &book, const QString &summary)
 {
   int first = 1, level_p = 1;
   int rc, i, smils, child;
@@ -790,8 +790,8 @@ DaisyDuck::openBook (QString book, QString summary)
     this->labelDuration->setText (tr ("Unknown"));
 
   if (summary.isEmpty ())
-    summary = tr ("Not available");
-
+    this->labelSummary->setText (tr ("Not available"));
+  else
   this->labelSummary->setText (summary);
 
   /* fill tree */
