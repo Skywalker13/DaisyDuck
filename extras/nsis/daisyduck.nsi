@@ -172,7 +172,7 @@ Function un.onInit
 FunctionEnd
 
 Function un.Uninstaller
-  Delete "$DESKTOP\DaisyDuck Player.lnk"
+  Delete "$DESKTOP\DaisyDuck.lnk"
   RMdir /r "$SMPROGRAMS\DaisyDuck"
   RMDir /r /rebootok "$INSTDIR"
 
