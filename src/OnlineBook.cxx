@@ -171,6 +171,7 @@ OnlineBook::downloadFinished (void)
   }
 
   data = this->rep->readAll ();
+  this->rep->close ();
 
   doc.setContent (data);
   root = doc.documentElement ();
@@ -373,6 +374,7 @@ OnlineBook::downloadNccFinished (QNetworkReply *rep)
   }
 
   data = rep->readAll ();
+  rep->close ();
 
   hash = QCryptographicHash::hash (data, QCryptographicHash::Sha1).data ();
   this->hash = hash.toHex ();
@@ -469,6 +471,7 @@ OnlineBook::downloadSmilFinished (QNetworkReply *rep)
   }
 
   data = rep->readAll ();
+  rep->close ();
 
   for (it = this->daisyFiles.begin (); it != this->daisyFiles.end (); it++)
     if ((*it)->rep == rep)
