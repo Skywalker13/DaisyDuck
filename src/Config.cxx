@@ -37,6 +37,7 @@ Config::Config (QString cfg)
   QFile file (cfg);
 
   this->cfg = cfg;
+  this->remember = false;
 
   if (!file.open (QIODevice::ReadOnly))
   {
