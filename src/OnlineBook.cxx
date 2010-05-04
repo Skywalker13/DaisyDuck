@@ -166,12 +166,14 @@ OnlineBook::downloadFinished (void)
                           tr ("The download of the books list has failed. "
                               "Check that the URI is correct and/or your "
                               "Internet access."));
+    this->rep->deleteLater ();
     this->flush ();
     return;
   }
 
   data = this->rep->readAll ();
   this->rep->close ();
+  this->rep->deleteLater ();
 
   doc.setContent (data);
   root = doc.documentElement ();
@@ -369,12 +371,14 @@ OnlineBook::downloadNccFinished (QNetworkReply *rep)
   if (rep->error () != QNetworkReply::NoError)
   {
     QMessageBox::warning (this, tr ("Network"), tr ("Book download failed"));
+    rep->deleteLater ();
     this->flush ();
     return;
   }
 
   data = rep->readAll ();
   rep->close ();
+  rep->deleteLater ();
 
   hash = QCryptographicHash::hash (data, QCryptographicHash::Sha1).data ();
   this->hash = hash.toHex ();
@@ -466,12 +470,14 @@ OnlineBook::downloadSmilFinished (QNetworkReply *rep)
   if (rep->error () != QNetworkReply::NoError)
   {
     QMessageBox::warning (this, tr ("Network"), tr ("Book download failed"));
+    rep->deleteLater ();
     this->flush ();
     return;
   }
 
   data = rep->readAll ();
   rep->close ();
+  rep->deleteLater ();
 
   for (it = this->daisyFiles.begin (); it != this->daisyFiles.end (); it++)
     if ((*it)->rep == rep)
