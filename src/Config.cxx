@@ -219,7 +219,7 @@ Config::delBookmark (const QString *hash)
 }
 
 void
-Config::setCustom (QString title, QString text)
+Config::setCustom (const QString &title, const QString &text)
 {
   this->title = title;
   this->text  = text;

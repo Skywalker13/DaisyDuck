@@ -62,7 +62,7 @@ class Config
     void delBookmark (const QString *hash);
 
     /* Custom items */
-    void setCustom (QString title, QString text);
+    void setCustom (const QString &title, const QString &text);
     void getCustom (const QString **title, const QString **text);
 
     void writeConfig (void);
