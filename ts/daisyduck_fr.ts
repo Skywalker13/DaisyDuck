@@ -29,7 +29,7 @@
 <context>
     <name>DaisyDuck</name>
     <message>
-        <location filename="../src/DaisyDuck.cxx" line="+251"/>
+        <location filename="../src/DaisyDuck.cxx" line="+255"/>
         <source>Open File</source>
         <translation>Ouvrir un fichier</translation>
     </message>
@@ -49,7 +49,22 @@
         <translation>Daisy Duck est en train de dormir...</translation>
     </message>
     <message>
-        <location line="+316"/>
+        <location line="+80"/>
+        <source>Player</source>
+        <translation>Lecture</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>DaisyDuck can not start the playback! This Daisy book is not reachable or maybe that this one is corrupted.</source>
+        <translation>DaisyDuck ne peut pas démarrer la lecture! Ce livre Daisy n&apos;est pas joignable ou peut être que celui-ci est corrompu.</translation>
+    </message>
+    <message>
+        <location line="+206"/>
+        <source>&apos;Remaining time&apos; H:mm:ss</source>
+        <translation>&apos;Temps restant&apos; H:mm:ss</translation>
+    </message>
+    <message>
+        <location line="+56"/>
         <location line="+6"/>
         <source>Parsing</source>
         <translation>Analyse syntaxique</translation>
@@ -70,12 +85,12 @@
         <translation>H &apos;heures&apos; m &apos;minutes&apos; s &apos;secondes&apos;</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+5"/>
         <source>Unknown</source>
         <translation>Inconnu</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+5"/>
         <source>Not available</source>
         <translation>Non disponible</translation>
     </message>
@@ -90,24 +105,24 @@
         <translation>Ce livre a été interrompu, pressez &quot;lire&quot; pour reprendre.</translation>
     </message>
     <message>
-        <location line="-430"/>
+        <location line="-461"/>
         <source>Stop</source>
         <translation>Arrêt</translation>
     </message>
     <message>
-        <location line="-424"/>
-        <location line="+694"/>
+        <location line="-426"/>
+        <location line="+708"/>
         <source>Speed %1% :</source>
         <translation>Vitesse %1% :</translation>
     </message>
     <message>
-        <location line="-589"/>
-        <location line="+406"/>
+        <location line="-601"/>
+        <location line="+408"/>
         <source>Volume %1% :</source>
         <translation></translation>
     </message>
     <message>
-        <location line="-401"/>
+        <location line="-403"/>
         <source>Ctrl+PgUp</source>
         <translation></translation>
     </message>
@@ -563,7 +578,7 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
         <translation>Chapitres</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+43"/>
         <source>Book :</source>
         <translation>Livre :</translation>
     </message>
@@ -638,7 +653,7 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
         <translation>extrait du livre en cours</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+82"/>
         <source>previous chapter</source>
         <translation>chapitre précédent</translation>
     </message>
@@ -773,7 +788,7 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
         <translation>paragraphe précédent</translation>
     </message>
     <message>
-        <location line="-522"/>
+        <location line="-564"/>
         <source>DaisyDuck</source>
         <translation></translation>
     </message>
@@ -806,7 +821,7 @@ DaisyDuck sauve automatiquement la position de chaque livre qui vous lisez. Quan
 La partie concernant les paramétrages est destinée à être utilisée par les utilisateurs avancés et spécialement pour les accès en ligne.</translation>
     </message>
     <message>
-        <location line="+525"/>
+        <location line="+567"/>
         <source>go to the previous paragraph</source>
         <translation>aller au paragraphe précédent</translation>
     </message>
