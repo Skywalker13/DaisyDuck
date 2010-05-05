@@ -1122,6 +1122,18 @@ QSlider::handle:horizontal {
    </property>
   </action>
  </widget>
+ <tabstops>
+  <tabstop>treeSmilnode</tabstop>
+  <tabstop>sliderVolume</tabstop>
+  <tabstop>pushSpeedDown</tabstop>
+  <tabstop>pushSpeedReset</tabstop>
+  <tabstop>pushSpeedUp</tabstop>
+  <tabstop>pushSmilnodePrev</tabstop>
+  <tabstop>pushNodePrev</tabstop>
+  <tabstop>pushAction</tabstop>
+  <tabstop>pushNodeNext</tabstop>
+  <tabstop>pushSmilnodeNext</tabstop>
+ </tabstops>
  <resources>
   <include location="../images/images.qrc"/>
  </resources>
