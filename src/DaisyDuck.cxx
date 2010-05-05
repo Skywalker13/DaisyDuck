@@ -794,8 +794,15 @@ DaisyDuck::selectionUpdate (void)
     int remaining;
     QTime time = QTime (0, 0, 0, 0);
 
+    if (this->vlc_rate)
+    {
     remaining  = this->duck_duration - res.i;
     remaining -= libvlc_media_player_get_time (this->vlc_mp) / 1000;
+      remaining  = remaining * 100 / this->vlc_rate;
+    }
+    else
+      remaining = -1;
+
     time = time.addSecs (remaining);
     this->labelTime->setText (time.toString (tr ("'Remaining time' H:mm:ss")));
   }
