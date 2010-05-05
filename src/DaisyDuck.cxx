@@ -236,6 +236,11 @@ DaisyDuck::~DaisyDuck (void)
 
   if (this->vlc_core)
     libvlc_release (this->vlc_core);
+
+  if (this->shortcutVolumeUp)
+    delete this->shortcutVolumeUp;
+  if (this->shortcutVolumeDn)
+    delete this->shortcutVolumeDn;
 }
 
 /****************************************************************************/
