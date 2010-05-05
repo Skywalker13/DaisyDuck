@@ -18,6 +18,8 @@ navigate in the book.
   <li><pre class="shortcut">CTRL+PLUS          </pre>: to increase the playback speed of 10%.</li>
   <li><pre class="shortcut">CTRL+MINUS         </pre>: to decrease the playback speed of 10%.</li>
   <li><pre class="shortcut">CTRL+ASTERISK      </pre>: to reset the playback speed.</li>
+  <li><pre class="shortcut">CTRL+PAGE UP       </pre>: to increase the audio volume.</li>
+  <li><pre class="shortcut">CTRL+PAGE DOWN     </pre>: to decrease the audio volume.</li>
 </ul>
 <p>
 The speed changes preserve the audio pitch (time stretching).
