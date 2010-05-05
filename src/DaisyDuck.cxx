@@ -796,8 +796,8 @@ DaisyDuck::selectionUpdate (void)
 
     if (this->vlc_rate)
     {
-    remaining  = this->duck_duration - res.i;
-    remaining -= libvlc_media_player_get_time (this->vlc_mp) / 1000;
+      remaining  = this->duck_duration - res.i;
+      remaining -= libvlc_media_player_get_time (this->vlc_mp) / 1000;
       remaining  = remaining * 100 / this->vlc_rate;
     }
     else
