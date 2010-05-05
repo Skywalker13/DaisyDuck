@@ -115,6 +115,7 @@ For local books, just select &quot;File-&gt;Open&quot; or &lt;i&gt;CTRL+O&lt;/i&
 &lt;b&gt;How to control the reading?&lt;/b&gt;&lt;br/&gt;
 You can use the mouse, or the keyboard with the following shortcuts: &lt;i&gt;CTRL+ENTER&lt;/i&gt; to play and/or stop, &lt;i&gt;CTRL+UP ARROW&lt;/i&gt; for the previous chapter, &lt;i&gt;CTRL+BOTTOM ARROW&lt;/i&gt; for the next chapter, &lt;i&gt;CTRL+LEFT ARROW&lt;/i&gt; for the previous paragraph and &lt;i&gt;CTRL+RIGHT ARROW&lt;/i&gt; for the next paragraph.&lt;br/&gt;
 The playback speed can be controlled with &lt;i&gt;CTRL+PLUS&lt;/i&gt; to increase speed of 10%, &lt;i&gt;CTRL+MINUS&lt;/i&gt; to decrease speed of 10% and &lt;i&gt;CTRL+ASTERISK&lt;/i&gt; to set the normal speed.&lt;br/&gt;
+To change the audio volume, use &lt;i&gt;CTRL+PAGE UP&lt;/i&gt; and &lt;i&gt;CTRL+PAGE DOWN&lt;/i&gt;.&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;How to resume the reading of a book?&lt;/b&gt;&lt;br/&gt;
 DaisyDuck saves automatically the position of every book that you have read. When a book is opened, DaisyDuck searchs if a previous reading exists, and accordingly it sets the position (the chapter and the paragraph) in the player (a message is printed in the status bar). You must simply press the &quot;Play&quot; button when the book is loaded.&lt;br/&gt;

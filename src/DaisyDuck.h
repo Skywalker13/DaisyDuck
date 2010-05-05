@@ -32,6 +32,7 @@
 #include "dialogAbout.h"
 
 class Config;
+class QShortcut;
 
 class About : public QDialog, private Ui::dialogAbout
 {
@@ -101,6 +102,10 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
                      const QString &summary);
     void showOnlineAccess (void);
 
+    /* Other */
+    void actionVolumeUp (void);
+    void actionVolumeDn (void);
+
   private:
     int daisySmilnodeWalk (int inc);
     int daisyNodeWalk (int inc);
@@ -123,6 +128,8 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
     ConfigAccess *dialogConfigAccess;
     ConfigCustom *dialogConfigCustom;
     About        *dialogAbout;
+    QShortcut    *shortcutVolumeUp;
+    QShortcut    *shortcutVolumeDn;
     static const libvlc_event_type_t vlc_events_map[];
 
     enum {

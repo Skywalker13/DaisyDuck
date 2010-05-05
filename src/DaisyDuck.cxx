@@ -22,6 +22,7 @@
 
 #include <QtGui/QMessageBox>
 #include <QtGui/QFileDialog>
+#include <QtGui/QShortcut>
 #include <QtCore/QFile>
 #include <QtCore/QCryptographicHash>
 #include <QtCore/QTime>
@@ -157,6 +158,14 @@ DaisyDuck::DaisyDuck (void)
 
   connect (this->sliderVolume, SIGNAL (valueChanged (int)),
            this, SLOT (playerVolume (int)));
+
+  this->shortcutVolumeUp = new QShortcut (QKeySequence (tr ("Ctrl+PgUp")), this);
+  this->shortcutVolumeDn = new QShortcut (QKeySequence (tr ("Ctrl+PgDown")), this);
+
+  connect (this->shortcutVolumeUp, SIGNAL (activated ()),
+           this, SLOT (actionVolumeUp ()));
+  connect (this->shortcutVolumeDn, SIGNAL (activated ()),
+           this, SLOT (actionVolumeDn ()));
 
   /* libduck initialization */
   this->duck = duck_init (NULL);
@@ -569,6 +578,22 @@ DaisyDuck::showOnlineAccess (void)
   this->winOnlineBook->hide ();
   this->dialogConfigAccess->showDialog ();
   this->winOnlineBook->showWindow ();
+}
+
+void
+DaisyDuck::actionVolumeUp (void)
+{
+  this->vlc_volume = this->vlc_volume + 10 > 100 ? 100 : this->vlc_volume + 10;
+  this->playerVolume (this->vlc_volume);
+  this->sliderVolume->setSliderPosition (this->vlc_volume);
+}
+
+void
+DaisyDuck::actionVolumeDn (void)
+{
+  this->vlc_volume = this->vlc_volume - 10 < 0 ? 0 : this->vlc_volume - 10;
+  this->playerVolume (this->vlc_volume);
+  this->sliderVolume->setSliderPosition (this->vlc_volume);
 }
 
 /****************************************************************************/
