@@ -257,6 +257,12 @@ The settings part is only intended to be used by the advanced users and speciall
              <property name="text">
               <string>Chapters</string>
              </property>
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
             </column>
            </widget>
           </item>
