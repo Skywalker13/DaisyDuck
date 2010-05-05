@@ -7,17 +7,17 @@ ainsi que pour naviguer dans le livre.
 
 <h2>Raccourcis clavier</h2>
 <ul>
-  <li><pre class="shortcut">CTRL+O             </pre>: ouvrir un livre audio local (sur un média physique).</li>
-  <li><pre class="shortcut">CTRL+L             </pre>: accéder à la liste des livres audio en ligne.</li>
-  <li><pre class="shortcut">CTRL+Q             </pre>: quitter DaisyDuck.</li>
-  <li><pre class="shortcut">CTRL+ENTRÉE        </pre>: lire et/ou arrêter.</li>
-  <li><pre class="shortcut">CTRL+FLÈCHE HAUT   </pre>: aller au chapitre précédent.</li>
-  <li><pre class="shortcut">CTRL+FLÈCHE BAS    </pre>: aller au chapitre suivant.</li>
-  <li><pre class="shortcut">CTRL+FLÈCHE GAUCHE </pre>: aller au paragraphe précédent.</li>
-  <li><pre class="shortcut">CTRL+FLÈCHE DROITE </pre>: aller au paragraphe suivant.</li>
-  <li><pre class="shortcut">CTRL+PLUS          </pre>: augmenter la vitesse de 10%.</li>
-  <li><pre class="shortcut">CTRL+MOINS         </pre>: diminuer la vitesse de 10%.</li>
-  <li><pre class="shortcut">CTRL+ASTÉRISQUE    </pre>: remettre la vitesse normal de lecture.</li>
+  <li><pre class="shortcut">CTRL+O               </pre>: ouvrir un livre audio local (sur un média physique).</li>
+  <li><pre class="shortcut">CTRL+L               </pre>: accéder à la liste des livres audio en ligne.</li>
+  <li><pre class="shortcut">CTRL+Q               </pre>: quitter DaisyDuck.</li>
+  <li><pre class="shortcut">CTRL+ENTRÉE          </pre>: lire et/ou arrêter.</li>
+  <li><pre class="shortcut">CTRL+FLÈCHE HAUT     </pre>: aller au chapitre précédent.</li>
+  <li><pre class="shortcut">CTRL+FLÈCHE BAS      </pre>: aller au chapitre suivant.</li>
+  <li><pre class="shortcut">CTRL+FLÈCHE GAUCHE   </pre>: aller au paragraphe précédent.</li>
+  <li><pre class="shortcut">CTRL+FLÈCHE DROITE   </pre>: aller au paragraphe suivant.</li>
+  <li><pre class="shortcut">CTRL+PLUS            </pre>: augmenter la vitesse de 10%.</li>
+  <li><pre class="shortcut">CTRL+MOINS           </pre>: diminuer la vitesse de 10%.</li>
+  <li><pre class="shortcut">CTRL+ASTÉRISQUE      </pre>: remettre la vitesse normal de lecture.</li>
   <li><pre class="shortcut">CTRL+PAGE PRÉCÉDENTE </pre>: augmenter le volume audio.</li>
   <li><pre class="shortcut">CTRL+PAGE SUIVANTE   </pre>: diminuer le volume audio.</pre>
 </ul>
