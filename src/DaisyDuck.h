@@ -140,6 +140,7 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
     /* libduck */
     duck_t  *duck;
     QString  duck_path;
+    int      duck_duration;
 
     /* libvlc */
     libvlc_instance_t     *vlc_core;

@@ -48,6 +48,7 @@ DaisyDuck::DaisyDuck (void)
 
   this->setupUi (this);
   this->daisyState = DAISY_IS_SLEEPING;
+  this->duck_duration = 0;
   this->vlc_rate = 100;
   this->labelSpeed->setText (tr ("Speed %1% :").arg (this->vlc_rate));
 
@@ -500,6 +501,8 @@ DaisyDuck::playerStop (void)
   keys = this->pushAction->shortcut ();
   this->pushAction->setText (tr ("Play"));
   this->pushAction->setShortcut (keys);
+
+  this->labelTime->setText ("");
 }
 
 void
@@ -750,10 +753,25 @@ DaisyDuck::playerSpeed (void)
 void
 DaisyDuck::selectionUpdate (void)
 {
-  int smilpos = 0, nodepos = 0;
+  duck_value_t res;
+  int rc, smilpos = 0, nodepos = 0;
 
   duck_getpos (this->duck, &smilpos, &nodepos);
   this->cfg->setBookmark (&this->hash, smilpos, nodepos);
+
+  rc = duck_smilnode_getinfo (this->duck, DUCK_SMILNODE_I_ELAPSEDTIME, &res);
+  if (!rc && this->duck_duration)
+  {
+    int remaining;
+    QTime time = QTime (0, 0, 0, 0);
+
+    remaining  = this->duck_duration - res.i;
+    remaining -= libvlc_media_player_get_time (this->vlc_mp) / 1000;
+    time = time.addSecs (remaining);
+    this->labelTime->setText (time.toString (tr ("'Remaining time' H:mm:ss")));
+  }
+  else
+    this->labelTime->setText ("");
 
   emit this->treeUpdate ();
 }
@@ -831,9 +849,13 @@ DaisyDuck::openBook (const QString &book, const QString &summary)
     time = time.addSecs (res.i);
     this->labelDuration->setText
       (time.toString (tr ("H 'hours' m 'minutes' s 'seconds'")));
+    this->duck_duration = res.i;
   }
   else
+  {
     this->labelDuration->setText (tr ("Unknown"));
+    this->duck_duration = 0;
+  }
 
   if (summary.isEmpty ())
     this->labelSummary->setText (tr ("Not available"));
