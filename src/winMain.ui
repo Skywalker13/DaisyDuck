@@ -498,7 +498,10 @@ The settings part is only intended to be used by the advanced users and speciall
               <property name="topMargin">
                <number>0</number>
               </property>
-              <item row="4" column="0">
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item row="5" column="0">
                <widget class="QPushButton" name="pushSmilnodePrev">
                 <property name="minimumSize">
                  <size>
@@ -530,7 +533,7 @@ The settings part is only intended to be used by the advanced users and speciall
                 </property>
                </widget>
               </item>
-              <item row="4" column="1">
+              <item row="5" column="1">
                <widget class="QPushButton" name="pushNodePrev">
                 <property name="enabled">
                  <bool>false</bool>
@@ -565,7 +568,7 @@ The settings part is only intended to be used by the advanced users and speciall
                 </property>
                </widget>
               </item>
-              <item row="4" column="2">
+              <item row="5" column="2">
                <widget class="QPushButton" name="pushAction">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -600,7 +603,7 @@ The settings part is only intended to be used by the advanced users and speciall
                 </property>
                </widget>
               </item>
-              <item row="4" column="5">
+              <item row="5" column="5">
                <widget class="QPushButton" name="pushSmilnodeNext">
                 <property name="minimumSize">
                  <size>
@@ -769,7 +772,7 @@ The settings part is only intended to be used by the advanced users and speciall
                 </item>
                </layout>
               </item>
-              <item row="4" column="4">
+              <item row="5" column="4">
                <widget class="QPushButton" name="pushNodeNext">
                 <property name="enabled">
                  <bool>false</bool>
@@ -823,6 +826,64 @@ The settings part is only intended to be used by the advanced users and speciall
                 </property>
                </widget>
               </item>
+              <item row="1" column="0" colspan="2">
+               <widget class="QSlider" name="sliderVolume">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Ignored" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="accessibleName">
+                 <string>volume</string>
+                </property>
+                <property name="accessibleDescription">
+                 <string>change volume</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QSlider::groove:horizontal {
+	height: 16px;
+	margin-bottom: 10;
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 255, 105, 255), stop:1 rgba(255, 105, 105, 255));
+	border-radius: 8px;
+	border: 1px solid #555555;
+}
+
+QSlider::handle:horizontal {
+	width: 16px;
+	height: 16px;
+	margin-bottom: 5;
+	background-color: black;
+	border-radius: 8px;
+}</string>
+                </property>
+                <property name="maximum">
+                 <number>100</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0" colspan="2">
+               <widget class="QLabel" name="labelVolume">
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
              </layout>
             </item>
            </layout>
@@ -841,7 +902,7 @@ The settings part is only intended to be used by the advanced users and speciall
      <x>0</x>
      <y>0</y>
      <width>845</width>
-     <height>23</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

@@ -93,6 +93,7 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
     void playerSpeedReset (void);
     void playerSpeedUp (void);
     void playerSpeedDown (void);
+    void playerVolume (int value);
 
     /* Online Books */
     void onlineBook (const QString &book,
@@ -137,6 +138,7 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
     libvlc_instance_t     *vlc_core;
     libvlc_media_player_t *vlc_mp;
     int vlc_rate;
+    int vlc_volume;
     static const int vlc_rate_inc = 10;
 };
 

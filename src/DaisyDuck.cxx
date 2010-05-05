@@ -150,6 +150,14 @@ DaisyDuck::DaisyDuck (void)
   for (i = 0; i < ARRAY_NB_ELEMENTS (vlc_events_map); i++)
     libvlc_event_attach (ev, vlc_events_map[i], DaisyDuck::vlc_event_cb, this);
 
+  /* volume slider */
+  this->vlc_volume = libvlc_audio_get_volume (this->vlc_mp);
+  this->sliderVolume->setSliderPosition (this->vlc_volume);
+  this->labelVolume->setText (tr ("Volume %1% :").arg (this->vlc_volume));
+
+  connect (this->sliderVolume, SIGNAL (valueChanged (int)),
+           this, SLOT (playerVolume (int)));
+
   /* libduck initialization */
   this->duck = duck_init (NULL);
   if (!this->duck)
@@ -537,6 +545,14 @@ DaisyDuck::playerSpeedDown (void)
   if (this->vlc_rate < 0)
     this->vlc_rate = 0;
   this->playerSpeed ();
+}
+
+void
+DaisyDuck::playerVolume (int value)
+{
+  this->vlc_volume = value;
+  this->labelVolume->setText (tr ("Volume %1% :").arg (this->vlc_volume));
+  libvlc_audio_set_volume (this->vlc_mp, this->vlc_volume);
 }
 
 void
