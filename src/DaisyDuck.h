@@ -62,6 +62,7 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
   signals:
     void playerEvEndReached (void);
     void playerEvTimeChanged (long time);
+    void playerEvError (void);
     void treeUpdate (void);
 
   public:
@@ -95,6 +96,7 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
     void playerSpeedUp (void);
     void playerSpeedDown (void);
     void playerVolume (int value);
+    void playerError (void);
 
     /* Online Books */
     void onlineBook (const QString &book,

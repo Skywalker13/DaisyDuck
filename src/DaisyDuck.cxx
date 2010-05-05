@@ -35,6 +35,7 @@
 const libvlc_event_type_t DaisyDuck::vlc_events_map[] = {
   libvlc_MediaPlayerEndReached,
   libvlc_MediaPlayerTimeChanged,
+  libvlc_MediaPlayerEncounteredError,
 };
 
 DaisyDuck::DaisyDuck (void)
@@ -106,6 +107,8 @@ DaisyDuck::DaisyDuck (void)
            this, SLOT (playerSmilnodeNext ()));
   connect (this, SIGNAL (playerEvTimeChanged (long)),
            this, SLOT (playerTimeChanged (long)));
+  connect (this, SIGNAL (playerEvError ()),
+           this, SLOT (playerError ()));
 
   /* VideoLAN initialization */
   vlc_argv[vlc_argc++] = "--no-stats";
@@ -568,6 +571,16 @@ DaisyDuck::playerVolume (int value)
 }
 
 void
+DaisyDuck::playerError (void)
+{
+  this->playerStop ();
+  QMessageBox::critical (this, tr ("Player"),
+                         tr ("DaisyDuck can not start the playback! This "
+                             "Daisy book is not reachable or maybe that this "
+                             "one is corrupted."));
+}
+
+void
 DaisyDuck::onlineBook (const QString &book,
                        const QString &hash, const QString &summary)
 {
@@ -950,6 +963,10 @@ DaisyDuck::vlc_event_cb (const libvlc_event_t *ev, void *data)
 
   case libvlc_MediaPlayerTimeChanged:
     daisy->emit playerEvTimeChanged (ev->u.media_player_time_changed.new_time);
+    break;
+
+  case libvlc_MediaPlayerEncounteredError:
+    daisy->emit playerEvError ();
     break;
 
   default:
