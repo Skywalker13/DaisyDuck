@@ -47,6 +47,17 @@ DaisyDuck::DaisyDuck (void)
   char useragent[256];
   libvlc_event_manager_t *ev;
 
+  this->cfg = NULL;
+  this->winOnlineBook = NULL;
+  this->dialogConfigAccess = NULL;
+  this->dialogConfigCustom = NULL;
+  this->dialogAbout = NULL;
+  this->shortcutVolumeUp = NULL;
+  this->shortcutVolumeDn = NULL;
+  this->duck = NULL;
+  this->vlc_core = NULL;
+  this->vlc_mp = NULL;
+
   this->setupUi (this);
   this->daisyState = DAISY_IS_SLEEPING;
   this->duck_duration = 0;
