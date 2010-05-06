@@ -793,7 +793,7 @@ DaisyDuck::selectionUpdate (void)
   rc = duck_smilnode_getinfo (this->duck, DUCK_SMILNODE_I_ELAPSEDTIME, &res);
   if (!rc && this->duck_duration)
   {
-    int remaining;
+    int remaining = -1;
     QTime time = QTime (0, 0, 0, 0);
 
     if (this->vlc_rate)
@@ -802,8 +802,6 @@ DaisyDuck::selectionUpdate (void)
       remaining -= libvlc_media_player_get_time (this->vlc_mp) / 1000;
       remaining  = remaining * 100 / this->vlc_rate;
     }
-    else
-      remaining = -1;
 
     time = time.addSecs (remaining);
     this->labelTime->setText (time.toString (tr ("'Remaining time' H:mm:ss")));
