@@ -1,0 +1,66 @@
+
+How to use these scripts to compile for Windows?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+First, install MinGW, Wine and MSYS+MinGW or only MSYS+MinGW on Windows.
+If you are on Windows, you must install pkg-config. Otherwise the flags
+must be passed manually (and it can be very annoying with the Windows
+binaries because the order for the linker is important).
+
+The file "./config" provides the variables to cross-compile FFmpeg, libduck,
+libiconv, libxml2 and VLC. The sources of every libraries must be
+downloaded in this directory. The versions must be set in the "./config"
+file.
+
+Then you can use
+ ./build.sh
+in order to run the cross-compilation.
+
+ NOTE: the build scripts are very simple. The goal is only to help the build
+       for Windows. But sometimes it can be necessary to made some changes
+       in the scripts, accordingly to your system.
+
+The libraries are installed in the ./usr/ directory. Note that most of
+libraries are static, excepted for libVLC. This one can not be compiled
+for a static linking (ver. 1.1.x). Plugins are always dynamic and libvlc
++ libvlccore fail when DaisyDuck is statically linked with they (stack
+overflow or something else).
+
+
+Qt4 is not handled in the same way that the other libraries. Qt4 can not
+be easily cross-compiled without many patches. The way is to use MSYS
+with Wine or Windows.
+The scripts build-qt.sh, prl2pc.sh and the patch qt4_10_optimize-small.diff
+must be copied in the root of MSYS (for example in your MSYS/home/$USER), and
+the sources of Qt4 must be downloaded in this directory. Then you can use
+ ./build-qt.sh
+in order to run the compilation.
+
+If you use Wine, in this case the absolute path (from the Linux point of view)
+of Qt4 must be provided as argument:
+ ./build-qt.sh "$HOME/.wine/drive_c/msys/1.0/home/$USER/qt-everywhere-opensource-src-x.y.z"
+
+
+The pkg-config files needed by DaisyDuck for Qt4, are created by the script
+"prl2pc.sh" after the compilation. The Qt libraries can be found in
+qt-everywhere-opensource-x.y.z/lib with the pkg-config files in the
+pkgconfig sub-directory. Note that Qt4 is compiled only for static linking.
+
+
+When all libraries are compiled, DaisyDuck must be configured in this way:
+
+ PKG_CONFIG_PATH="$(pwd)/extras/mingw/usr/lib/pkgconfig:$HOME/.wine/drive_c/msys/1.0/home/$USER/qt-everywhere-opensource-src-x.y.z/lib/pkgconfig" \
+ PKG_CONFIG_LIBDIR="$(pwd)/extras/mingw/usr/lib:$HOME/.wine/drive_c/msys/1.0/home/$USER/qt-everywhere-opensource-src-x.y.z/lib" \
+ ./configure --cross-compile \
+             --cross-prefix=i586-mingw32msvc- \
+             --with-libqt4-dir=$HOME/.wine/drive_c/msys/1.0/home/$USER/qt-everywhere-opensource-src-x.y.z \
+             --disable-optimize \
+             --enable-small \
+             --disable-debug
+
+Of course, the paths for pkg-config and libqt4-dir must be adapted for your
+system. The command-line above assumes that you have cross-compiled the
+libraries in the extras/mingw directory and Qt4 in the default MSYS directory
+with Wine.
+DaisyDuck is cross-compiled with the -Os flag because the scripts provided
+in extras/mingw use this one with every library.

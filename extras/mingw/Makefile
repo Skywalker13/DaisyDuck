@@ -9,6 +9,7 @@ EXTRADIST = \
 	config \
 	prl2pc.sh \
 	qt4_10_optimize-small.diff \
+	README \
 	vlc_10_skip-cache-gen.diff \
 
 all:
