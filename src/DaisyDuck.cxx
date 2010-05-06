@@ -174,8 +174,10 @@ DaisyDuck::DaisyDuck (void)
   connect (this->sliderVolume, SIGNAL (valueChanged (int)),
            this, SLOT (playerVolume (int)));
 
-  this->shortcutVolumeUp = new QShortcut (QKeySequence (tr ("Ctrl+PgUp")), this);
-  this->shortcutVolumeDn = new QShortcut (QKeySequence (tr ("Ctrl+PgDown")), this);
+  this->shortcutVolumeUp =
+    new QShortcut (QKeySequence (tr ("Ctrl+PgUp")), this);
+  this->shortcutVolumeDn =
+    new QShortcut (QKeySequence (tr ("Ctrl+PgDown")), this);
 
   connect (this->shortcutVolumeUp, SIGNAL (activated ()),
            this, SLOT (actionVolumeUp ()));
