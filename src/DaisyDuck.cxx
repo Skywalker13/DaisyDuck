@@ -575,8 +575,8 @@ DaisyDuck::playerSpeedDown (void)
     return;
 
   this->vlc_rate -= this->vlc_rate_inc;
-  if (this->vlc_rate < 0)
-    this->vlc_rate = 0;
+  if (this->vlc_rate < this->vlc_rate_min)
+    this->vlc_rate = this->vlc_rate_min;
   this->playerSpeed ();
 }
 

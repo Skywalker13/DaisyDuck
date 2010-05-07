@@ -150,6 +150,7 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
     int vlc_rate;
     int vlc_volume;
     static const int vlc_rate_inc = 10;
+    static const int vlc_rate_min = 50;
 };
 
 #endif /* DAISYDUCK_H */
