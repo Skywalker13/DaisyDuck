@@ -340,7 +340,7 @@ DaisyDuck::treeClicked (QTreeWidgetItem *item,
 
   this->playerStop ();
 
-  rc = duck_walk (this->duck, id, 1);
+  rc = duck_walk_smil (this->duck, id);
   if (rc)
     return;
 
@@ -643,7 +643,7 @@ DaisyDuck::daisySmilnodeWalk (int inc)
   int smilpos = 0;
 
   duck_getpos (this->duck, &smilpos, NULL);
-  while (!(rc = duck_walk (this->duck, smilpos += inc, 1)))
+  while (!(rc = duck_walk_smil (this->duck, smilpos += inc)))
   {
     duck_value_t res;
 
@@ -957,7 +957,7 @@ DaisyDuck::openBook (const QString &book, const QString &summary)
   }
 
   /* got to the first heading */
-  duck_walk (this->duck, first, 1);
+  duck_walk_smil (this->duck, first);
 
   this->cfg->getBookmark (&this->hash, &smilpos, &nodepos);
   if ((smilpos > 1 && nodepos) || (smilpos == 1 && nodepos > 1))
