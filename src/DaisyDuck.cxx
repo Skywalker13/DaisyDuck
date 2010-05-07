@@ -826,7 +826,7 @@ DaisyDuck::customUpdate (void)
   rc = duck_book_getinfo (this->duck, e, &res);   \
   if (!rc || !res.s)                              \
   {                                               \
-    this->l->setText (res.s);                     \
+    this->l->setText (QString::fromUtf8 (res.s)); \
     free (res.s);                                 \
   }                                               \
   else                                            \
