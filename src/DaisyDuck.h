@@ -132,7 +132,6 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
     About        *dialogAbout;
     QShortcut    *shortcutVolumeUp;
     QShortcut    *shortcutVolumeDn;
-    static const libvlc_event_type_t vlc_events_map[];
 
     enum {
       DAISY_IS_SLEEPING = 0,
@@ -151,6 +150,7 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
     int vlc_volume;
     static const int vlc_rate_inc = 10;
     static const int vlc_rate_min = 50;
+    static const libvlc_event_type_t vlc_events_map[];
 };
 
 #endif /* DAISYDUCK_H */
