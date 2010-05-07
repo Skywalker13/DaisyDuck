@@ -416,6 +416,7 @@ DaisyDuck::playerSmilnodeNext (void)
   }
 
   this->playerPlay ();
+  this->daisyNodeSeek ();
   this->selectionUpdate ();
 }
 
@@ -431,6 +432,7 @@ DaisyDuck::playerSmilnodePrev (void)
     return;
 
   this->playerPlay ();
+  this->daisyNodeSeek ();
   this->selectionUpdate ();
 }
 
