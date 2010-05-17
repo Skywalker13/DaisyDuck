@@ -29,7 +29,7 @@
 <context>
     <name>DaisyDuck</name>
     <message>
-        <location filename="../src/DaisyDuck.cxx" line="+255"/>
+        <location filename="../src/DaisyDuck.cxx" line="+273"/>
         <source>Open File</source>
         <translation>Ouvrir un fichier</translation>
     </message>
@@ -39,7 +39,7 @@
         <translation></translation>
     </message>
     <message>
-        <location line="+216"/>
+        <location line="+218"/>
         <source>Daisy Duck is reading...</source>
         <translation>Daisy Duck est en train de lire...</translation>
     </message>
@@ -59,7 +59,7 @@
         <translation>DaisyDuck ne peut pas démarrer la lecture! Ce livre Daisy n&apos;est pas joignable ou peut être que celui-ci est corrompu.</translation>
     </message>
     <message>
-        <location line="+206"/>
+        <location line="+211"/>
         <source>&apos;Remaining time&apos; H:mm:ss</source>
         <translation>&apos;Temps restant&apos; H:mm:ss</translation>
     </message>
@@ -105,34 +105,34 @@
         <translation>Ce livre a été interrompu, pressez &quot;lire&quot; pour reprendre.</translation>
     </message>
     <message>
-        <location line="-461"/>
+        <location line="-466"/>
         <source>Stop</source>
         <translation>Arrêt</translation>
     </message>
     <message>
-        <location line="-426"/>
-        <location line="+708"/>
+        <location line="-435"/>
+        <location line="+717"/>
         <source>Speed %1% :</source>
         <translation>Vitesse %1% :</translation>
     </message>
     <message>
-        <location line="-601"/>
-        <location line="+408"/>
+        <location line="-610"/>
+        <location line="+417"/>
         <source>Volume %1% :</source>
         <translation></translation>
     </message>
     <message>
-        <location line="-403"/>
+        <location line="-411"/>
         <source>Ctrl+PgUp</source>
         <translation></translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Ctrl+PgDown</source>
         <translation></translation>
     </message>
     <message>
-        <location line="+338"/>
+        <location line="+345"/>
         <source>Play</source>
         <translation>Lire</translation>
     </message>
@@ -199,12 +199,16 @@
         <translation>À propos de DaisyDuck</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>DaisyDuck is a free software for playing online and local DTB (Digital Talking Books). It supports the Daisy specifications through the libduck library. It relies on Qt4 for the GUI and libVLC for the audio playing. </source>
-        <translation>DaisyDuck est un logiciel libre pour la lecture en ligne et locale de DTB (Digital Talking Books). Il supporte les spécifications Daisy via la bibliothèque libduck. Il se base sur Qt4 pour le GUI et libVLC pour la lecture audio.</translation>
+        <translation type="obsolete">DaisyDuck est un logiciel libre pour la lecture en ligne et locale de DTB (Digital Talking Books). Il supporte les spécifications Daisy via la bibliothèque libduck. Il se base sur Qt4 pour le GUI et libVLC pour la lecture audio.</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>DaisyDuck is a free software for playing online and local DTB (Digital Talking Books). It supports the Daisy specifications through the libduck library. It relies on Qt4 for the GUI and libVLC for the audio playing.&lt;br/&gt;&lt;br/&gt;Project website : &lt;a href=&quot;http://daisy.geexbox.org&quot;&gt;daisy.geexbox.org&lt;/a&gt; </source>
+        <translation>DaisyDuck est un logiciel libre pour la lecture en ligne et locale de DTB (Digital Talking Books). Il supporte les spécifications Daisy via la bibliothèque libduck. Il se base sur Qt4 pour le GUI et libVLC pour la lecture audio.&lt;br/&gt;&lt;br/&gt;Site web du projet : &lt;a href=&quot;http://daisy.geexbox.org&quot;&gt;daisy.geexbox.org&lt;/a&gt; </translation>
     </message>
     <message utf8="true">
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Copyright (C) 2010 Mathieu Schroeter&lt;br/&gt;&lt;br/&gt;This application was originally developped for the auditors of the BSR (Bibliothèque Sonore Romande, &lt;a href=&quot;http://www.bsr-lausanne.ch&quot;&gt;www.bsr-lausanne.ch&lt;/a&gt;) to provide an audio streaming program for Daisy 2.02 books.</source>
         <translation>Copyright (C) 2010 Mathieu Schroeter&lt;br/&gt;&lt;br/&gt;Cette application a été originellement développée pour les auditeurs de la BSR (Bibliothèque Sonore Romande, &lt;a href=&quot;http://www.bsr-lausanne.ch&quot;&gt;www.bsr-lausanne.ch&lt;/a&gt;) afin de leur fournir un programme de streaming audio pour les livres Daisy 2.02.</translation>
     </message>
@@ -219,7 +223,7 @@
         <translation>la licence de DaisyDuck</translation>
     </message>
     <message>
-        <location line="+732"/>
+        <location line="+727"/>
         <source>Dependencies :</source>
         <translation>Dépendances :</translation>
     </message>
@@ -412,7 +416,7 @@
         <translation>liste des livres en ligne disponibles</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+31"/>
         <source>Number</source>
         <translation>Numéro</translation>
     </message>
@@ -563,7 +567,7 @@ DaisyDuck sauve automatiquement la position de chaque livre qui vous lisez. Quan
 La partie concernant les paramétrages est destinée à être utilisée par les utilisateurs avancés et spécialement pour les accès en ligne.</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>chapters</source>
         <translation>chapitres</translation>
     </message>
@@ -573,7 +577,7 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
         <translation>liste des chapitres dans le livre en cours</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+16"/>
         <source>Chapters</source>
         <translation>Chapitres</translation>
     </message>
@@ -788,7 +792,7 @@ La partie concernant les paramétrages est destinée à être utilisée par les 
         <translation>paragraphe précédent</translation>
     </message>
     <message>
-        <location line="-564"/>
+        <location line="-576"/>
         <source>DaisyDuck</source>
         <translation></translation>
     </message>
@@ -821,7 +825,7 @@ DaisyDuck sauve automatiquement la position de chaque livre qui vous lisez. Quan
 La partie concernant les paramétrages est destinée à être utilisée par les utilisateurs avancés et spécialement pour les accès en ligne.</translation>
     </message>
     <message>
-        <location line="+567"/>
+        <location line="+579"/>
         <source>go to the previous paragraph</source>
         <translation>aller au paragraphe précédent</translation>
     </message>
