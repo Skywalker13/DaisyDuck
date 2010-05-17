@@ -45,12 +45,18 @@
    <item row="0" column="1">
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>DaisyDuck is a free software for playing online and local DTB (Digital Talking Books). It supports the Daisy specifications through the libduck library. It relies on Qt4 for the GUI and libVLC for the audio playing. </string>
+      <string>DaisyDuck is a free software for playing online and local DTB (Digital Talking Books). It supports the Daisy specifications through the libduck library. It relies on Qt4 for the GUI and libVLC for the audio playing.&lt;br/&gt;&lt;br/&gt;Project website : &lt;a href=&quot;http://daisy.geexbox.org&quot;&gt;daisy.geexbox.org&lt;/a&gt; </string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
      </property>
      <property name="alignment">
       <set>Qt::AlignJustify|Qt::AlignTop</set>
      </property>
      <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="openExternalLinks">
       <bool>true</bool>
      </property>
     </widget>
