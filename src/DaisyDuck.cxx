@@ -147,9 +147,9 @@ DaisyDuck::DaisyDuck (void)
   vlc_argv[vlc_argc++] = useragent;
 
   vlc_argv[vlc_argc++] = "--ipv4-timeout";
-  vlc_argv[vlc_argc++] = "500";
+  vlc_argv[vlc_argc++] = "300";
   vlc_argv[vlc_argc++] = "--mms-timeout";
-  vlc_argv[vlc_argc++] = "500";
+  vlc_argv[vlc_argc++] = "300";
 
   this->vlc_core = libvlc_new (vlc_argc, vlc_argv);
   if (!this->vlc_core)
