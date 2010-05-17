@@ -82,14 +82,29 @@
          <property name="accessibleDescription">
           <string>list of available online books</string>
          </property>
-         <property name="animated">
-          <bool>true</bool>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="showDropIndicator" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="expandsOnDoubleClick">
+          <bool>false</bool>
          </property>
          <attribute name="headerVisible">
           <bool>true</bool>
          </attribute>
          <attribute name="headerDefaultSectionSize">
           <number>185</number>
+         </attribute>
+         <attribute name="headerStretchLastSection">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="headerDefaultSectionSize">
+          <number>185</number>
+         </attribute>
+         <attribute name="headerVisible">
+          <bool>true</bool>
          </attribute>
          <attribute name="headerStretchLastSection">
           <bool>true</bool>

@@ -244,14 +244,26 @@ The settings part is only intended to be used by the advanced users and speciall
               <height>0</height>
              </size>
             </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
             <property name="accessibleName">
              <string>chapters</string>
             </property>
             <property name="accessibleDescription">
              <string>list of chapters in the current book</string>
             </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
+            <property name="showDropIndicator" stdset="0">
+             <bool>false</bool>
+            </property>
             <property name="animated">
              <bool>true</bool>
+            </property>
+            <property name="expandsOnDoubleClick">
+             <bool>false</bool>
             </property>
             <column>
              <property name="text">
