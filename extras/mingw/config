@@ -1,8 +1,9 @@
 # Configuration
 
-HOST="i586-mingw32msvc"
-CROSS_PREFIX="i586-mingw32msvc-"
-MINGW_SYSROOT="/usr/i586-mingw32msvc"
+ARCH="i586"
+HOST="$ARCH-mingw32msvc"
+CROSS_PREFIX="$ARCH-mingw32msvc-"
+MINGW_SYSROOT="/usr/$ARCH-mingw32msvc"
 PREFIX="$(pwd)/usr"
 
 ICONV_VER="1.13.1"

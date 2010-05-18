@@ -108,7 +108,7 @@ if [ ! -d "ffmpeg-$FFMPEG_VER" ]; then
   ./configure --enable-cross-compile \
               --cross-prefix=${CROSS_PREFIX} \
               --target-os=mingw32 \
-              --arch=i586 \
+              --arch=$ARCH \
               --prefix=${PREFIX} \
               --extra-cflags="$CFLAGS" \
               --enable-static \
