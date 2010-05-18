@@ -1,5 +1,5 @@
 --- a/modules/Makefile.in	2010-04-17 00:15:36.000000000 +0200
-+++ b/modules/Makefile.in2	2010-04-23 10:19:24.621452030 +0200
++++ b/modules/Makefile.in	2010-04-23 10:19:24.621452030 +0200
 @@ -1014,11 +1014,7 @@
  	$(AM_V_at)touch stamp-cache
  
