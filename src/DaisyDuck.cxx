@@ -951,7 +951,12 @@ DaisyDuck::openBook (const QString &book, const QString &summary)
       item[level - 2]->addChild (itemc);
 
       if (!item[level - 1] || level_p >= level)
+      {
+        int lp;
         item[level - 1] = itemc;
+        for (lp = level; lp < ARRAY_NB_ELEMENTS (item); lp++)
+          item[lp] = NULL;
+      }
     }
 
     free (res.s);
