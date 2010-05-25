@@ -469,7 +469,7 @@ La vitesse de lecture peut être contrôlée avec &lt;i&gt;CTRL+PLUS&lt;/i&gt; p
 Pour modifier le volume audio, utilisez &lt;i&gt;CTRL+PAGE PRÉCÉDENTE&lt;/i&gt; et &lt;i&gt;CTRL+PAGE SUIVANTE&lt;/i&gt;.&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;Comment reprendre la lecture d&apos;un livre?&lt;/b&gt;&lt;br/&gt;
-DaisyDuck sauve automatiquement la position de chaque livre qui vous lisez. Quand un livre est ouvert, DaisyDuck cherche si une lecture précédente existe, et en fonction, la position (le chapitre et le paragraphe) est modifiée pour la lecture (un message est affiché dans la barre de status). Vous devez simplement presser le bouton &quot;Lire&quot; quand le livre est chargé.&lt;br/&gt;
+DaisyDuck sauve automatiquement la position de chaque livre que vous lisez. Quand un livre est ouvert, DaisyDuck cherche si une lecture précédente existe, et en fonction, la position (le chapitre et le paragraphe) est modifiée pour la lecture (un message est affiché dans la barre de status). Vous devez simplement presser le bouton &quot;Lire&quot; quand le livre est chargé.&lt;br/&gt;
 &lt;br/&gt;
 &lt;b&gt;Et concernant &quot;Paramétrages&quot;?&lt;/b&gt;&lt;br/&gt;
 La partie concernant les paramétrages est destinée à être utilisée par les utilisateurs avancés et spécialement pour les accès en ligne.</translation>
