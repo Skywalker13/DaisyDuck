@@ -1,5 +1,17 @@
 --- a/modules/Makefile.in	2010-04-17 00:15:36.000000000 +0200
 +++ b/modules/Makefile.in	2010-04-23 10:19:24.621452030 +0200
+@@ -1006,11 +1006,7 @@
+ .PHONY: stamp-cache
+ 
+ stamp-cache:
+-	$(AM_V_GEN)if test "$(build)" = "$(host)"; then \
+-		../bin/vlc-cache-gen$(EXEEXT) . ; \
+-	else \
+ 		echo "Cross-compilation: cache generation skipped!" ; \
+-	fi
+ 	$(AM_V_at)touch stamp-cache
+ 
+ install-exec-hook:
 @@ -1014,11 +1014,7 @@
  	$(AM_V_at)touch stamp-cache
  
