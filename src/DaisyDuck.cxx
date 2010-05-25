@@ -954,7 +954,7 @@ DaisyDuck::openBook (const QString &book, const QString &summary)
       {
         int lp;
         item[level - 1] = itemc;
-        for (lp = level; lp < ARRAY_NB_ELEMENTS (item); lp++)
+        for (lp = level; lp < (int) ARRAY_NB_ELEMENTS (item); lp++)
           item[lp] = NULL;
       }
     }
