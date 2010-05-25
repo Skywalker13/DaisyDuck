@@ -2,6 +2,14 @@
 
 . ./config
 
+if [ "$USE_CROSS" = "no" ]; then
+  CROSS_PREFIX=""
+  MINGW_SYSROOT=""
+  CFG_HOST=""
+else
+  CFG_HOST="--host=${HOST}"
+fi
+
 export MAKEFLAGS=-j3
 
 export CC=${CROSS_PREFIX}gcc
@@ -34,7 +42,7 @@ mkdir -p ${PREFIX}
 if [ ! -d "libiconv-$ICONV_VER" ]; then
   tar -zxf libiconv-$ICONV_VER.tar.gz
   cd libiconv-$ICONV_VER
-  ./configure --host=${HOST} \
+  ./configure $CFG_HOST \
               --prefix=${PREFIX} \
               --enable-static \
               --disable-shared \
@@ -50,7 +58,7 @@ if [ ! -d "libxml2-$XML2_VER" ]; then
   tar -zxf libxml2-$XML2_VER.tar.gz
   cd libxml2-$XML2_VER
   LDFLAGS="$LDFLAGS -liconv" \
-  ./configure --host=${HOST} \
+  ./configure $CFG_HOST \
               --prefix=${PREFIX} \
               --enable-static \
               --disable-shared \
@@ -86,10 +94,13 @@ if [ ! -d "libxml2-$XML2_VER" ]; then
 fi
 
 if [ ! -d "libduck-$DUCK_VER" ]; then
+  [ "$USE_CROSS" = "yes" ] \
+    && DUCK_CROSS="--cross-compile --cross-prefix=${CROSS_PREFIX}" \
+    || DUCK_CROSS=""
+
   tar -jxf libduck-$DUCK_VER.tar.bz2
   cd libduck-$DUCK_VER
-  ./configure --cross-compile \
-              --cross-prefix=${CROSS_PREFIX} \
+  ./configure $DUCK_CROSS \
               --prefix=${PREFIX} \
               --enable-static \
               --disable-shared \
@@ -103,12 +114,13 @@ if [ ! -d "libduck-$DUCK_VER" ]; then
 fi
 
 if [ ! -d "ffmpeg-$FFMPEG_VER" ]; then
+  [ "$USE_CROSS" = "yes" ] \
+    && FFMPEG_CROSS="--enable-cross-compile --cross-prefix=${CROSS_PREFIX} --target-os=mingw32 --arch=$ARCH" \
+    || FFMPEG_CROSS=""
+
   tar -jxf ffmpeg-$FFMPEG_VER.tar.bz2
   cd ffmpeg-$FFMPEG_VER
-  ./configure --enable-cross-compile \
-              --cross-prefix=${CROSS_PREFIX} \
-              --target-os=mingw32 \
-              --arch=$ARCH \
+  ./configure $FFMPEG_CROSS \
               --prefix=${PREFIX} \
               --extra-cflags="$CFLAGS" \
               --enable-static \
@@ -155,7 +167,7 @@ if [ ! -d "vlc-$VLC_VER" ]; then
 
   cd vlc-$VLC_VER
   patch -p1 < vlc_10_skip-cache-gen.diff
-  ./configure --host=${HOST} \
+  ./configure $CFG_HOST \
               --prefix=${PREFIX} \
               --disable-static \
               --enable-shared \
