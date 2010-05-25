@@ -199,7 +199,7 @@ a {
 }
 
 .code {
-  font-size: medium;
+  font-size: normal;
   padding: 5px;
   margin-left: 25px;
   color: #444444;
@@ -233,7 +233,7 @@ a {
   width: 50%;
   font-variant: small-caps;
   font-weight: bold;
-  font-size: 80%;
+  font-size: 90%;
 }
 
 .lang:hover a {

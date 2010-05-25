@@ -19,7 +19,7 @@ ainsi que pour naviguer dans le livre.
   <li><pre class="shortcut">CTRL+MOINS           </pre>: diminuer la vitesse de 10%.</li>
   <li><pre class="shortcut">CTRL+ASTÉRISQUE      </pre>: remettre la vitesse normal de lecture.</li>
   <li><pre class="shortcut">CTRL+PAGE PRÉCÉDENTE </pre>: augmenter le volume audio.</li>
-  <li><pre class="shortcut">CTRL+PAGE SUIVANTE   </pre>: diminuer le volume audio.</pre>
+  <li><pre class="shortcut">CTRL+PAGE SUIVANTE   </pre>: diminuer le volume audio.</li>
 </ul>
 <p>
 Les variations de vitesse préservent la hauteur (pitch) du son (étirement
