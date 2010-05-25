@@ -120,6 +120,7 @@ class DaisyDuck : public QMainWindow, private Ui::winMain
 
     void selectionUpdate (void);
     void customUpdate (void);
+    inline void openBook_setLabelInfo (QLabel *l, duck_book_info_t e);
     void openBook (const QString &book, const QString &summary);
 
     static void vlc_event_cb (const libvlc_event_t *ev, void *data);

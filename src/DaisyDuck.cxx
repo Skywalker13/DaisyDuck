@@ -824,15 +824,21 @@ DaisyDuck::customUpdate (void)
   this->labelCustomText->setText (*text);
 }
 
-#define BOOK_SETLABEL_INFO(l, e)                  \
-  rc = duck_book_getinfo (this->duck, e, &res);   \
-  if (!rc || !res.s)                              \
-  {                                               \
-    this->l->setText (QString::fromUtf8 (res.s)); \
-    free (res.s);                                 \
-  }                                               \
-  else                                            \
-    this->l->setText (tr ("Unknown"));
+inline void
+DaisyDuck::openBook_setLabelInfo (QLabel *l, duck_book_info_t e)
+{
+  int rc;
+  duck_value_t res;
+
+  rc = duck_book_getinfo (this->duck, e, &res);
+  if (!rc || !res.s)
+  {
+    l->setText (QString::fromUtf8 (res.s));
+    free (res.s);
+  }
+  else
+    l->setText (tr ("Unknown"));
+}
 
 void
 DaisyDuck::openBook (const QString &book, const QString &summary)
@@ -876,9 +882,9 @@ DaisyDuck::openBook (const QString &book, const QString &summary)
   /* flush */
   treeSmilnode->clear ();
 
-  BOOK_SETLABEL_INFO (labelBook,      DUCK_BOOK_S_TITLE)
-  BOOK_SETLABEL_INFO (labelAuthor,    DUCK_BOOK_S_AUTHOR)
-  BOOK_SETLABEL_INFO (labelNarrator,  DUCK_BOOK_S_NARRATOR)
+  this->openBook_setLabelInfo (this->labelBook,     DUCK_BOOK_S_TITLE);
+  this->openBook_setLabelInfo (this->labelAuthor,   DUCK_BOOK_S_AUTHOR);
+  this->openBook_setLabelInfo (this->labelNarrator, DUCK_BOOK_S_NARRATOR);
 
   rc = duck_book_getinfo (this->duck, DUCK_BOOK_I_DURATION, &res);
   if (!rc)
