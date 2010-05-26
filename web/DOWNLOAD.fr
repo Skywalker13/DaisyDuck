@@ -23,7 +23,12 @@ Pour télécharger l'archive source complète (7-Zip) :
 <p>
 La version GNU/Linux est distribuée en tant que paquets pour Ubuntu Lucid Lynx.
 </p>
+<p>
+Pas encore disponible!
+</p>
+<!--
 @@INCLUDE:table.ubuntu@@
+-->
 
 <h1>Sources</h1>
 <p>
