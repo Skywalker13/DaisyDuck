@@ -3,9 +3,9 @@
 ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 !include "languages\declaration.nsh"
 
-!define VERSION 0.0.1
+!define VERSION 1.0.0
 !define PRODUCT_NAME "DaisyDuck Player"
-!define PRODUCT_VERSION 0.0.1
+!define PRODUCT_VERSION 1.0.0
 !define PRODUCT_PUBLISHER "GeeXboX"
 !define PRODUCT_UNINST_KEY \
   "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"

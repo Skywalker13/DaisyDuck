@@ -5,14 +5,13 @@ This installer was created using NSIS (http://nsis.sourceforge.net).
 
 All programs and libraries incorporated into and distributed with this installer are free softwares.
 
- daisyduck-0.0.1	GPL3		(http://daisy.geexbox.org)
- qt-4.6.2		LGPL2.1 GPL3	(http://qt.nokia.com)
- libduck-0.0.1	LGPL2.1		(http://libduck.geexbox.org)
- libvlc-1.1.0	GPL2		(http://www.videolan.org)
- libxml2		LGPL2.1?	(http://...)
- libiconv		?		
- ffmpeg		GPL2?		(http://www.ffmpeg.org)
- gettext		?		
+ daisyduck-1.0.0	GPL v3+		http://daisy.geexbox.org
+ ffmpeg-r23149	GPL v2+		http://www.ffmpeg.org
+ libduck-1.0.0	LGPL v2.1+	http://libduck.geexbox.org
+ libiconv-1.13.1	LGPL v2+		http://www.gnu.org/software/libiconv/
+ libqt4-4.6.2	LGPL 2.1		http://qt.nokia.com
+ libvlc-1.1.0-pre4	GPL v2+		http://www.videolan.org
+ libxml2-2.7.7	MIT		http://xmlsoft.org
 
 Licenses for these packages are available from respective URLs listed above.
 
