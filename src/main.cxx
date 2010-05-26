@@ -81,7 +81,7 @@ main (int argc, char **argv)
 #endif /* !_WIN32 */
 
   if (res)
-  app.installTranslator (&ts2);
+    app.installTranslator (&ts2);
 
   DaisyDuck winMain;
 
