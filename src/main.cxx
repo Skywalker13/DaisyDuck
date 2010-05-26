@@ -44,9 +44,7 @@ main (int argc, char **argv)
 #ifdef Q_WS_X11
   XInitThreads ();
 #endif /* Q_WS_X11 */
-  int rc;
   bool res = false;
-  DaisyDuck *winMain;
   QApplication app (argc, argv);
   QString locale = QLocale::system ().name ();
   QTranslator ts1, ts2;
@@ -85,13 +83,8 @@ main (int argc, char **argv)
   if (res)
   app.installTranslator (&ts2);
 
-  winMain = new DaisyDuck ();
-  if (!winMain)
-    return -1;
+  DaisyDuck winMain;
 
-  winMain->show ();
-  rc = app.exec ();
-
-  delete winMain;
-  return rc;
+  winMain.show ();
+  return app.exec ();
 }
