@@ -958,7 +958,7 @@ if [ -n "$libduckdir" ]; then
 fi
 
 echolog "Checking for libduck ... "
-check_lib_version libduck "0.0.0" "1.0.0"
+check_lib_version libduck "1.0.0" "2.0.0"
 [ "$?" != 0 ] && die "Error, can't find libduck or bad version !"
 check_lib_pkgcfg libduck duck.h duck_init -lduck
 [ "$?" != 0 ] && die "Error, can't find libduck !"
