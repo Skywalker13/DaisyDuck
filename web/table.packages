@@ -7,7 +7,7 @@
 </tr>
 <tr>
   <td>FFmpeg</td>
-  <td>r21465</td>
+  <td>r23149</td>
   <td>GPL v2+</td>
   <td><a href="http://www.ffmpeg.org">http://www.ffmpeg.org</a></td>
 </tr>
@@ -37,7 +37,7 @@
 </tr>
 <tr>
   <td>libVLC</td>
-  <td>1.1.0-pre2</td>
+  <td>1.1.0-pre4</td>
   <td>GPL v2+</td>
   <td><a href="http://www.videolan.org">http://www.videolan.org</a></td>
 </tr>
