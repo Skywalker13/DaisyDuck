@@ -50,6 +50,7 @@ if [ ! -d "qt-everywhere-opensource-src-$QT_VER" ]; then
                   -no-style-cde \
 
   make sub-src
+  make sub-tools
 
   # Generate pkg-config files with the .prl files.
   mkdir -p lib/pkgconfig
