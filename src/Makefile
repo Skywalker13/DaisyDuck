@@ -22,6 +22,7 @@ SRCS_QRC = \
 
 H_MOC = \
 	ConfigAccess.h \
+	ConfigCustom.h \
 	DaisyDuck.h \
 	Input.h \
 	OnlineBook.h \
