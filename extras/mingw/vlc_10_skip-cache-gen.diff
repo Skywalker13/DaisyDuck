@@ -1,6 +1,6 @@
---- a/modules/Makefile.in	2010-04-17 00:15:36.000000000 +0200
-+++ b/modules/Makefile.in	2010-04-23 10:19:24.621452030 +0200
-@@ -1006,11 +1006,7 @@
+--- a/modules/Makefile.in	2010-05-03 10:41:14 +0000
++++ b/modules/Makefile.in	2010-05-27 07:12:44 +0000
+@@ -1006,19 +1006,11 @@
  .PHONY: stamp-cache
  
  stamp-cache:
@@ -8,20 +8,17 @@
 -		../bin/vlc-cache-gen$(EXEEXT) . ; \
 -	else \
 -		echo "Cross-compilation: cache generation skipped!" ; \
-+		echo "Cross-compilation: cache generation skipped!"
 -	fi
- 	$(AM_V_at)touch stamp-cache
- 
- install-exec-hook:
-@@ -1014,11 +1014,7 @@
++		echo "Cross-compilation: cache generation skipped!"
  	$(AM_V_at)touch stamp-cache
  
  install-exec-hook:
 -	if test -z "$(DESTDIR)"; then \
 -		../bin/vlc-cache-gen$(EXEEXT) "$(vlclibdir)/plugins" ; \
 -	else \
- 		echo "Staged installation: cache generation skipped!" ; \
+-		echo "Staged installation: cache generation skipped!" ; \
 -	fi
++		echo "Staged installation: cache generation skipped!"
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
