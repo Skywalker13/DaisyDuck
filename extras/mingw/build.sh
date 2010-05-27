@@ -86,7 +86,8 @@ if [ ! -d "libxml2-$XML2_VER" ]; then
               --with-iconv=${PREFIX} \
 
   # fix pkgconfig for static linking
-  sed -i "s,\(Libs:.*\),\1 -liconv -lwsock32," libxml-2.0.pc
+  sed "s,\(Libs:.*\),\1 -liconv -lwsock32," libxml-2.0.pc > libxml-2.0.pc.tmp
+  mv -f libxml-2.0.pc.tmp libxml-2.0.pc
 
   make
   make install
