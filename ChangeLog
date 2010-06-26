@@ -1,3 +1,8 @@
+2010-06-26  Mathieu Schroeter  <mathieu.schroeter@gamesover.ch>
+
+	* Release (v1.0.1).
+	* Minor fixes in the build scripts and Makefiles.
+
 2010-05-26  Mathieu Schroeter  <mathieu.schroeter@gamesover.ch>
 
 	* Initial project release (v1.0.0).
