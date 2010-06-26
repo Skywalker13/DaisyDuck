@@ -2,7 +2,7 @@ Source: daisyduck
 Section: misc
 Priority: optional
 Maintainer: Mathieu Schroeter <mathieu.schroeter@gamesover.ch>
-Build-Depends: debhelper (>= 7.0.50), pkg-config (>= 0.20), libduck-dev (>= 1.0.0), libqt4-dev (>= 4.6.0)
+Build-Depends: debhelper (>= 7.0.50), pkg-config (>= 0.20), libduck-dev (>= 1.0.0), libqt4-dev (>= 4.6.0), libvlc-dev (>= 1.1.0)
 Standards-Version: 3.8.4
 Homepage: http://daisy.geexbox.org
 Vcs-Hg: http://hg.geexbox.org/daisyduck
