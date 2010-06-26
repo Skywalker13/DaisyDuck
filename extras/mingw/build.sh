@@ -153,7 +153,6 @@ if [ ! -d "ffmpeg-$FFMPEG_VER" ]; then
               --disable-devices \
               --disable-filters \
               --disable-zlib \
-              --disable-libfaad \
 
   make
   make install
