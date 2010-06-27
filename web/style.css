@@ -188,6 +188,23 @@ a {
   text-decoration: none;
 }
 
+.warn {
+  margin: auto;
+  margin-bottom: 20px;
+  width: 60%;
+  background-color: #ffebaf;
+  background-image: url('warn.png');
+  background-repeat: no-repeat;
+  background-position: 20px 20px;
+  border: 0;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  padding: 20px;
+  padding-left: 80px;
+  text-align: justify;
+}
+
 .sh {
   font-size: 110%;
   color: #ffffff;
@@ -215,6 +232,12 @@ a {
   margin: 0;
   font-weight: bold;
   display: inline;
+}
+
+.cmd {
+  font-size: medium;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
 .frame_gui img {

@@ -6,7 +6,7 @@ DaisyDuck is available for Windows and for GNU/Linux.
 <h2>DaisyDuck for Windows</h2>
 <p>
 To download the installer :
-<a href="releases/daisyduck-win32-installer-1.0.0.exe">daisyduck-win32-installer-1.0.0.exe</a>
+<a href="releases/daisyduck-win32-installer-1.0.1.exe">daisyduck-win32-installer-1.0.1.exe</a>
 </p>
 <p>
 This version was built with the help of
@@ -16,19 +16,21 @@ and embarks the following libraries :
 @@INCLUDE:table.packages@@
 <p>
 To download the full source package (7-Zip) :
-<a href="releases/daisyduck-full-dist-1.0.0.7z">daisyduck-full-dist-1.0.0.7z</a>
+<a href="releases/daisyduck-full-dist-1.0.1.7z">daisyduck-full-dist-1.0.1.7z</a>
 </p>
 
 <h2>DaisyDuck for GNU/Linux</h2>
 <p>
 The GNU/Linux version is distributed as packages for Ubuntu Lucid Lynx.
 </p>
-<p>
-Not yet available!
-</p>
-<!--
+<div class="warn">
+  You need at least libvlc-1.1.x which is available on PPA :
+  <pre class="cmd">deb http://ppa.launchpad.net/c-korn/vlc/ubuntu lucid main</pre>
+  Maybe you must install manually "vlc", because the plugins used by libvlc are
+  not installed with the "libvlc" package, and "vlc" is not a dependency of
+  "daisyduck".
+</div>
 @@INCLUDE:table.ubuntu@@
--->
 
 <h1>Sources</h1>
 <p>
@@ -36,7 +38,7 @@ The sources can be downloaded with the following links :
 </p>
 <ul>
   <li><a href="releases/libduck-1.0.0.tar.bz2">libduck-1.0.0.tar.bz2</a></li>
-  <li><a href="releases/daisyduck-1.0.0.tar.bz2">daisyduck-1.0.0.tar.bz2</a></li>
+  <li><a href="releases/daisyduck-1.0.1.tar.bz2">daisyduck-1.0.1.tar.bz2</a></li>
 </ul>
 <p>
 The development versions are available on the "<a href="@@DEVELOPER@@.@@LANG@@.html">__DEVELOPER__</a>" page.

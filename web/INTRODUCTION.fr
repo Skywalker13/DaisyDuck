@@ -4,7 +4,7 @@ Bienvenue sur le site internet du projet DaisyDuck, un logiciel libre pour la
 lecture de livres audio digitaux (Daisy 2.02).
 </p>
 <p>
-L'objectif du projet, est de permettre la lecture de livres en ligne ainsi
+L'objectif du projet est de permettre la lecture de livres en ligne ainsi
 que la lecture de livres locaux (accessiblent directement via un media
 physique). L'interface est simplifiée pour une prise en main rapide, également
 pour les personnes souffrant d'un handicape tel que les malvoyants.<br/>
@@ -19,7 +19,14 @@ intervention de l'auditeur.
 <h2>Nouveautés</h2>
 <p>
 La version actuelle de <a href="@@DOWNLOAD@@.@@LANG@@.html">DaisyDuck</a> est
-la 1.0.0, avec les changements suivants :
+la 1.0.1, avec les changements suivants :
+</p>
+<ul>
+  <li>Corrections mineurs dans les scripts de "build" et les "Makefiles"</li>
+  <li>Disponibilité des paquets pour Ubuntu</li>
+</ul>
+<p>
+Changements dans la 1.0.0:
 </p>
 <ul>
   <li>Version initiale</li>

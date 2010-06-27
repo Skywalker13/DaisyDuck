@@ -4,7 +4,7 @@ Welcome on the DaisyDuck project website, a free software for playing digital
 audio books (Daisy 2.02).
 </p>
 <p>
-The goal of this project, is to provide the playback of online books and the
+The goal of this project is to provide the playback of online books and the
 playback of local books (reachable directly on a physical media). The interface
 is simplified for a quick handling, even for people with an handicap like
 partially sighted persons.<br/>
@@ -19,7 +19,14 @@ auditor.
 <h2>News</h2>
 <p>
 The current release of <a href="@@DOWNLOAD@@.@@LANG@@.html">DaisyDuck</a> is
-1.0.0, with the following changes :
+1.0.1, with the following changes :
+</p>
+<ul>
+  <li>Minor fixes in the build scripts and Makefiles</li>
+  <li>Availability of packages for Ubuntu</li>
+</ul>
+<p>
+Changes in 1.0.0:
 </p>
 <ul>
   <li>Initial release</li>
