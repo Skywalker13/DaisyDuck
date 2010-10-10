@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author>Mathieu Schroeter &lt;mathieu.schroeter@gamesover.ch&gt;</author>
+ <author>Mathieu Schroeter &lt;mathieu@schroetersa.ch&gt;</author>
  <class>winMain</class>
  <widget class="QMainWindow" name="winMain">
   <property name="geometry">

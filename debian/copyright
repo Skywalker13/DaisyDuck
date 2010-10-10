@@ -1,6 +1,6 @@
 This package was debianized by:
 
-   Mathieu Schroeter <mathieu.schroeter@gamesover.ch> on Fri, 30 Apr 2010 12:38:05 +0100.
+   Mathieu Schroeter <mathieu@schroetersa.ch> on Fri, 30 Apr 2010 12:38:05 +0100.
 
 It was downloaded from:
 
@@ -8,7 +8,7 @@ It was downloaded from:
 
 Copyright:
 
-   Copyright: 2010, Mathieu Schroeter <mathieu.schroeter@gamesover.ch>
+   Copyright: 2010, Mathieu Schroeter <mathieu@schroetersa.ch>
 
 License:
 
@@ -27,6 +27,6 @@ License:
 
 The Debian packaging is:
 
-  Copyright (C) 2010, Mathieu Schroeter <mathieu.schroeter@gamesover.ch>
+  Copyright (C) 2010, Mathieu Schroeter <mathieu@schroetersa.ch>
 
 and is licensed under the GPL, see `/usr/share/common-licenses/GPL-3'.

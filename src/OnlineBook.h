@@ -1,6 +1,6 @@
 /*
  * DaisyDuck: tiny Daisy player for audio books.
- * Copyright (C) 2010 Mathieu Schroeter <mathieu.schroeter@gamesover.ch>
+ * Copyright (C) 2010 Mathieu Schroeter <mathieu@schroetersa.ch>
  *
  * This file is part of DaisyDuck.
  *

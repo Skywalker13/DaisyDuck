@@ -116,7 +116,7 @@ racine des sources.
 <h1>Feed-back</h1>
 <p>
 L'auteur de DaisyDuck et de libduck, Mathieu Schroeter, peut être contacté
-par <a href="mailto:mathieu.schroeter@gamesover.ch">e-mail</a>.
+par <a href="mailto:mathieu@schroetersa.ch">e-mail</a>.
 </p>
 <p>
 S'il vous plaît, envoyez les rapports de bugs, des suggestions, des idées,
