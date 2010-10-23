@@ -1,10 +1,11 @@
-2010-06-26  Mathieu Schroeter  <mathieu@schroetersa.ch>
+daisyduck (1.0)
 
-	* Release (v1.0.1).
-	* Minor fixes in the build scripts and Makefiles.
+  1.0.1: 26 Jun, 2010
 
-2010-05-26  Mathieu Schroeter  <mathieu@schroetersa.ch>
+    * Minor fixes in the build scripts and Makefiles.
 
-	* Initial project release (v1.0.0).
-	* Support for Daisy 2.02 DTB playback of local and online
-	  audio books.
+  1.0.0: 26 May, 2010
+
+    * Initial project release.
+    * Support for Daisy 2.02 DTB playback of local and online
+      audio books.
