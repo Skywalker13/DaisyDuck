@@ -913,7 +913,6 @@ The settings part is only intended to be used by the advanced users and speciall
 QSlider::handle:horizontal {
 	width: 16px;
 	height: 16px;
-	margin-bottom: 5;
 	background-color: black;
 	border-radius: 8px;
 }</string>
@@ -957,7 +956,7 @@ QSlider::handle:horizontal {
      <x>0</x>
      <y>0</y>
      <width>845</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
