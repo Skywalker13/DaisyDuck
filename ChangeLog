@@ -1,5 +1,9 @@
 daisyduck (1.0)
 
+  1.0.2: 31 Dec, 2013
+
+    * Fix player with libvlc-2.
+
   1.0.1: 26 Jun, 2010
 
     * Minor fixes in the build scripts and Makefiles.
