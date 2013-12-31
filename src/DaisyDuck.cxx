@@ -271,7 +271,7 @@ DaisyDuck::actionOpen_activated (void)
 
   file = QFileDialog::getOpenFileName (this,
                                        tr ("Open File"), QDir::homePath (),
-                                       tr ("Daisy NCC (ncc.html NCC.HTML)"));
+                                       tr ("Daisy NCC (ncc.html)"));
 
   fd = new QFile (file);
   if (!fd->exists ())
