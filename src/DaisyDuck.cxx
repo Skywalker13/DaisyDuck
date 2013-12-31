@@ -857,7 +857,7 @@ DaisyDuck::openBook (const QString &book, const QString &summary)
   if (!finfo)
     return;
 
-  this->duck_path = finfo->absolutePath () + "/";
+  this->duck_path = "file://" + finfo->absolutePath () + "/";
   delete finfo;
 
   if (this->daisyState == DAISY_IS_PLAYING)
