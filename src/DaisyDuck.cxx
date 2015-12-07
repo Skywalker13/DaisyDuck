@@ -485,7 +485,14 @@ DaisyDuck::playerPlay (void)
     location = QString (res.s); /* uri */
 
   free (res.s);
-  media = libvlc_media_new_location (this->vlc_core, location.toAscii ());
+
+#ifdef _WIN32
+  const QByteArray path = location.toAscii ();
+#else /* _WIN32 */
+  const QByteArray path = location.toUtf8 ();
+#endif /* !_WIN32 */
+
+  media = libvlc_media_new_location (this->vlc_core, path);
   libvlc_media_player_set_media (this->vlc_mp, media);
 
   this->daisyState = DAISY_IS_PLAYING;
@@ -863,7 +870,13 @@ DaisyDuck::openBook (const QString &book, const QString &summary)
   if (this->daisyState == DAISY_IS_PLAYING)
     this->playerStop ();
 
-  rc = duck_load (this->duck, book.toAscii (), DUCK_FORMAT_NCC);
+#ifdef _WIN32
+  const QByteArray path = book.toAscii ();
+#else /* _WIN32 */
+  const QByteArray path = book.toUtf8 ();
+#endif /* !_WIN32 */
+
+  rc = duck_load (this->duck, path, DUCK_FORMAT_NCC);
   if (rc)
   {
     if (rc < 0)
