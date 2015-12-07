@@ -40,35 +40,35 @@ Le travail sur libduck est inspiré de la bibliothèque libdaisy du projet
 DaisyPlayer Project</a>".
 </p>
 
-<h1>Les sources / Mercurial</h1>
+<h1>Les sources / Git</h1>
 <p>
-Les sources sont disponibles en ligne à l'aide de Mercurial, un système de
-gestion de versions décentralisées, dont le but est similaire aux outils CVS,
-SCCS, SVN et Arch. Il est utilisé afin de suivre les changements réalisés
+Les sources sont disponibles en ligne à l'aide de Git, un système de
+gestion de versions décentralisées, dont le but est similaire aux outils Hg,
+CVS, SCCS, SVN et Arch. Il est utilisé afin de suivre les changements réalisés
 dans les sources et pour aider les développeurs à combiner et manipuler des
 changements réalisés par plusieurs personnes à des instants différents.
 </p>
 <p>
-Il y a actuellement deux moyens d'accéder à l'arborescence Mercurial. Via la
+Il y a actuellement deux moyens d'accéder à l'arborescence Git. Via la
 ligne de commande ou (pour voir un changement sur un fichier en particulier,
-par exemple) via l'interface web avec votre navigateur internet :
+par exemple) via l'interface web avec votre navigateur Internet :
 </p>
 <p>
-<a href="http://hg.geexbox.org/daisyduck">daisyduck</a> et
-<a href="http://hg.geexbox.org/libduck">libduck</a>
+<a href="https://github.com/Skywalker13/DaisyDuck">daisyduck</a> et
+<a href="https://github.com/Skywalker13/libduck">libduck</a>
 </p>
 <p>
-Afin d'accéder à Mercurial via la ligne de commande, procédez ainsi
-(assurez-vous d'avoir installé le paquet mercurial).
+Afin d'accéder à Git via la ligne de commande, procédez ainsi
+(assurez-vous d'avoir installé le paquet git).
 </p>
 <ul>
-  <li>Pour rappatrier une copie de chaque dépôt Mercurial :
-      <pre class="sh">hg clone http://hg.geexbox.org/libduck</pre>
-      <pre class="sh">hg clone http://hg.geexbox.org/daisyduck</pre>
+  <li>Pour rappatrier une copie de chaque dépôt Git :
+      <pre class="sh">git clone https://github.com/Skywalker13/libduck.git</pre>
+      <pre class="sh">git clone https://github.com/Skywalker13/DaisyDuck.git</pre>
   </li>
   <li>Pour mettre à jour votre copie locale d'un dépôt, en synchronisant avec
-      notre serveur :
-      <pre class="sh">hg pull -u</pre></li>
+      le serveur :
+      <pre class="sh">git pull</pre></li>
 </ul>
 
 <h2>Compilation</h2>
@@ -117,10 +117,4 @@ racine des sources.
 <p>
 L'auteur de DaisyDuck et de libduck, Mathieu Schroeter, peut être contacté
 par <a href="mailto:mathieu@schroetersa.ch">e-mail</a>.
-</p>
-<p>
-S'il vous plaît, envoyez les rapports de bugs, des suggestions, des idées,
-des commentaires ou des patches à la
-<a href="https://www.geexbox.org/sympa/info/devel">liste de développement</a>
-GeeXboX : <a href="mailto:devel@geexbox.org">devel@geexbox.org</a>.
 </p>

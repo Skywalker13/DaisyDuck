@@ -19,18 +19,11 @@ auditor.
 <h2>News</h2>
 <p>
 The current release of <a href="@@DOWNLOAD@@.@@LANG@@.html">DaisyDuck</a> is
-1.0.1, with the following changes :
+1.0.2, with the following changes :
 </p>
 <ul>
-  <li>Minor fixes in the build scripts and Makefiles</li>
-  <li>Availability of packages for Ubuntu</li>
-</ul>
-<p>
-Changes in 1.0.0:
-</p>
-<ul>
-  <li>Initial release</li>
-  <li>Support for Daisy 2.02 books</li>
+  <li>Fix player with libvlc-2</li>
+  <li>Upgrade libduck to v1.1.2</li>
 </ul>
 
 <h2>Licenses</h2>
@@ -48,8 +41,8 @@ FOR A PARTICULAR PURPOSE. See the licenses for more details.
 <p>
 This software is available for the GNU/Linux and Windows platforms. No version
 is currently envisaged for the Mac OS X systems. An installer is provided with
-the Windows version. About GNU/Linux, packages for Ubuntu Lucid Lynx are
-available. See the section
+the Windows version. About GNU/Linux, packages for Debian are available.
+See the section
 "<a href="@@DOWNLOAD@@.@@LANG@@.html">__DOWNLOAD__</a>" of this site.
 </p>
 

@@ -38,34 +38,34 @@ The work on libduck is inspired by the libdaisy library of
 DaisyPlayer Project</a>".
 </p>
 
-<h1>The sources / Mercurial</h1>
+<h1>The sources / Git</h1>
 <p>
-The sources are available online with the help of Mercurial, a distributed
-revision control system, similar in purpose to tools such as CVS, SCCS, SVN
+The sources are available online with the help of Git, a distributed
+revision control system, similar in purpose to tools such as Hg, CVS, SCCS, SVN
 and Arch. It is used to keep track of the changes made in the sources and to
 help programmers combine and otherwise manipulate changes made by multiple
 people or at different times.
 </p>
 <p>
-There are currently two ways of accessing to the Mercurial tree. Via the
+There are currently two ways of accessing to the Git tree. Via the
 command line or (to just have a look to some changes on a specific file, for
-example) via the web interface with your internet browser.
+example) via the web interface with your Internet browser.
 </p>
 <p>
-<a href="http://hg.geexbox.org/daisyduck">daisyduck</a> and
-<a href="http://hg.geexbox.org/libduck">libduck</a>
+<a href="https://github.com/Skywalker13/DaisyDuck">daisyduck</a> and
+<a href="https://github.com/Skywalker13/libduck.git">libduck</a>
 </p>
 <p>
-In order to access to Mercurial via command line, do the following (be sure
-that you have installed the mercurial package).
+In order to access to Git via command line, do the following (be sure
+that you have installed the git package).
 </p>
 <ul>
-  <li>To get a copy of every Mercurial repository :
-      <pre class="sh">hg clone http://hg.geexbox.org/libduck</pre>
-      <pre class="sh">hg clone http://hg.geexbox.org/daisyduck</pre>
+  <li>To get a copy of every Git repository :
+      <pre class="sh">git clone https://github.com/Skywalker13/libduck.git</pre>
+      <pre class="sh">git clone https://github.com/Skywalker13/DaisyDuck.git</pre>
   </li>
-  <li>To update your local copy of a repository, synchronizing with our server :
-      <pre class="sh">hg pull -u</pre></li>
+  <li>To update your local copy of a repository, synchronizing with the server :
+      <pre class="sh">git pull</pre></li>
 </ul>
 
 <h2>Compilation</h2>
@@ -112,10 +112,4 @@ in the root of the sources.
 <p>
 The author of DaisyDuck and of libduck, Mathieu Schroeter, can be contacted
 by <a href="mailto:mathieu@schroetersa.ch">e-mail</a>.
-</p>
-<p>
-Please, send bug reports, suggestions, ideas, comments or patches to the
-GeeXboX
-<a href="https://www.geexbox.org/sympa/info/devel">devel list</a> :
-<a href="mailto:devel@geexbox.org">devel@geexbox.org</a>.
 </p>
