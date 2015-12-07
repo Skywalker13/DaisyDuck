@@ -1,3 +1,10 @@
+daisyduck (1.0.2-1) stretch; urgency=low
+
+  * Fix player with libvlc-2.
+  * Upgrade libduck to v1.1.2.
+
+ -- Mathieu Schroeter <mathieu@schroetersa.ch>  Mon, 7 Dec 2015 21:04:05 +0100
+
 daisyduck (1.0.1-1) lucid; urgency=low
 
   * Release (v1.0.1).
