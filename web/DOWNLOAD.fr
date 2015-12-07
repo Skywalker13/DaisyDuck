@@ -3,7 +3,7 @@
 DaisyDuck est disponible pour Windows et pour GNU/Linux.
 </p>
 
-<h2>DaisyDuck pour Windows</h2>
+<h2>DaisyDuck pour Windows (la version Linux est plus récente)</h2>
 <p>
 Pour télécharger l'installateur :
 <a href="releases/daisyduck-win32-installer-1.0.1.exe">daisyduck-win32-installer-1.0.1.exe</a>
