@@ -13,3 +13,6 @@ win*.h
 qrc_*.cxx
 *_moc.cxx
 web/site*
+/debian/files
+/debian/*.substvars
+/debian/*.log
