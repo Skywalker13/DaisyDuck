@@ -1,3 +1,9 @@
+daisyduck (1.0.3-1) stretch; urgency=low
+
+  * Fix encoding for unices on open file.
+
+ -- Mathieu Schroeter <mathieu@schroetersa.ch>  Mon, 11 Dec 2015 21:29:12 +0100
+
 daisyduck (1.0.2-1) stretch; urgency=low
 
   * Fix player with libvlc-2.
