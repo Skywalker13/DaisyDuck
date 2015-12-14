@@ -19,12 +19,8 @@ auditor.
 <h2>News</h2>
 <p>
 The current release of <a href="@@DOWNLOAD@@.@@LANG@@.html">DaisyDuck</a> is
-1.0.2, with the following changes :
+1.0.3.
 </p>
-<ul>
-  <li>Fix player with libvlc-2</li>
-  <li>Upgrade libduck to v1.1.2</li>
-</ul>
 
 <h2>Licenses</h2>
 <p>

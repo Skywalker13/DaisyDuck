@@ -1,20 +1,25 @@
 <table>
 <tr>
   <th>x86-64</th>
+  <th>i386</th>
 </tr>
 <tr>
   <td><a href="releases/libduck1_1.1.2-1_amd64.deb">libduck1_1.1.2-1_amd64.deb</a></td>
+  <td><a href="releases/libduck1_1.1.2-1_i386.deb">libduck1_1.1.2-1_i386.deb</a></td>
 </tr>
 <tr>
-  <td><a href="releases/daisyduck_1.0.2-1_amd64.deb">daisyduck_1.0.2-1_amd64.deb</a></td>
+  <td><a href="releases/daisyduck_1.0.3-1_amd64.deb">daisyduck_1.0.3-1_amd64.deb</a></td>
+  <td><a href="releases/daisyduck_1.0.3-1_i386.deb">daisyduck_1.0.3-1_i386.deb</a></td>
 </tr>
 <tr>
   <td colspan="2" style="border-bottom: solid 1px \#aaaaaa"></td>
 </tr>
 <tr>
   <td><a href="releases/libduck-dbg_1.1.2-1_amd64.deb">libduck-dbg_1.1.2-1_amd64.deb</a></td>
+  <td><a href="releases/libduck-dbg_1.1.2-1_i386.deb">libduck-dbg_1.1.2-1_i386.deb</a></td>
 </tr>
 <tr>
   <td><a href="releases/libduck-dev_1.1.2-1_amd64.deb">libduck-dev_1.1.2-1_amd64.deb</a></td>
+  <td><a href="releases/libduck-dev_1.1.2-1_i386.deb">libduck-dev_1.1.2-1_i386.deb</a></td>
 </tr>
 </table>

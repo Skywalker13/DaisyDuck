@@ -19,11 +19,8 @@ intervention de l'auditeur.
 <h2>Nouveautés</h2>
 <p>
 La version actuelle de <a href="@@DOWNLOAD@@.@@LANG@@.html">DaisyDuck</a> est
-la 1.0.2, avec les changements suivants :
-<ul>
-  <li>Correction du lecteur avec libvlc-2</li>
-  <li>Mise à niveau de libduck en v1.1.2</li>
-</ul>
+la 1.0.3.
+</p>
 
 <h2>Licences</h2>
 <p>
