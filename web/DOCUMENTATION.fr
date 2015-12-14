@@ -114,13 +114,17 @@ principe, il n'y a jamais besoin d'y apporter de modifications.
 <p>
 Dans le fichier de configuration présenté précédemment, la liste pointe
 sur un fichier PHP. Bien entendu, ceci est complètement arbitraire. Il
-est tout à fait possible de pointer directement sur une page static (XML)
-et sans avoir le moindre paramètre dans la balise &lt;uriparam&gt;.
+est tout à fait possible de pointer directement sur une page sans avoir le
+moindre paramètre dans la balise &lt;uriparam&gt;.
 </p>
 <p>
 L'exemple suivant présente une telle liste avec deux livres.
 </p>
 @@INCLUDE:xml.onlinebooks@@
+<p>
+Exemple interactif : <a href="http://daisy.schroetersa.ch/sample.php">
+http://daisy.schroetersa.ch/sample.php</a>
+</p>
 <p>
 Il n'y a pas de limite sur la quantité de livres. La balise &lt;uriparam&gt;
 doit exister une seule fois. Elle contient les arguments à utiliser en GET

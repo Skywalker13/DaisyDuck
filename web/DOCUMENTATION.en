@@ -110,12 +110,16 @@ there is no need of changing anything.
 <p>
 In the configuration file which was previously presented, the list is
 a PHP file. Of course, this is fully arbitrary. It is possible to use
-a static page (XML) and without parameter in the tag &lt;uriparam&gt;.
+a page without parameter in the tag &lt;uriparam&gt;.
 </p>
 <p>
 The following example presents a such list with two books.
 </p>
 @@INCLUDE:xml.onlinebooks@@
+<p>
+Interactive sample: <a href="http://daisy.schroetersa.ch/sample.php">
+http://daisy.schroetersa.ch/sample.php</a>
+</p>
 <p>
 The quantity of books is unlimited. The tag &lt;uriparam&gt; must exist
 one time. It contains the arguments to use in GET (HTTP) with the address
