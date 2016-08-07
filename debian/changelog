@@ -1,3 +1,9 @@
+daisyduck (1.0.3-3) trusty; urgency=medium
+
+  * Fix dependency for libx11-dev.
+
+ -- Mathieu Schroeter <mathieu@schroetersa.ch>  Sun, 07 Aug 2016 14:50:07 +0200
+
 daisyduck (1.0.3-2) trusty; urgency=medium
 
   * New trusty upload.
