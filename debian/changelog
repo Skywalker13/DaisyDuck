@@ -1,3 +1,10 @@
+daisyduck (1.0.3-4) trusty; urgency=medium
+
+  * Fix version dependency of libvlc..
+  * Fix source format.
+
+ -- Mathieu Schroeter <mathieu@schroetersa.ch>  Sun, 07 Aug 2016 15:48:08 +0200
+
 daisyduck (1.0.3-3) trusty; urgency=medium
 
   * Fix dependency for libx11-dev.
