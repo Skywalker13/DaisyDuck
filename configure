@@ -37,15 +37,15 @@ show_help(){
   echo "  --sharedir=DIR              install data in DIR [PREFIX/share]"
   echo "  --docdir=DIR                install docs in DIR [PREFIX/share/doc]"
   echo "  --mandir=DIR                install man page in DIR [PREFIX/share/man]"
-  echo "  --with-libqt4-dir=DIR       check for Qt4 installed in DIR"
+  echo "  --with-libqt5-dir=DIR       check for Qt5 installed in DIR"
   echo "  --with-libduck-dir=DIR      check for libduck in DIR"
   echo "  --with-libvlc-dir=DIR       check for libvlc in DIR"
   echo "  --with-libX11-dir=DIR       check for libX11 in DIR"
-  echo "  --with-mocqt4=BIN           use BIN for moc-qt4"
-  echo "  --with-uicqt4=BIN           use BIN for uic-qt4"
-  echo "  --with-rccqt4=BIN           use BIN for rcc-qt4"
-  echo "  --with-lupdateqt4=BIN       use BIN for lupdate-qt4"
-  echo "  --with-lreleaseqt4=BIN      use BIN for lrelease-qt4"
+  echo "  --with-mocqt5=BIN           use BIN for moc-qt5"
+  echo "  --with-uicqt5=BIN           use BIN for uic-qt5"
+  echo "  --with-rccqt5=BIN           use BIN for rcc-qt5"
+  echo "  --with-lupdateqt5=BIN       use BIN for lupdate-qt5"
+  echo "  --with-lreleaseqt5=BIN      use BIN for lrelease-qt5"
   echo ""
   echo "Advanced options (experts only):"
   echo "  --arch=ARCH                 force architecture"
@@ -515,11 +515,11 @@ VERSION=""
 pkgconfig_requires=""
 pkgconfig_libs=""
 x11="no"
-mocqt4=moc-qt4
-uicqt4=uic-qt4
-rccqt4=rcc-qt4
-lupdateqt4=lupdate-qt4
-lreleaseqt4=lrelease-qt4
+mocqt5=moc-qt5
+uicqt5=uic-qt5
+rccqt5=rcc-qt5
+lupdateqt5=lupdate-qt5
+lreleaseqt5=lrelease-qt5
 
 #################################################
 #   check options
@@ -567,7 +567,7 @@ for opt do
   ;;
   --cross-compile) cross_compile="yes"
   ;;
-  --with-libqt4-dir=*) libqt4dir="$optval";
+  --with-libqt5-dir=*) libqt5dir="$optval";
   ;;
   --with-libduck-dir=*) libduckdir="$optval";
   ;;
@@ -575,15 +575,15 @@ for opt do
   ;;
   --with-libX11-dir=*) libx11dir="$optval";
   ;;
-  --with-mocqt4=*) mocqt4="$optval";
+  --with-mocqt5=*) mocqt5="$optval";
   ;;
-  --with-uicqt4=*) uicqt4="$optval";
+  --with-uicqt5=*) uicqt5="$optval";
   ;;
-  --with-rccqt4=*) rccqt4="$optval";
+  --with-rccqt5=*) rccqt5="$optval";
   ;;
-  --with-lupdateqt4=*) lupdateqt4="$optval";
+  --with-lupdateqt5=*) lupdateqt5="$optval";
   ;;
-  --with-lreleaseqt4=*) lreleaseqt4="$optval";
+  --with-lreleaseqt5=*) lreleaseqt5="$optval";
   ;;
   --enable-pic) pic="yes";
   ;;
@@ -874,65 +874,65 @@ elif enabled optimize; then
 fi
 
 #################################################
-#   check for Qt4
+#   check for Qt5
 #################################################
-if [ -n "$libqt4dir" ]; then
-  check_cxxflags -I$libqt4dir/include
-  check_ldflags -L$libqt4dir/lib
+if [ -n "$libqt5dir" ]; then
+  check_cxxflags -I$libqt5dir/include
+  check_ldflags -L$libqt5dir/lib
 fi
 
-echolog "Checking for QtGui ..."
-check_lib_pkgcfg QtGui QtGui/QtGui QCoreApplication::arguments -lQtGui -lQtCore
+echolog "Checking for Qt5Widgets ..."
+check_lib_pkgcfg Qt5Widgets QtWidgets QCoreApplication::arguments -lQt5Widgets -lQt5Core
 if [ "$?" != 0 ]; then
-  check_lib QtGui/QtGui QCoreApplication::arguments -lQtGui4 -lQtCore4 || die "Error, can't find QtGui !"
+  check_lib QtWidgets QCoreApplication::arguments -lQt5Widgets -lQt5Core || die "Error, can't find Qt5Widgets !"
 fi
 
-echolog "Checking for QtXml ..."
-check_lib_pkgcfg QtXml QtXml/QtXml QDomImplementation::invalidDataPolicy -lQtXml
+echolog "Checking for Qt5Xml ..."
+check_lib_pkgcfg Qt5Xml QtXml/QtXml QDomImplementation::invalidDataPolicy -lQt5Xml
 if [ "$?" != 0 ]; then
-  check_lib QtXml/QtXml QDomImplementation::invalidDataPolicy -lQtXml4 || die "Error, can't find QtXml !"
+  check_lib QtXml/QtXml QDomImplementation::invalidDataPolicy -lQt5Xml || die "Error, can't find Qt5Xml !"
 fi
 
-echolog "Checking for QtNetwork ..."
-check_lib_pkgcfg QtNetwork QtNetwork/QtNetwork QNetworkInterface::interfaceFromName -lQtNetwork
+echolog "Checking for Qt5Network ..."
+check_lib_pkgcfg Qt5Network QtNetwork/QtNetwork QNetworkInterface::interfaceFromName -lQt5Network
 if [ "$?" != 0 ]; then
-  check_lib QtNetwork/QtNetwork QNetworkInterface::interfaceFromName -lQtNetwork4 || die "Error, can't find QtNetwork !"
+  check_lib QtNetwork/QtNetwork QNetworkInterface::interfaceFromName -lQt5Network || die "Error, can't find Qt5Network !"
 fi
 
-check_cpp_define QtGui/QtGui Q_WS_X11
+check_cpp_define QtWidgets/QtWidgets Q_WS_X11
 [ "$?" = 0 ] && enable x11
 
-echolog "Checking for Qt4 tools ..."
+echolog "Checking for Qt5 tools ..."
 
-which $mocqt4 >/dev/null 2>&1
+which $mocqt5 >/dev/null 2>&1
 if [ "$?" != 0 ]; then
   which moc >/dev/null 2>&1
   [ "$?" != 0 ] && die "Error, can't find 'moc' !"
-  mocqt4=moc
+  mocqt5=moc
 fi
-which $uicqt4 >/dev/null 2>&1
+which $uicqt5 >/dev/null 2>&1
 if [ "$?" != 0 ]; then
   which uic >/dev/null 2>&1
   [ "$?" != 0 ] && die "Error, can't find 'uic' !"
-  uicqt4=uic
+  uicqt5=uic
 fi
-which $rccqt4 >/dev/null 2>&1
+which $rccqt5 >/dev/null 2>&1
 if [ "$?" != 0 ]; then
   which rcc >/dev/null 2>&1
   [ "$?" != 0 ] && die "Error, can't find 'rcc' !"
-  rccqt4=rcc
+  rccqt5=rcc
 fi
-which $lupdateqt4 >/dev/null 2>&1
+which $lupdateqt5 >/dev/null 2>&1
 if [ "$?" != 0 ]; then
   which lupdate >/dev/null 2>&1
   [ "$?" != 0 ] && die "Error, can't find 'lupdate' !"
-  lupdateqt4=lupdate
+  lupdateqt5=lupdate
 fi
-which $lreleaseqt4 >/dev/null 2>&1
+which $lreleaseqt5 >/dev/null 2>&1
 if [ "$?" != 0 ]; then
   which lrelease >/dev/null 2>&1
   [ "$?" != 0 ] && die "Error, can't find 'lrelease' !"
-  lreleaseqt4=lrelease
+  lreleaseqt5=lrelease
 fi
 
 #################################################
@@ -1043,11 +1043,11 @@ append_config "AR=$ar"
 append_config "RANLIB=$ranlib"
 append_config "LN=ln"
 
-append_config "MOCQT4=$mocqt4"
-append_config "UICQT4=$uicqt4"
-append_config "RCCQT4=$rccqt4"
-append_config "LUPDATEQT4=$lupdateqt4"
-append_config "LRELEASEQT4=$lreleaseqt4"
+append_config "MOCQT5=$mocqt5"
+append_config "UICQT5=$uicqt5"
+append_config "RCCQT5=$rccqt5"
+append_config "LUPDATEQT5=$lupdateqt5"
+append_config "LRELEASEQT5=$lreleaseqt5"
 
 append_config "BUILD_DYLIB=$dylib"
 append_config "BUILD_MINGW32=$mingw32"

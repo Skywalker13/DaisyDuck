@@ -21,7 +21,7 @@
 #ifndef INPUT_H
 #define INPUT_H
 
-#include <QtGui/QDialog>
+#include <QtWidgets/QDialog>
 
 #include "dialogInput.h"
 

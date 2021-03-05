@@ -20,9 +20,9 @@
 
 #include <cstdio>
 
-#include <QtGui/QMessageBox>
-#include <QtGui/QFileDialog>
-#include <QtGui/QShortcut>
+#include <QtWidgets/QMessageBox>
+#include <QtWidgets/QFileDialog>
+#include <QtWidgets/QShortcut>
 #include <QtCore/QFile>
 #include <QtCore/QCryptographicHash>
 #include <QtCore/QTime>
@@ -487,7 +487,7 @@ DaisyDuck::playerPlay (void)
   free (res.s);
 
 #ifdef _WIN32
-  const QByteArray path = location.toAscii ();
+  const QByteArray path = location.toLatin1 ();
 #else /* _WIN32 */
   const QByteArray path = location.toUtf8 ();
 #endif /* !_WIN32 */
@@ -871,7 +871,7 @@ DaisyDuck::openBook (const QString &book, const QString &summary)
     this->playerStop ();
 
 #ifdef _WIN32
-  const QByteArray path = book.toAscii ();
+  const QByteArray path = book.toLatin1 ();
 #else /* _WIN32 */
   const QByteArray path = book.toUtf8 ();
 #endif /* !_WIN32 */
@@ -952,7 +952,7 @@ DaisyDuck::openBook (const QString &book, const QString &summary)
       continue;
 
     if (!res.s)
-      res.s = strdup (tr ("Undefined").toAscii ());
+      res.s = strdup (tr ("Undefined").toLatin1 ());
 
     if (level == 1)
     {

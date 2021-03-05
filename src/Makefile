@@ -67,10 +67,10 @@ all: apps
 	$(CXX) -c $(OPTFLAGS) $(CXXFLAGS) $(APPS_CPPFLAGS) -o $@ $<
 
 .h_moc.cxx:
-	$(MOCQT4) -o $@ $<
+	$(MOCQT5) -o $@ $<
 
 .ui.h:
-	$(UICQT4) -o $@ $<
+	$(UICQT5) -o $@ $<
 
 $(DAISYDUCK): $(OBJS)
 	$(CXX) $(OBJS) $(EXTRALIBS) $(APPS_LDFLAGS) -o $(DAISYDUCK)

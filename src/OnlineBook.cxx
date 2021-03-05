@@ -18,7 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <QtGui/QtGui>
+#include <QtWidgets/QtWidgets>
 #include <QtNetwork/QtNetwork>
 #include <QtXml/QDomDocument>
 #include <QtCore/QCryptographicHash>
@@ -105,7 +105,7 @@ void
 OnlineBook::showWindow (void)
 {
   this->editUri->setText (this->cfg->getUri ());
-  this->list_args = this->cfg->getUriArgs ().toAscii ();
+  this->list_args = this->cfg->getUriArgs ().toLatin1 ();
   this->show ();
 
   /*
@@ -126,7 +126,7 @@ OnlineBook::showWindow (void)
 void
 OnlineBook::inputEnded (void)
 {
-  this->list_args = this->cfg->getUriArgs ().toAscii ();
+  this->list_args = this->cfg->getUriArgs ().toLatin1 ();
   this->downloadList ();
 }
 
@@ -396,7 +396,7 @@ OnlineBook::downloadNccFinished (QNetworkReply *rep)
    * FIXME: format should not be forced here, but the autodetection relies
    *        only on the file name.
    */
-  duck_load (this->duck, path.toAscii (), DUCK_FORMAT_NCC);
+  duck_load (this->duck, path.toLatin1 (), DUCK_FORMAT_NCC);
 
   smils = duck_smilnode_number (this->duck);
 
@@ -427,7 +427,7 @@ OnlineBook::downloadNccFinished (QNetworkReply *rep)
 
     /* Set a temporary file name for every SMIL file. */
     finfo = new QFileInfo (df->smil->fileName ());
-    data.replace (res.s, Qt::escape (finfo->fileName ()).toAscii ());
+    data.replace (res.s, finfo->fileName ().toHtmlEscaped ().toLatin1 ());
     delete finfo;
     emit downloadSmil (res.s, df);
 
@@ -441,7 +441,7 @@ OnlineBook::downloadNccFinished (QNetworkReply *rep)
   tmp->smil->write (data);
   tmp->smil->close ();
 
-  duck_load (this->duck, path.toAscii (), DUCK_FORMAT_NCC);
+  duck_load (this->duck, path.toLatin1 (), DUCK_FORMAT_NCC);
 }
 
 void
@@ -497,7 +497,7 @@ OnlineBook::downloadSmilFinished (QNetworkReply *rep)
     return;
 
   uri = this->uri_base + QString (res.s) + this->uri_args;
-  data.replace (res.s, Qt::escape (uri).toAscii ());
+  data.replace (res.s, uri.toHtmlEscaped ().toLatin1 ());
   free (res.s);
 
   /* Rewrite the SMIL file with the URI replacements. */

@@ -15,12 +15,12 @@ EXTRADIST = \
 all: release
 
 .ts.qm:
-	$(LRELEASEQT4) $< -qm $@
+	$(LRELEASEQT5) $< -qm $@
 
 release: $(QM)
 
 update:
-	$(LUPDATEQT4) ../src/ -extensions ui,cxx,h -locations relative -ts $(TS)
+	$(LUPDATEQT5) ../src/ -extensions ui,cxx,h -locations relative -ts $(TS)
 
 install: release
 	$(INSTALL) -d $(sharedir)/daisyduck/ts

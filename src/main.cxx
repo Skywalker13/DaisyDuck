@@ -20,7 +20,7 @@
 
 #include <iostream>
 
-#include <QtGui/QApplication>
+#include <QtWidgets/QApplication>
 #include <QtCore/QTranslator>
 #include <QtCore/QLocale>
 #include <QtCore/QLibraryInfo>

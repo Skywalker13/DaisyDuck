@@ -18,7 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <QtGui/QDialog>
+#include <QtWidgets/QDialog>
 
 #include "Config.h"
 #include "ConfigAccess.h"
