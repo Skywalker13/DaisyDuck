@@ -175,7 +175,7 @@ append_var(){
     var=$1
     shift
     for f in $@; do
-      if eval echo \$$var | grep -qv -e "$f"; then
+      if eval echo \$$var | grep -qv -e "$f$"; then
         test -n "$(eval echo \$$var)" && eval "$var=\"\$$var $f\"" || eval "$var=\"$f\""
       fi
     done
