@@ -6,7 +6,7 @@ DaisyDuck is available for Windows and for GNU/Linux.
 <h2>DaisyDuck for Windows (the Linux version is newer)</h2>
 <p>
 To download the installer :
-<a href="releases/daisyduck-win32-installer-1.0.1.exe">daisyduck-win32-installer-1.0.1.exe</a>
+<a href="https://github.com/Skywalker13/DaisyDuck/releases/download/v1.0.1/daisyduck-win32-installer-1.0.1.exe">daisyduck-win32-installer-1.0.1.exe</a>
 </p>
 <p>
 This version was built with the help of
@@ -16,7 +16,7 @@ and embarks the following libraries :
 @@INCLUDE:table.packages@@
 <p>
 To download the full source package (7-Zip) :
-<a href="releases/daisyduck-full-dist-1.0.1.7z">daisyduck-full-dist-1.0.1.7z</a>
+<a href="https://github.com/Skywalker13/DaisyDuck/releases/download/v1.0.1/daisyduck-full-dist-1.0.1.7z">daisyduck-full-dist-1.0.1.7z</a>
 </p>
 
 <h2>DaisyDuck for GNU/Linux</h2>
@@ -30,8 +30,8 @@ The GNU/Linux version is distributed as packages for Debian Stretch.
 The sources can be downloaded with the following links :
 </p>
 <ul>
-  <li><a href="releases/libduck-1.1.2.tar.bz2">libduck-1.1.2.tar.bz2</a></li>
-  <li><a href="releases/daisyduck-1.0.3.tar.bz2">daisyduck-1.0.3.tar.bz2</a></li>
+  <li><a href="https://github.com/Skywalker13/libduck/archive/refs/tags/v1.1.2.tar.gz">libduck-1.1.2.tar.gz</a></li>
+  <li><a href="https://github.com/Skywalker13/DaisyDuck/archive/refs/tags/v1.0.3.tar.gz">daisyduck-1.0.3.tar.gz</a></li>
 </ul>
 <p>
 The development versions are available on the "<a href="@@DEVELOPER@@.@@LANG@@.html">__DEVELOPER__</a>" page.
