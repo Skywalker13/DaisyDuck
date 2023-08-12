@@ -13,7 +13,7 @@ EXTRADIST = \
 	README \
 
 SUBDIRS = \
-	DOCS \
+	Documentations \
 	extras \
 	extras/mingw \
 	extras/nsis \
@@ -37,10 +37,10 @@ daisyduck: images
 	$(MAKE) -C src
 
 docs:
-	$(MAKE) -C DOCS
+	$(MAKE) -C Documentations
 
 docs-clean:
-	$(MAKE) -C DOCS clean
+	$(MAKE) -C Documentations clean
 
 clean:
 	$(MAKE) -C images clean
