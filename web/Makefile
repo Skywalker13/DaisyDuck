@@ -5,6 +5,6 @@ build:
 	./build.sh
 
 clean:
-	rm -rf site
+	rm -rf ../docs
 
 .PHONY: build clean

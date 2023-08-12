@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <!--
+    This web site is (C) 2010-2015 Mathieu Schroeter
+
+    HomePage for the DaisyDuck Project (http://daisy.geexbox.org)
+    Feel free to get inspiration from this site, as long as you leave this
+    comment here.
+  //-->
+  <head>
+    <title>DaisyDuck - a free player for Daisy 2.02 audio books</title>
+    <meta http-equiv="Content-language" content="en"/>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+    <meta name="description" content="DaisyDuck Player for Digital Talking Books."/>
+    <meta name="author" content="Mathieu Schroeter"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="keywords" content="daisy,2.02,dtb,digital,talking,book,player,libduck,libvlc"/>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div id="page">
+      <div id="header">
+        <div id="title_img">
+          <a href="index.html" title="Back on the to select the language">
+            <img src="daisyduck.png" alt="Mascot of the DaisyDuck project"/>
+          </a>
+        </div>
+        <div id="title">DaisyDuck</div>
+        <div id="title_text">a free player for Daisy 2.02 audio books</div>
+      </div>
+      <div id="contents">
+        <div class="item">
+          <a href="INTRODUCTION.en.html" title="Introduction" accesskey="1">Introduction</a>
+        </div>
+        <div class="item">
+          <a href="DOCUMENTATION.en.html" title="Documentation" accesskey="2">Documentation</a>
+        </div>
+        <div class="item">
+          <a href="DOWNLOAD.en.html" title="Download" accesskey="3">Download</a>
+        </div>
+        <div class="item">
+          <a href="DEVELOPER.en.html" title="Development" accesskey="4">Development</a>
+        </div>
+      </div>
+      <div id="include">
+        <h1>For the developers</h1> <p> The DaisyDuck project concerns two different projects. The graphical interface (DaisyDuck) is separated of the Daisy files parser (libduck). DaisyDuck is written in C++ whereas libduck is written in C. </p>  <h2>DaisyDuck</h2> <p> DaisyDuck is based on the Qt libraries. Excepted for the audio playback which is done by libVLC, and the handling of the Daisy 2.02 files, which is done by libduck. This software is under the GPL3+ license. </p> <ul>   <li>Qt4 : <a href="http://qt.nokia.comi/downloads">http://qt.nokia.com/downloads</a></li>   <li>libVLC : <a href="http://www.videolan.org/developers/vlc.html">http://www.videolan.org/developers/vlc.html</a></li> </ul>  <h2>libduck</h2> <p> The parsing of Daisy 2.02 files, NCC and SMIL is fully done by libduck. This library is under the LGPL2.1+ license. Although all Daisy 2.02 files should be readable, all parts of the specifications are not supported. This library was written mainly for the graphical DaisyDuck application. So, the particularities like the XHTML files support (tag &lt;text&gt; in the SMIL files) are just ignored.<br/> Even for a part of the metadata provided by the Daisy 2.02 files. Only the fields used by DaisyDuck (in principle) are getable with the public API of the library. Note that it is easy to add more metadata, if necessary. The parsing is done with the help of libxml2. </p> <ul>   <li>libxml2 : <a href="http://xmlsoft.org/downloads.html">http://xmlsoft.org/downloads.html</a></li> </ul> <p> The work on libduck is inspired by the libdaisy library of "<a href="http://developer.skolelinux.no/info/studentgrupper/2006-hig-daisyplayer/">The DaisyPlayer Project</a>". </p>  <h1>The sources / Git</h1> <p> The sources are available online with the help of Git, a distributed revision control system, similar in purpose to tools such as Hg, CVS, SCCS, SVN and Arch. It is used to keep track of the changes made in the sources and to help programmers combine and otherwise manipulate changes made by multiple people or at different times. </p> <p> There are currently two ways of accessing to the Git tree. Via the command line or (to just have a look to some changes on a specific file, for example) via the web interface with your Internet browser. </p> <p> <a href="https://github.com/Skywalker13/DaisyDuck">daisyduck</a> and <a href="https://github.com/Skywalker13/libduck.git">libduck</a> </p> <p> In order to access to Git via command line, do the following (be sure that you have installed the git package). </p> <ul>   <li>To get a copy of every Git repository :       <pre class="sh">git clone https://github.com/Skywalker13/libduck.git</pre>       <pre class="sh">git clone https://github.com/Skywalker13/DaisyDuck.git</pre>   </li>   <li>To update your local copy of a repository, synchronizing with the server :       <pre class="sh">git pull</pre></li> </ul>  <h2>Compilation</h2> <p> The compilation of libduck and of DaisyDuck is made with the usual means via the `make` command (as well the building for GNU/Linux as for Windows). Although DaisyDuck is based on Qt4, the Makefiles do not depend of `qmake` and this one must not be used. </p> <pre class="sh"> ./configure
+ make
+ make install </pre> <p> To make a cross-compilation, nothing difficult (example for Windows): </p> <pre class="sh"> ./configure --cross-compile --cross-prefix=i586-mingw32msvc- --prefix=/usr/i586-mingw32msvc
+ make
+ make install </pre> <p> The configure script strongly relies on pkg-config. In the particular case of Qt4 with DaisyDuck, check that the .pc files for QtCore, QtGui, QtXml and QtNetwork are available. Otherwise, you must pass all necessary arguments CXXFLAGS and LDFLAGS or else you must create the pkg-config files manually.<br/> According to your system settings, it can be necessary to proceed in this way (and especially in the case of Windows cross-compilation) : </p> <pre class="sh"> export PKG_CONFIG_PATH=/usr/i586-mingw32msvc/lib/pkgconfig
+ export PKG_CONFIG_LIBDIR=/usr/i586-mingw32msvc/lib
+ ./configure --cross-compile --cross-prefix=i586-mingw32msvc- --prefix=/usr/i586-mingw32msvc
+ make
+ make install </pre> <p> If the configure script fails, look the config.log file which was generated in the root of the sources. </p>  <h1>Feedback</h1> <p> The author of DaisyDuck and of libduck, Mathieu Schroeter, can be contacted by <a href="mailto:mathieu@schroetersa.ch">e-mail</a>. </p> 
+      </div>
+      <div id="footer">
+        <span id="valid"><img src="valid-xhtml11-small.png" alt="valid xhtml 1.1"/></span>
+        <span id="gx"><a href="http://www.geexbox.org">GeeXboX.org</a></span>
+      </div>
+    </div>
+  </body>
+</html>
