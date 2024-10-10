@@ -168,6 +168,8 @@ DaisyDuck::DaisyDuck (void)
 
   /* volume slider */
   this->vlc_volume = libvlc_audio_get_volume (this->vlc_mp);
+  if (this->vlc_volume <= 0)
+    this->vlc_volume = 70;
   this->sliderVolume->setSliderPosition (this->vlc_volume);
   this->labelVolume->setText (tr ("Volume %1% :").arg (this->vlc_volume));
 
