@@ -1,3 +1,11 @@
+daisyduck (1.1)
+
+  next
+
+    * Move to Qt5
+    * Fix initial volume to 70% if libvlc returns 0 or less.
+    * Provide command line support to load a Daisy book.
+
 daisyduck (1.0)
 
   1.0.3: 12 Dec, 2015
