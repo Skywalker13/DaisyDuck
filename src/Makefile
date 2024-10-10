@@ -76,7 +76,7 @@ $(DAISYDUCK): $(OBJS)
 	$(CXX) $(OBJS) $(EXTRALIBS) $(APPS_LDFLAGS) -o $(DAISYDUCK)
 
 apps-dep: $(UIS) $(SRCS_MOC)
-	$(CXX) -MM $(CXXFLAGS) $(APPS_CPPFLAGS) $(SRCS) $(SRCS_QRC) 1>.depend
+	$(CXX) -MM $(OPTFLAGS) $(CXXFLAGS) $(APPS_CPPFLAGS) $(SRCS) $(SRCS_QRC) 1>.depend
 
 apps-all: $(DAISYDUCK)
 
