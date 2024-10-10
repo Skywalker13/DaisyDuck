@@ -182,8 +182,8 @@
     </message>
     <message>
         <location line="+13"/>
-        <source>DaisyDuck is a free software for playing online and local DTB (Digital Talking Books). It supports the Daisy specifications through the libduck library. It relies on Qt4 for the GUI and libVLC for the audio playing.&lt;br/&gt;&lt;br/&gt;Project website : &lt;a href=&quot;http://daisy.geexbox.org&quot;&gt;daisy.geexbox.org&lt;/a&gt; </source>
-        <translation>DaisyDuck est un logiciel libre pour la lecture en ligne et locale de DTB (Digital Talking Books). Il supporte les spécifications Daisy via la bibliothèque libduck. Il se base sur Qt4 pour le GUI et libVLC pour la lecture audio.&lt;br/&gt;&lt;br/&gt;Site web du projet : &lt;a href=&quot;http://daisy.geexbox.org&quot;&gt;daisy.geexbox.org&lt;/a&gt; </translation>
+        <source>DaisyDuck is a free software for playing online and local DTB (Digital Talking Books). It supports the Daisy specifications through the libduck library. It relies on Qt4 for the GUI and libVLC for the audio playing.&lt;br/&gt;&lt;br/&gt;Project website : &lt;a href=&quot;https://skywalker13.github.io/DaisyDuck/&quot;&gt;skywalker13.github.io/DaisyDuck&lt;/a&gt; </source>
+        <translation>DaisyDuck est un logiciel libre pour la lecture en ligne et locale de DTB (Digital Talking Books). Il supporte les spécifications Daisy via la bibliothèque libduck. Il se base sur Qt4 pour le GUI et libVLC pour la lecture audio.&lt;br/&gt;&lt;br/&gt;Site web du projet : &lt;a href=&quot;https://skywalker13.github.io/DaisyDuck/&quot;&gt;skywalker13.github.io/DaisyDuck&lt;/a&gt; </translation>
     </message>
     <message utf8="true">
         <location line="+19"/>

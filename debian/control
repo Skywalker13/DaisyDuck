@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Mathieu Schroeter <mathieu@schroetersa.ch>
 Build-Depends: debhelper (>= 7.0.50), pkg-config (>= 0.20), libduck-dev (>= 1.1.0), libqt4-dev (>= 4.8.0), libvlc-dev (>= 2.0.0), libx11-dev
 Standards-Version: 3.8.4
-Homepage: http://daisy.geexbox.org
+Homepage: https://skywalker13.github.io/DaisyDuck/
 Vcs-Git: https://github.com/Skywalker13/DaisyDuck.git
 Vcs-Browser: https://github.com/Skywalker13/DaisyDuck
 
@@ -12,6 +12,6 @@ Package: daisyduck
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: a free player for Daisy 2.02 audio books
- DaisyDuck is a player for Daisy 2.02 DTB (Digital Talking Book).
- It provides the ability to play online books through the VideoLAN
- library.
+  DaisyDuck is a player for Daisy 2.02 DTB (Digital Talking Book).
+  It provides the ability to play online books through the VideoLAN
+  library.

@@ -4,26 +4,38 @@
   <!--
     This web site is (C) 2010-2015 Mathieu Schroeter
 
-    HomePage for the DaisyDuck Project (http://daisy.geexbox.org)
+    HomePage for the DaisyDuck Project (https://skywalker13.github.io/DaisyDuck/)
     Feel free to get inspiration from this site, as long as you leave this
     comment here.
   //-->
   <head>
     <title>DaisyDuck - un lecteur libre de livres audio Daisy 2.02</title>
-    <meta http-equiv="Content-language" content="fr"/>
-    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
-    <meta name="description" content="DaisyDuck Player for Digital Talking Books."/>
-    <meta name="author" content="Mathieu Schroeter"/>
-    <meta name="robots" content="index,follow"/>
-    <meta name="keywords" content="daisy,2.02,dtb,digital,talking,book,player,libduck,libvlc"/>
-    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <meta http-equiv="Content-language" content="fr" />
+    <meta
+      http-equiv="Content-Type"
+      content="application/xhtml+xml; charset=utf-8"
+    />
+    <meta
+      name="description"
+      content="DaisyDuck Player for Digital Talking Books."
+    />
+    <meta name="author" content="Mathieu Schroeter" />
+    <meta name="robots" content="index,follow" />
+    <meta
+      name="keywords"
+      content="daisy,2.02,dtb,digital,talking,book,player,libduck,libvlc"
+    />
+    <link type="text/css" rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="page">
       <div id="header">
         <div id="title_img">
-          <a href="index.html" title="Revenir sur la page du choix de la langue">
-            <img src="daisyduck.png" alt="Mascotte du projet DaisyDuck"/>
+          <a
+            href="index.html"
+            title="Revenir sur la page du choix de la langue"
+          >
+            <img src="daisyduck.png" alt="Mascotte du projet DaisyDuck" />
           </a>
         </div>
         <div id="title">DaisyDuck</div>
@@ -31,27 +43,176 @@
       </div>
       <div id="contents">
         <div class="item">
-          <a href="INTRODUCTION.fr.html" title="Introduction" accesskey="1">Introduction</a>
+          <a href="INTRODUCTION.fr.html" title="Introduction" accesskey="1"
+            >Introduction</a
+          >
         </div>
         <div class="item">
-          <a href="DOCUMENTATION.fr.html" title="Documentation" accesskey="2">Documentation</a>
+          <a href="DOCUMENTATION.fr.html" title="Documentation" accesskey="2"
+            >Documentation</a
+          >
         </div>
         <div class="item">
-          <a href="DOWNLOAD.fr.html" title="Téléchargement" accesskey="3">Téléchargement</a>
+          <a href="DOWNLOAD.fr.html" title="Téléchargement" accesskey="3"
+            >Téléchargement</a
+          >
         </div>
         <div class="item">
-          <a href="DEVELOPER.fr.html" title="Développement" accesskey="4">Développement</a>
+          <a href="DEVELOPER.fr.html" title="Développement" accesskey="4"
+            >Développement</a
+          >
         </div>
       </div>
       <div id="include">
-        <h1>Documentation utilisateur</h1> <p> Au lancement de l'application, une brève documentation indique les touches de raccourcis permettant d'atteindre les éléments importants pour charger un livre ainsi que pour naviguer dans le livre. </p>  <h2>Raccourcis clavier</h2> <ul>   <li><pre class="shortcut">CTRL+O               </pre>: ouvrir un livre audio local (sur un média physique).</li>   <li><pre class="shortcut">CTRL+L               </pre>: accéder à la liste des livres audio en ligne.</li>   <li><pre class="shortcut">CTRL+Q               </pre>: quitter DaisyDuck.</li>   <li><pre class="shortcut">CTRL+ENTRÉE          </pre>: lire et/ou arrêter.</li>   <li><pre class="shortcut">CTRL+FLÈCHE HAUT     </pre>: aller au chapitre précédent.</li>   <li><pre class="shortcut">CTRL+FLÈCHE BAS      </pre>: aller au chapitre suivant.</li>   <li><pre class="shortcut">CTRL+FLÈCHE GAUCHE   </pre>: aller au paragraphe précédent.</li>   <li><pre class="shortcut">CTRL+FLÈCHE DROITE   </pre>: aller au paragraphe suivant.</li>   <li><pre class="shortcut">CTRL+PLUS            </pre>: augmenter la vitesse de 10%.</li>   <li><pre class="shortcut">CTRL+MOINS           </pre>: diminuer la vitesse de 10%.</li>   <li><pre class="shortcut">CTRL+ASTÉRISQUE      </pre>: remettre la vitesse normal de lecture.</li>   <li><pre class="shortcut">CTRL+PAGE PRÉCÉDENTE </pre>: augmenter le volume audio.</li>   <li><pre class="shortcut">CTRL+PAGE SUIVANTE   </pre>: diminuer le volume audio.</li> </ul> <p> Les variations de vitesse préservent la hauteur (pitch) du son (étirement temporel). </p>  <h2>Accueil et Lecture</h2> <p> Les photos d'écran ci-dessous (cliquez sur les images pour les agrandir) présentent le cadre d'accueil ainsi que le cadre du lecteur. L'accueil donne une brève description de DaisyDuck et surtout, donne la liste des raccourcis clavier. Le lecteur se résume en la liste des chapitres (sur la gauche) du livre chargé, quelques informations sur le livre (dont l'extrait), et les boutons pour naviguer dans le livre en bas à droite du cadre. </p> <div class="frame_gui">   <a href="gui-welcome.fr.png">     <img src="gui-welcome.fr.png" alt="GUI Accueil" title="Photo d'écran de l'accueil"/>   </a>   <br/><br/>Cadre Accueil </div> <div class="frame_gui">   <a href="gui-player.fr.png">     <img src="gui-player.fr.png" alt="GUI Lecteur" title="Photo d'écran du lecteur"/>   </a>   <br/><br/>Cadre Lecteur </div>  <h2>Livres en ligne</h2> <p> Pour accéder à la liste de livres en ligne, cliquez sur le bouton "Livres en ligne" depuis l'écran principal, ou pressez <i>CTRL+L</i>. </p> <p> L'accès à une liste dépend du lien dans le champ "URI". Si la liste n'est pas directement disponible, une fenêtre "Entrées" contenant une liste de paramètres s'affiche (cette liste de paramètres peut être différente selon la configuration du logiciel). L'exemple ci-dessous (photo d'écran), montre cette fenêtre en attente d'un numéro d'utilisateur et d'un mot de passe. Bien entendu, si aucun lien n'est spécifié dans le champ "URI", la fenêtre "Entrées" n'est pas affichée. </p> <div class="frame_gui" style="float: none">   <a href="gui-onlinebooks.fr.png">     <img src="gui-onlinebooks.fr.png" alt="GUI Livres en ligne" title="Photo d'écran pour l'accès aux livres en ligne"/>   </a>   <br/><br/>Accès aux livres en ligne </div>  <h1>Documentation pour les utilisateurs avancés</h1> <p> La documentation avancée s'adresse uniquement au personnes qui désirent modifier manuellement le fichier de configuration ou de créer une liste de livres pour la lecture en ligne. </p>  <h2>Fichier de configuration</h2> <p> Le fichier de configuration contient les paramètres généraux de DaisyDuck ainsi que les enregistrements automatiques des livres partiellement lus. En principe il n'est pas nécessaire de faire les modifications directement dans le fichier de configuration. Les paramètres généraux sont accessibles depuis le menu "Paramétrages". </p> <p> Si vous désirez faire des modifications manuellement dans le fichier, celui-ci est localisé (selon le système d'exploitation), dans <i>$HOME/.config/daisyduck/</i> sous GNU/Linux, et <i>$APPDATA/daisyduck/</i> sous Windows. </p> <p> La configuration se présente en tant que simple fichier XML : </p> <pre class="code"> &lt;!DOCTYPE daisyduckcfg&gt;
+        <h1>Documentation utilisateur</h1>
+        <p>
+          Au lancement de l'application, une brève documentation indique les
+          touches de raccourcis permettant d'atteindre les éléments importants
+          pour charger un livre ainsi que pour naviguer dans le livre.
+        </p>
+        <h2>Raccourcis clavier</h2>
+        <ul>
+          <li>
+            <pre class="shortcut">CTRL+O               </pre>
+            : ouvrir un livre audio local (sur un média physique).
+          </li>
+          <li>
+            <pre class="shortcut">CTRL+L               </pre>
+            : accéder à la liste des livres audio en ligne.
+          </li>
+          <li>
+            <pre class="shortcut">CTRL+Q               </pre>
+            : quitter DaisyDuck.
+          </li>
+          <li>
+            <pre class="shortcut">CTRL+ENTRÉE          </pre>
+            : lire et/ou arrêter.
+          </li>
+          <li>
+            <pre class="shortcut">CTRL+FLÈCHE HAUT     </pre>
+            : aller au chapitre précédent.
+          </li>
+          <li>
+            <pre class="shortcut">CTRL+FLÈCHE BAS      </pre>
+            : aller au chapitre suivant.
+          </li>
+          <li>
+            <pre class="shortcut">CTRL+FLÈCHE GAUCHE   </pre>
+            : aller au paragraphe précédent.
+          </li>
+          <li>
+            <pre class="shortcut">CTRL+FLÈCHE DROITE   </pre>
+            : aller au paragraphe suivant.
+          </li>
+          <li>
+            <pre class="shortcut">CTRL+PLUS            </pre>
+            : augmenter la vitesse de 10%.
+          </li>
+          <li>
+            <pre class="shortcut">CTRL+MOINS           </pre>
+            : diminuer la vitesse de 10%.
+          </li>
+          <li>
+            <pre class="shortcut">CTRL+ASTÉRISQUE      </pre>
+            : remettre la vitesse normal de lecture.
+          </li>
+          <li>
+            <pre class="shortcut">CTRL+PAGE PRÉCÉDENTE </pre>
+            : augmenter le volume audio.
+          </li>
+          <li>
+            <pre class="shortcut">CTRL+PAGE SUIVANTE   </pre>
+            : diminuer le volume audio.
+          </li>
+        </ul>
+        <p>
+          Les variations de vitesse préservent la hauteur (pitch) du son
+          (étirement temporel).
+        </p>
+        <h2>Accueil et Lecture</h2>
+        <p>
+          Les photos d'écran ci-dessous (cliquez sur les images pour les
+          agrandir) présentent le cadre d'accueil ainsi que le cadre du lecteur.
+          L'accueil donne une brève description de DaisyDuck et surtout, donne
+          la liste des raccourcis clavier. Le lecteur se résume en la liste des
+          chapitres (sur la gauche) du livre chargé, quelques informations sur
+          le livre (dont l'extrait), et les boutons pour naviguer dans le livre
+          en bas à droite du cadre.
+        </p>
+        <div class="frame_gui">
+          <a href="gui-welcome.fr.png">
+            <img
+              src="gui-welcome.fr.png"
+              alt="GUI Accueil"
+              title="Photo d'écran de l'accueil"
+            />
+          </a>
+          <br /><br />Cadre Accueil
+        </div>
+        <div class="frame_gui">
+          <a href="gui-player.fr.png">
+            <img
+              src="gui-player.fr.png"
+              alt="GUI Lecteur"
+              title="Photo d'écran du lecteur"
+            />
+          </a>
+          <br /><br />Cadre Lecteur
+        </div>
+        <h2>Livres en ligne</h2>
+        <p>
+          Pour accéder à la liste de livres en ligne, cliquez sur le bouton
+          "Livres en ligne" depuis l'écran principal, ou pressez <i>CTRL+L</i>.
+        </p>
+        <p>
+          L'accès à une liste dépend du lien dans le champ "URI". Si la liste
+          n'est pas directement disponible, une fenêtre "Entrées" contenant une
+          liste de paramètres s'affiche (cette liste de paramètres peut être
+          différente selon la configuration du logiciel). L'exemple ci-dessous
+          (photo d'écran), montre cette fenêtre en attente d'un numéro
+          d'utilisateur et d'un mot de passe. Bien entendu, si aucun lien n'est
+          spécifié dans le champ "URI", la fenêtre "Entrées" n'est pas affichée.
+        </p>
+        <div class="frame_gui" style="float: none">
+          <a href="gui-onlinebooks.fr.png">
+            <img
+              src="gui-onlinebooks.fr.png"
+              alt="GUI Livres en ligne"
+              title="Photo d'écran pour l'accès aux livres en ligne"
+            />
+          </a>
+          <br /><br />Accès aux livres en ligne
+        </div>
+        <h1>Documentation pour les utilisateurs avancés</h1>
+        <p>
+          La documentation avancée s'adresse uniquement au personnes qui
+          désirent modifier manuellement le fichier de configuration ou de créer
+          une liste de livres pour la lecture en ligne.
+        </p>
+        <h2>Fichier de configuration</h2>
+        <p>
+          Le fichier de configuration contient les paramètres généraux de
+          DaisyDuck ainsi que les enregistrements automatiques des livres
+          partiellement lus. En principe il n'est pas nécessaire de faire les
+          modifications directement dans le fichier de configuration. Les
+          paramètres généraux sont accessibles depuis le menu "Paramétrages".
+        </p>
+        <p>
+          Si vous désirez faire des modifications manuellement dans le fichier,
+          celui-ci est localisé (selon le système d'exploitation), dans
+          <i>$HOME/.config/daisyduck/</i> sous GNU/Linux, et
+          <i>$APPDATA/daisyduck/</i> sous Windows.
+        </p>
+        <p>La configuration se présente en tant que simple fichier XML :</p>
+        <pre class="code">
+ &lt;!DOCTYPE daisyduckcfg&gt;
  &lt;daisyduckcfg&gt;
   &lt;custom&gt;
    &lt;title&gt;DaisyDuck Titre Accueil&lt;/title&gt;
    &lt;text&gt;DaisyDuck Texte Accueil&lt;/text&gt;
   &lt;/custom&gt;
   &lt;onlinebook&gt;
-   &lt;uri&gt;http://daisy.geexbox.org/daisyduck.php&lt;/uri&gt;
+   &lt;uri&gt;http://some.website/daisyduck.php&lt;/uri&gt;
    &lt;uriparam&gt;
     &lt;param value="" name="username" label="Utilisateur" /&gt;
     &lt;param value="" name="password" label="Mot de passe" /&gt;
@@ -69,8 +230,34 @@
    &lt;hash&gt;c0d38c60852b868dd7135a6523ae562e3c49a2df&lt;/hash&gt;
    &lt;position node="1" smil="3" /&gt;
   &lt;/bookmark&gt;
- &lt;/daisyduckcfg&gt; </pre> 
- <p> Le contenu ci-dessus est un exemple factice. La balise &lt;custom&gt; doit être unique. Elle contient un titre et un texte personnalisé qui s'affiche sur le cadre d'accueil. La balise &lt;onlinebook&gt; doit également être unique. La balise &lt;uri&gt; permet de donner l'adresse sur la liste des livres en ligne. Les balises &lt;param&gt; dans &lt;uriparam&gt; sont des arguments arbitraires, utilisés pour créer la fenêtre "Entrées". Chacun d'eux est envoyé via la méthode POST (HTTP), au lien indiqué dans la balise &lt;uri&gt;. Notez bien que ces paramètres sont tous configurable depuis l'interface graphique de DaisyDuck. </p> <p> Les balises &lt;bookmark&gt; concernent les lectures interrompues. En principe, il n'y a jamais besoin d'y apporter de modifications. </p>  <h2>Fichier de liste de livres en ligne</h2> <p> Dans le fichier de configuration présenté précédemment, la liste pointe sur un fichier PHP. Bien entendu, ceci est complètement arbitraire. Il est tout à fait possible de pointer directement sur une page sans avoir le moindre paramètre dans la balise &lt;uriparam&gt;. </p> <p> L'exemple suivant présente une telle liste avec deux livres. </p> <pre class="code"> &lt;daisyduck version="1.0"&gt;
+ &lt;/daisyduckcfg&gt; </pre
+        >
+        <p>
+          Le contenu ci-dessus est un exemple factice. La balise &lt;custom&gt;
+          doit être unique. Elle contient un titre et un texte personnalisé qui
+          s'affiche sur le cadre d'accueil. La balise &lt;onlinebook&gt; doit
+          également être unique. La balise &lt;uri&gt; permet de donner
+          l'adresse sur la liste des livres en ligne. Les balises &lt;param&gt;
+          dans &lt;uriparam&gt; sont des arguments arbitraires, utilisés pour
+          créer la fenêtre "Entrées". Chacun d'eux est envoyé via la méthode
+          POST (HTTP), au lien indiqué dans la balise &lt;uri&gt;. Notez bien
+          que ces paramètres sont tous configurable depuis l'interface graphique
+          de DaisyDuck.
+        </p>
+        <p>
+          Les balises &lt;bookmark&gt; concernent les lectures interrompues. En
+          principe, il n'y a jamais besoin d'y apporter de modifications.
+        </p>
+        <h2>Fichier de liste de livres en ligne</h2>
+        <p>
+          Dans le fichier de configuration présenté précédemment, la liste
+          pointe sur un fichier PHP. Bien entendu, ceci est complètement
+          arbitraire. Il est tout à fait possible de pointer directement sur une
+          page sans avoir le moindre paramètre dans la balise &lt;uriparam&gt;.
+        </p>
+        <p>L'exemple suivant présente une telle liste avec deux livres.</p>
+        <pre class="code">
+ &lt;daisyduck version="1.0"&gt;
    &lt;audiobook&gt;
      &lt;number&gt;1&lt;/number&gt;
      &lt;title&gt;Il était une fois Linux&lt;/title&gt;
@@ -79,7 +266,7 @@
      &lt;summary&gt;
        « II y a aujourd'hui dix ans, un étudiant finlandais nommé Linus Torvalds s'enfermait plusieurs mois dans sa chambre, rideaux tirés, pour un long tête-à-tête avec son ordinateur. Le résultat : un nouveau système d'exploitation. Qu'allait-il en faire ? Le garder pour son usage personnel ? Le vendre à une société de logiciels ? Rien de tout cela. Linus décide de rendre le fruit de son travail librement accessible sur Internet en invitant toute personne intéressée à l'améliorer. L'UNIX libre de Linus, baptisé Linux, était né et avec lui, une nouvelle manière de concevoir les logiciels qui allait bouleverser l'univers de l'informatique. »
      &lt;/summary&gt;
-     &lt;uri&gt;http://daisy.geexbox.org/torvalds/ncc.html&lt;/uri&gt;
+     &lt;uri&gt;http://some.website/torvalds/ncc.html&lt;/uri&gt;
    &lt;/audiobook&gt;
    &lt;audiobook&gt;
      &lt;number&gt;2&lt;/number&gt;
@@ -89,18 +276,33 @@
      &lt;summary&gt;
        « Chaque génération a son philosophe, écrivain ou artiste qui saisit et incarne l'imaginaire du moment. Il arrive que ces philosophes soient reconnus de leur vivant, mais le plus souvent il faut attendre que la patine du temps fasse son effet. Que cette reconnaissance soit immédiate ou différée, une époque est marquée par ces hommes qui expriment leurs idéaux, dans les murmures d'un poème ou dans le grondement d'un mouvement politique. Notre génération a un philosophe. Ce n'est ni un artiste ni un écrivain. C'est un informaticien. »
      &lt;/summary&gt;
-     &lt;uri&gt;http://daisy.geexbox.org/stallman/ncc.html&lt;/uri&gt;
+     &lt;uri&gt;http://some.website/stallman/ncc.html&lt;/uri&gt;
    &lt;/audiobook&gt;
    &lt;uriparam&gt;
      &lt;param name="Policy" value="foobar"/&gt;
      &lt;param name="Signature" value="foobar"/&gt;
      &lt;param name="Key-Pair-Id" value="fooid"/&gt;
    &lt;/uriparam&gt;
- &lt;/daisyduck&gt; </pre> 
- <p> Exemple interactif : <a href="http://daisy.schroetersa.ch/sample.php"> http://daisy.schroetersa.ch/sample.php</a> </p> <p> Il n'y a pas de limite sur la quantité de livres. La balise &lt;uriparam&gt; doit exister une seule fois. Elle contient les arguments à utiliser en GET (HTTP) avec l'adresse des fichiers NCC (balise &lt;uri&gt;) et tous les fichiers formant le livre Daisy. Cette liste de paramètres est également arbitraire. </p> 
+ &lt;/daisyduck&gt; </pre
+        >
+        <p>
+          Exemple interactif :
+          <a href="http://daisy.schroetersa.ch/sample.php">
+            http://daisy.schroetersa.ch/sample.php</a
+          >
+        </p>
+        <p>
+          Il n'y a pas de limite sur la quantité de livres. La balise
+          &lt;uriparam&gt; doit exister une seule fois. Elle contient les
+          arguments à utiliser en GET (HTTP) avec l'adresse des fichiers NCC
+          (balise &lt;uri&gt;) et tous les fichiers formant le livre Daisy.
+          Cette liste de paramètres est également arbitraire.
+        </p>
       </div>
       <div id="footer">
-        <span id="valid"><img src="valid-xhtml11-small.png" alt="valid xhtml 1.1"/></span>
+        <span id="valid"
+          ><img src="valid-xhtml11-small.png" alt="valid xhtml 1.1"
+        /></span>
         <span id="gx"><a href="http://www.geexbox.org">GeeXboX.org</a></span>
       </div>
     </div>

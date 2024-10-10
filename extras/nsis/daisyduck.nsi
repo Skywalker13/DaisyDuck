@@ -37,7 +37,7 @@ CRCCheck on
 !define MUI_FINISHPAGE_RUN
 !define MUI_FINISHPAGE_RUN_FUNCTION ExecAppFile
 !define MUI_FINISHPAGE_LINK $Link_VisitWebsite
-!define MUI_FINISHPAGE_LINK_LOCATION "http://daisy.geexbox.org"
+!define MUI_FINISHPAGE_LINK_LOCATION "https://skywalker13.github.io/DaisyDuck/"
 
 
 ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -8,7 +8,7 @@
     &lt;summary&gt;\n
       __XMLOB_SUMMARY1__\n
     &lt;/summary&gt;\n
-    &lt;uri&gt;http://daisy.geexbox.org/torvalds/ncc.html&lt;/uri&gt;\n
+    &lt;uri&gt;http://some.website/torvalds/ncc.html&lt;/uri&gt;\n
   &lt;/audiobook&gt;\n
   &lt;audiobook&gt;\n
     &lt;number&gt;2&lt;/number&gt;\n
@@ -18,7 +18,7 @@
     &lt;summary&gt;\n
       __XMLOB_SUMMARY2__\n
     &lt;/summary&gt;\n
-    &lt;uri&gt;http://daisy.geexbox.org/stallman/ncc.html&lt;/uri&gt;\n
+    &lt;uri&gt;http://some.website/stallman/ncc.html&lt;/uri&gt;\n
   &lt;/audiobook&gt;\n
   &lt;uriparam&gt;\n
     &lt;param name="Policy" value="foobar"/&gt;\n

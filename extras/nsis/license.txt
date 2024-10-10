@@ -5,7 +5,7 @@ This installer was created using NSIS (http://nsis.sourceforge.net).
 
 All programs and libraries incorporated into and distributed with this installer are free softwares.
 
- daisyduck-1.0.1	GPL v3+		http://daisy.geexbox.org
+ daisyduck-1.0.1	GPL v3+		https://skywalker13.github.io/DaisyDuck/
  ffmpeg-r23791	GPL v2+		http://www.ffmpeg.org
  libduck-1.0.0	LGPL v2.1+	http://libduck.geexbox.org
  libiconv-1.13.1	LGPL v2+		http://www.gnu.org/software/libiconv/
