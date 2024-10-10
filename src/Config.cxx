@@ -404,12 +404,11 @@ Config::parseOnlinebook (const QDomElement *item)
 
     if (!uriparam_done && it.tagName () == "uriparam")
     {
-      unsigned int i;
       QDomNodeList array;
 
       array = it.childNodes ();
 
-      for (i = 0; i < array.length (); i++)
+      for (auto i = 0; i < array.length (); i++)
       {
         QDomNode n = array.item (i);
         QDomElement item = n.toElement ();

@@ -862,7 +862,7 @@ void
 DaisyDuck::openBook (const QString &book, const QString &summary)
 {
   int first = 1, level_p = 1;
-  int rc, i, smils, child;
+  int rc, i, smils;
   int smilpos = 0, nodepos = 0;
   duck_value_t res;
   QFileInfo *finfo;
@@ -931,7 +931,6 @@ DaisyDuck::openBook (const QString &book, const QString &summary)
     this->labelSummary->setText (summary);
 
   /* fill tree */
-  child = 0;
   smils = duck_smilnode_number (this->duck);
   for (i = 1; i <= smils; i++)
   {
@@ -971,7 +970,6 @@ DaisyDuck::openBook (const QString &book, const QString &summary)
       item[0]->setText (0, QString::fromUtf8 (res.s, -1));
       item[0]->setData (0, Qt::UserRole, id);
       treeSmilnode->addTopLevelItem (item[0]);
-      child = 0;
     }
     else
     {

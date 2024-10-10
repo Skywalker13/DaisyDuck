@@ -180,7 +180,6 @@ OnlineBook::downloadFinished (void)
 
   for (; !node.isNull (); node = node.nextSibling ())
   {
-    unsigned int i;
     QDomElement  it;
     QDomNodeList array;
     QTreeWidgetItem *item;
@@ -193,7 +192,7 @@ OnlineBook::downloadFinished (void)
     {
       /* List of parameters */
       this->uri_args = "";
-      for (i = 0; i < array.length (); i++)
+      for (auto i = 0; i < array.length (); i++)
       {
         QDomElement e = array.item (i).toElement ();
         this->uri_args += (!i ? "?" : "&")
@@ -206,7 +205,7 @@ OnlineBook::downloadFinished (void)
 
     item = new QTreeWidgetItem ();
 
-    for (i = 0; i < array.length (); i++)
+    for (auto i = 0; i < array.length (); i++)
     {
       unsigned int col;
       QDomNode n = array.item (i);
