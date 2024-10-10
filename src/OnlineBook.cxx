@@ -48,6 +48,7 @@ OnlineBook::OnlineBook (QWidget *parent, Config *cfg) : QDialog (parent)
   this->progressDialog->setAutoReset (true);
   this->progressDialog->setAutoClose (true);
   this->progressDialog->setWindowModality (Qt::WindowModal);
+  this->progressDialog->findChildren <QTimer *> ()[0]->stop ();
 
   this->actionLoad->setEnabled (false);
 
