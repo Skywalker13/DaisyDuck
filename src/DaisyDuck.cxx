@@ -69,7 +69,9 @@ DaisyDuck::DaisyDuck (void)
 
   this->actionHelp_activated ();
 
-  if (QCoreApplication::arguments ().contains ("-v"))
+  const auto args = QCoreApplication::arguments();
+
+  if (args.contains ("-v"))
   {
     duck_verbosity (DUCK_MSG_VERBOSE);
     verbose = true;
@@ -217,6 +219,13 @@ DaisyDuck::DaisyDuck (void)
   this->dialogAbout = new About (this);
 
   this->customUpdate ();
+
+  if (args.size() > 0)
+  {
+    const auto last = args.last();
+    if (last.endsWith (".ncc") || last.endsWith (".NCC"))
+      this->openBook(last, "");
+  }
 }
 
 DaisyDuck::~DaisyDuck (void)
