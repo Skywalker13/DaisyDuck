@@ -52,7 +52,7 @@ main (int argc, char **argv)
   if (QCoreApplication::arguments ().contains ("-h"))
   {
     std::cout << "DaisyDuck\n\n"
-                 "Usage: daisyduck [options...] [file.ncc]\n\n"
+                 "Usage: daisyduck [options...] [ncc.html]\n\n"
                  "Options:\n"
                  " -h     this help\n"
                  " -v     verbose mode\n"

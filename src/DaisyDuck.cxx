@@ -223,7 +223,8 @@ DaisyDuck::DaisyDuck (void)
   if (args.size() > 0)
   {
     const auto last = args.last();
-    if (last.endsWith (".ncc") || last.endsWith (".NCC"))
+    if (   last.endsWith (".html") || last.endsWith (".HTML")
+        || last.endsWith (".htm")  || last.endsWith (".HTM"))
       this->openBook(last, "");
   }
 }
